@@ -14,10 +14,10 @@ const TemplateWrapper = ({ children }) => (
       htmlAttributes={{
         lang: 'en',
         class: 'has-navbar-fixed-top',
-        style: 'background-color: whitesmoke',
+        style: {backgroundColor: 'whitesmoke'},
       }}
       bodyAttributes={{
-        style: 'background-color: white',
+        style: {backgroundColor: 'white'},
       }}
       title="Brad McGonigle"
     />
