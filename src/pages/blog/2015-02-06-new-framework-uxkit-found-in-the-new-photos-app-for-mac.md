@@ -1,6 +1,5 @@
 ---
 templateKey: 'blog-post'
-path: /blog/new-framework-uxkit-found-in-the-new-photos-app-for-mac
 title: 'New framework, UXKit, found in the new Photos App for Mac'
 date: 2015-02-06T09:37:00.000Z
 description: >-
