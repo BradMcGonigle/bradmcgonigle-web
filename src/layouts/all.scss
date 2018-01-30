@@ -6,6 +6,15 @@ $primary-invert: $white-bis;
 
 $body-background-color: $white;
 
+// Base
+html, .html {
+  background-color: whitesmoke;
+}
+
+body {
+  background-color: $white;
+}
+
 // Links
 a {
   transition: 250ms all ease-in-out;

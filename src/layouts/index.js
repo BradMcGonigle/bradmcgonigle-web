@@ -13,11 +13,7 @@ const TemplateWrapper = ({ children }) => (
     <Helmet
       htmlAttributes={{
         lang: 'en',
-        class: 'has-navbar-fixed-top',
-        style: {backgroundColor: 'whitesmoke'},
-      }}
-      bodyAttributes={{
-        style: {backgroundColor: 'white'},
+        class: 'html has-navbar-fixed-top',
       }}
       title="Brad McGonigle"
     />
