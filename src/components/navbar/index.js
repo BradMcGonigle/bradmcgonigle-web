@@ -9,7 +9,7 @@ import { faFacebook, faGithub, faInstagram, faTwitter } from '@fortawesome/fonta
 
 const Brand = styled('div')`
   a.navbar-item:hover {
-    background-color: inherit;
+    background-color: inherit!important;
   }
 `;
 
