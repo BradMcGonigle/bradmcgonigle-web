@@ -1,0 +1,41 @@
+@import "~bulma/sass/utilities/initial-variables";
+
+// Config
+$primary: $cyan;
+$primary-invert: $white-bis;
+
+$body-background-color: $white;
+
+// Links
+a {
+  transition: 250ms all ease-in-out;
+}
+
+// Helper Classes
+.full-width-image-container {
+  width: 100vw;
+  height: 400px;
+  position: relative;
+  left: 50%;
+  right: 50%;
+  margin: 5em -50vw;
+  background-size: cover;
+  background-position: bottom;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.margin-top-0 {
+  margin-top: 0 !important;
+}
+
+.margin-bottom-0 {
+  margin-bottom: 0 !important;
+}
+
+.margin-bottom-half {
+  margin-bottom: 0.5rem!important;
+}
+
+@import "~bulma";
