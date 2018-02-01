@@ -1,5 +1,6 @@
 ---
 templateKey: 'blog-post'
+path: /blog/net-neutrality
 title: 'Net Neutrality'
 date: 2015-02-04T22:03:00.000Z
 description: >-
