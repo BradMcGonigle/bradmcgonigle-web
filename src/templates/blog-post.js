@@ -17,7 +17,7 @@ export const BlogPostTemplate = ({
         <div className="columns">
           <div className="column is-10">
             <h1 className="title">{title}</h1>
-            <p>{excerpt}</p>
+            <p>{description}</p>
             <PostContent content={content} />
           </div>
         </div>
