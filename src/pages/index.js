@@ -3,7 +3,7 @@ import Script from "react-load-script";
 
 
 const Hero = () => (
-  <div className="hero is-info is-fullheight">
+  <div className="hero is-info is-fullheight is-bold">
     <div className="hero-body">
       <div className="container">
         <div className="columns">

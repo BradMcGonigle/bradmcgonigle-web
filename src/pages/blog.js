@@ -16,10 +16,11 @@ export default class BlogPage extends React.Component {
     return (
       <section className="section">
         <div className="container content">
-          <h1 className="title has-text-weight-light">Writings <small>&mdash; Thoughts on things</small></h1>
-          <hr />
           <div className="columns">
             <div className="column is-8">
+              <h1 className="title is-size-4 has-text-weight-medium">
+                Writings <small className="has-text-weight-light">&mdash; Thoughts on things</small>
+              </h1>
               { posts
                 .filter(post => post.node.frontmatter.templateKey === "blog-post")
                 .map(({ node: post }, i, { length }) => (

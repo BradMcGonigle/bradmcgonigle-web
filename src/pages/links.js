@@ -12,9 +12,11 @@ import { faExternalLink } from '@fortawesome/fontawesome-pro-light';
 const LinkItem = styled('div')`
   .card {
     height: 100%;
+    overflow: hidden;
 
     .card-image {
       background-color: #eee;
+      box-shadow: 0 0 2px rgba(0, 0, 0, 0.125);
       text-align: center;
 
       span.icon {

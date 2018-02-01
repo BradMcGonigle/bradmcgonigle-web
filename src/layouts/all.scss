@@ -35,16 +35,20 @@ a {
   align-items: center;
 }
 
-.margin-top-0 {
-  margin-top: 0 !important;
-}
+.margin-0 { margin: 0 !important; }
+.padding-0 { padding: 0 !important; }
 
-.margin-bottom-0 {
-  margin-bottom: 0 !important;
-}
+.margin-top-0 { margin-top: 0 !important;}
+.margin-top-025 { margin-top: 0.25rem !important; }
+.margin-top-050 { margin-top: 0.5rem !important; }
+.margin-top-075 { margin-top: 0.75rem !important; }
+.margin-top-1 { margin-top: 1rem !important; }
 
-.margin-bottom-half {
-  margin-bottom: 0.5rem!important;
-}
+.margin-bottom-0 { margin-bottom: 0 !important; }
+.margin-bottom-025 { margin-bottom: 0.25rem !important; }
+.margin-bottom-050 { margin-bottom: 0.5rem !important; }
+.margin-bottom-075 { margin-bottom: 0.75rem !important; }
+.margin-bottom-1 { margin-bottom: 1rem !important; }
+
 
 @import "~bulma";
