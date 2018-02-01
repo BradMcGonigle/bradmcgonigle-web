@@ -113,10 +113,9 @@ export const pageQuery = graphql`
                 sizes(
                   maxWidth: 1000,
                   maxHeight: 667,
-                  cropFocus: ATTENTION,
-                  traceSVG: { color: "#A7DEF6" }
+                  cropFocus: ATTENTION
                 ) {
-                  ...GatsbyImageSharpSizes_withWebp_tracedSVG
+                  ...GatsbyImageSharpSizes_withWebp
                 }
               }
             }

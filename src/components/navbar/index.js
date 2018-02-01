@@ -39,6 +39,9 @@ const Navbar = () => (
           <Link className="navbar-item" to="/blog">
             Blog
           </Link>
+          <Link className="navbar-item" to="/links">
+            Links
+          </Link>
           <SocialLink className="navbar-item" href="https://github.com/bradmcgonigle" rel="noopener noreferrer">
             <span className="icon"><FontAwesomeIcon icon={faGithub} inverse /></span>
           </SocialLink>
