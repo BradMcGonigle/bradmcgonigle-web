@@ -12,6 +12,7 @@
     "bulma": "^0.6.0",
     "emotion": "^8.0.12",
     "gatsby": "^1.9.63",
+    "gatsby-image": "^1.0.34",
     "gatsby-link": "^1.6.21",
     "gatsby-plugin-netlify-cms": "^1.0.2",
     "gatsby-plugin-react-helmet": "^1.0.5",
