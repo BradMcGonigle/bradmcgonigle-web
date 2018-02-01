@@ -17,8 +17,6 @@ export const LinkPostTemplate = ({
         <div className="columns">
           <div className="column is-10">
             <h1 className="title">{title}</h1>
-            <p>{excerpt}</p>
-            <PostContent content={content} />
           </div>
         </div>
       </div>
@@ -30,8 +28,6 @@ export default ({ data }) => {
   const { markdownRemark: post } = data;
 
   return (<LinkPostTemplate
-    content={post.html}
-    contentComponent={HTMLContent}
     helmet={<Helmet title={`Blog | ${post.frontmatter.title}`} />}
     title={post.frontmatter.title}
   />);
