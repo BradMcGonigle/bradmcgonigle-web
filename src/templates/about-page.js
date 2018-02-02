@@ -30,7 +30,6 @@ export const AboutPageTemplate = (
 
 export default ({ data }) => {
   const { markdownRemark: post } = data;
-  console.log(data);
 
   return (<AboutPageTemplate
     contentComponent={HTMLContent}
