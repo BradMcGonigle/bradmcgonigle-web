@@ -2,7 +2,7 @@
 templateKey: 'about-page'
 path: /about
 title: About
-image: 'me.jpg'
+image: me.jpg
 ---
 
 Hi, I'm Brad — a frontend developer and product designer from Orlando, Florida.
