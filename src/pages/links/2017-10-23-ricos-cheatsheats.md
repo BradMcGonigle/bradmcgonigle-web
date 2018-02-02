@@ -5,7 +5,6 @@ title: Rico’s Cheatsheats
 date: 2017-10-23T02:32:55.000Z
 url: 'https://devhints.io/'
 image:
-imageRef:
 tags:
   - development
 ---
