@@ -1,5 +1,6 @@
 ---
 templateKey: blog-post
+path: /blog/2018-01-30-test-entry
 title: Test Entry
 date: 2018-01-30T16:10:46.248Z
 description: >-
