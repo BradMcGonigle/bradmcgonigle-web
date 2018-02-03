@@ -115,7 +115,7 @@ export const pageQuery = graphql`
                 sizes(
                   maxWidth: 1000,
                   maxHeight: 667,
-                  cropFocus: ATTENTION
+                  cropFocus: ENTROPY,
                 ) {
                   ...GatsbyImageSharpSizes_withWebp
                 }
