@@ -1,10 +1,10 @@
 ---
 templateKey: link-post
-path: /links/2017-02-09-animista
-title: Support Animista
+path: /links/2017-02-09-wait-animate
+title: Wait! Animate
 date: 2017-02-09T12:12:33-05:00
-url: http://animista.net/
-image: 2017-02-09-animista.png
+url: http://waitanimate.wstone.io/
+image: 2017-02-09-wait-animate.png
 tags:
   - animation
   - css
