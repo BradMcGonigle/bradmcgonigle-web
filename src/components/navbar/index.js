@@ -26,7 +26,7 @@ const Navbar = () => (
         </div>
       </div>
       <div id="navbar" className="navbar-menu">
-        <div className="navbar-end">
+        <div className="navbar-end has-text-centered">
           <Link className="navbar-item site-nav" to="/about">
             About
           </Link>

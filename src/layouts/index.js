@@ -5,6 +5,7 @@ import Helmet from 'react-helmet';
 import Navbar from '../components/navbar';
 
 import './all.scss';
+import './hamburger.js';
 
 
 const TemplateWrapper = ({ children }) => (
