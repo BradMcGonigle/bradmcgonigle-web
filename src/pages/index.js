@@ -1,9 +1,20 @@
 import React from "react";
 import Script from "react-load-script";
 
+const background = [
+  'is-danger',
+  'is-dark',
+  'is-info',
+  'is-light',
+  'is-primary',
+  'is-success',
+  'is-warning',
+];
 
-const Hero = () => (
-  <div className="hero is-info is-fullheight is-bold">
+const randomBackground = background[Math.floor(Math.random() * background.length)];
+
+const Hero = (randomBackground) => (
+  <div className="hero is-fullheight is-bold is-info">
     <div className="hero-body">
       <div className="container">
         <div className="columns">
