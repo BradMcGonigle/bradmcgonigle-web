@@ -2,7 +2,6 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import Helmet from 'react-helmet';
 
-import Footer from '../components/footer';
 import Navbar from '../components/navbar';
 
 import './all.scss';
@@ -19,7 +18,6 @@ const TemplateWrapper = ({ children }) => (
     />
     <Navbar />
     {children()}
-    <Footer />
   </div>
 );
 
