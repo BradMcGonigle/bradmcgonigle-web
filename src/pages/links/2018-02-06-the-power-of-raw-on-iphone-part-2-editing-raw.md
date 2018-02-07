@@ -1,7 +1,7 @@
 ---
 templateKey: link-post
-path: /links/2018-02-06-the-power-of-raw-on-iphone,-part-2:-editing raw
-title: The Power of RAW on iPhone, Part 2: Editing RAW
+path: /links/2018-02-06-the-power-of-raw-on-iphone-part-2-editing raw
+title: 'The Power of RAW on iPhone, Part 2: Editing RAW'
 date: 2018-02-06T21:28:18-0500
 url: https://blog.halide.cam/the-power-of-raw-on-iphone-part-2-editing-raw-79f60983302f
 image: 2018-02-06-the-power-of-raw-on-iphone-part-2-editing-raw.jpg
