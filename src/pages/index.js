@@ -13,15 +13,15 @@ const background = [
 
 const randomBackground = background[Math.floor(Math.random() * background.length)];
 
-const Hero = (randomBackground) => (
-  <div className="hero is-fullheight is-bold is-info">
+const Hero = () => (
+  <div className={`hero is-fullheight is-bold ${randomBackground}`}>
     <div className="hero-body">
       <div className="container">
         <div className="columns">
           <div className="column is-5 content">
-            <h1 className="title">Hi, I'm Brad.</h1>
-            <h2 className="subtitle">I build things on the internet.</h2>
-            <p>I'm a frontend developer and product designer with a broad range of skills and expertise in user experience design.</p>
+            <h1 className="title is-size-1">👋</h1>
+            <h2 className="subtitle">Hi, I'm Brad.</h2>
+            <p>I'm a frontend developer and product designer from Orlando, Florida building things on the internet.</p>
           </div>
         </div>
       </div>
