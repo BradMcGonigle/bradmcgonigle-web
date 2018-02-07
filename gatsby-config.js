@@ -1,10 +1,28 @@
 module.exports = {
   siteMetadata: {
     title: `Brad McGonigle`,
-    author: 'Brad McGonigle',
+    author: `Brad McGonigle`,
     siteUrl: `https://www.bradmcgonigle.com`,
   },
   plugins: [
+    {
+      resolve: `gatsby-plugin-favicon`,
+      options: {
+        logo: `./src/favicon.png`,
+        injectHTML: true,
+        icons: {
+          android: true,
+          appleIcon: true,
+          appleStartup: false,
+          coast: false,
+          favicons: true,
+          firefox: true,
+          twitter: false,
+          yandex: false,
+          windows: false,
+        }
+      }
+    },
     {
       resolve: `gatsby-plugin-google-tagmanager`,
       options: {
