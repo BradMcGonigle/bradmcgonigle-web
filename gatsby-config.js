@@ -25,9 +25,6 @@ module.exports = {
       }
     },
     {
-      resolve: `gatsby-plugin-feed`
-    },
-    {
       resolve: `gatsby-plugin-google-tagmanager`,
       options: {
         id: `GTM-T6KTKL`,
