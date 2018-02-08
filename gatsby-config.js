@@ -2,6 +2,7 @@ module.exports = {
   siteMetadata: {
     title: `Brad McGonigle`,
     author: `Brad McGonigle`,
+    description: `Developer, nerd and husband.`,
     siteUrl: `https://www.bradmcgonigle.com`,
   },
   plugins: [
@@ -22,6 +23,9 @@ module.exports = {
           windows: false,
         }
       }
+    },
+    {
+      resolve: `gatsby-plugin-feed`
     },
     {
       resolve: `gatsby-plugin-google-tagmanager`,
