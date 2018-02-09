@@ -8,4 +8,5 @@ summary:
 date: 2018-02-08T00:15:28-0500
 url: https://arstechnica.com/gadgets/2018/02/behold-the-157-new-emoji-for-2018/
 tags:
+  - Emoji
 ---

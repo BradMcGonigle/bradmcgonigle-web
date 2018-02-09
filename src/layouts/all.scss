@@ -1,10 +1,16 @@
 @import "~bulma/sass/utilities/initial-variables";
+@import "~bulma/sass/utilities/functions";
 
 // Config
 $primary: $cyan;
 $primary-invert: $white-bis;
 
 $body-background-color: $white;
+
+$content-blockquote-background-color: transparent;
+$content-blockquote-border-left: 5px solid $white-ter;
+$content-blockquote-padding: 0.75em 1em;
+blockquote p { line-height: 1.25rem; }
 
 // Base
 html, .html {
@@ -51,4 +57,76 @@ a {
 .margin-bottom-1 { margin-bottom: 1rem !important; }
 
 
+// Add new color variables to the color map.
+$semi-light: darken(hsl(0, 0%, 96%), 5%);
+$semi-light-invert: findColorInvert($semi-light);
+
+@import "~bulma/sass/utilities/derived-variables";
+$addColors: (
+  "semi-light":($semi-light, $semi-light-invert)
+);
+$colors: map-merge($colors, $addColors);
+
 @import "~bulma";
+
+// Post Detail
+.title {
+  position: relative;
+
+  a, span {
+    vertical-align: middle;
+  }
+
+  a.prev, a.next {
+    position: absolute;
+    top: 25%; // TODO find a better way to do this
+  }
+
+  a.prev {
+    left: -17px;
+  }
+
+  a.next {
+    right: -17px;
+  }
+}
+
+.content {
+  figure {
+    background-color: #f8f8f8;
+    padding: 1.5rem;
+    margin-left: 0;
+    margin-right: 0;
+
+    figcaption {
+      border-top: 1px dotted #ddd;
+      margin-top: 1rem;
+      padding-top: 0.5rem;
+    }
+  }
+}
+
+// Post Detail - Prev/Next
+.prev-next-nav {
+  .title {
+    position: relative;
+
+    a, span {
+      vertical-align: middle;
+    }
+
+    a.prev, a.next {
+      position: absolute;
+      top: 0;
+      line-height: 1.9rem;
+    }
+
+    a.prev {
+      left: -17px;
+    }
+
+    a.next {
+      right: -17px;
+    }
+  }
+}

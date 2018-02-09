@@ -30,11 +30,44 @@ exports.createPages = ({ boundActionCreators, graphql }) => {
       return Promise.reject(result.errors);
     }
 
-    return result.data.allMarkdownRemark.edges.forEach(({ node }) => {
+    const pages = result.data.allMarkdownRemark.edges;
+
+    return pages.forEach(({ node }, index) => {
+      const prev = index === pages.length - 1 ? false : pages[index + 1].node;
+      const next = index === 0 ? false : pages[index - 1].node;
+
+      let context = {};
+      if (
+        node.frontmatter.templateKey === 'link-post' &&
+        prev.frontmatter.templateKey === 'link-post' &&
+        next.frontmatter.templateKey === 'link-post'
+      ) {
+        context = {
+          prev,
+          next
+        }
+      } else if (
+        node.frontmatter.templateKey === 'link-post' &&
+        prev.frontmatter.templateKey === 'link-post' &&
+        next.frontmatter.templateKey !== 'link-post'
+      ) {
+        context = {
+          prev
+        }
+      } else if (
+          node.frontmatter.templateKey === 'link-post' &&
+          prev.frontmatter.templateKey !== 'link-post' &&
+          next.frontmatter.templateKey === 'link-post'
+      ) {
+        context = {
+          next
+        }
+      }
+
       createPage({
         path: node.frontmatter.path,
         component: path.resolve(`src/templates/${String(node.frontmatter.templateKey)}.js`),
-        context: {}, // additional data can be passed via context
+        context: context
       });
     });
   });

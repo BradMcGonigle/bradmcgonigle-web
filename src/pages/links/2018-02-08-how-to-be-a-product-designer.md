@@ -8,4 +8,5 @@ summary:
 date: 2018-02-08T23:23:41-0500
 url: https://uxdesign.cc/how-to-be-a-product-designer-1c14f19e772c
 tags:
+  - Design
 ---
