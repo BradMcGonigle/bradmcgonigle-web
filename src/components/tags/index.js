@@ -8,7 +8,8 @@ const TagList = styled('div')`
 `;
 
 export default function Tags({ list = [], ignore }) {
-  const tags = list.filter((a) => {return a !== ignore});
+  let tags = list.filter((a) => {return a !== ignore});
+  tags = tags.sort(); // Sort alphabetically
   return (
     <TagList className="tags">
       {tags.map((tag, index) =>
