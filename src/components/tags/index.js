@@ -11,8 +11,8 @@ export default function Tags({ list = [], ignore }) {
   const tags = list.filter((a) => {return a !== ignore});
   return (
     <TagList className="tags">
-      {tags.map(tag =>
-        <span className="tag is-size-6 has-text-weight-light is-lowercase">{tag}</span>
+      {tags.map((tag, index) =>
+        <span className="tag is-size-6 has-text-weight-light is-lowercase" key={index}>{tag}</span>
       )}
     </TagList>
   );
