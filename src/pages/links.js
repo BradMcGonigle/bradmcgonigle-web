@@ -6,7 +6,8 @@ import styled from 'react-emotion';
 
 import fontawesome from '@fortawesome/fontawesome';
 import FontAwesomeIcon from '@fortawesome/react-fontawesome';
-import { faExternalLink } from '@fortawesome/fontawesome-pro-light';
+import { faExternalLink, faShare } from '@fortawesome/fontawesome-pro-light';
+import { faFacebook, faTwitter } from '@fortawesome/fontawesome-free-brands';
 
 import Footer from '../components/footer';
 
@@ -15,6 +16,8 @@ const LinkItem = styled('div')`
   .card {
     height: 100%;
     overflow: hidden;
+    display: flex;
+    flex-direction: column;
 
     .card-image {
       background-color: #eee;
@@ -36,8 +39,33 @@ const LinkItem = styled('div')`
     }
 
     .card-content {
+      flex-grow: 1;
+
       time {
         font-size: 0.875rem;
+      }
+    }
+
+    .card-footer {
+      background-color: #fcfcfc;
+      font-size: 0.8rem;
+
+      a {
+        color: #999;
+      }
+
+      .card-footer-item {
+        flex-grow: 0;
+        padding-bottom: 0.33rem;
+        padding-top: 0.33rem;
+      }
+
+      .view {
+        flex-grow: 1;
+
+        &:hover {
+          background-color: #f6f6f6;
+        }
       }
     }
 
@@ -61,35 +89,36 @@ export default class LinksPage extends React.Component {
         <section className="section">
           <div className="container content">
             <h1 className="title is-size-4 has-text-weight-medium">
-              Links <small className="has-text-weight-light">&mdash; Interesting finds</small>
+              <span>Links <small className="has-text-weight-light">&mdash; Interesting finds from around the web</small></span>
             </h1>
             <div className="columns is-multiline">
               { posts
                 .filter(post => post.node.frontmatter.templateKey === "link-post")
                 .map(({ node: post }) => (
                   <LinkItem className="column is-6-tablet is-4-desktop is-3-widescreen" key={post.id}>
-                    <a href={post.frontmatter.url}>
-                      <div className="card">
-                        <div className="card-image">
-                          {
-                            post.frontmatter.image ?
-                            <Img className="image" sizes={post.frontmatter.image.childImageSharp.sizes} />
-                             :
-                            <figure className="is-hidden-mobile image is-3by2">
-                              <span className="icon is-large">
-                                <FontAwesomeIcon icon={faExternalLink} />
-                              </span>
-                            </figure>
-                          }
+                    <div className="card">
+                      <a href={post.frontmatter.url} title={post.frontmatter.title} className="card-image">
+                        {
+                          post.frontmatter.image ?
+                          <Img className="image" sizes={post.frontmatter.image.childImageSharp.sizes} />
+                           :
+                          <figure className="is-hidden-mobile image is-3by2">
+                            <span className="icon is-large">
+                              <FontAwesomeIcon icon={faExternalLink} />
+                            </span>
+                          </figure>
+                        }
+                      </a>
+                      <a href={post.frontmatter.url} title={post.frontmatter.title} className="card-content">
+                        <div className="content">
+                          <time dateTime={post.frontmatter.date} className="has-text-grey">{post.frontmatter.date}</time>
+                          <h4>{post.frontmatter.title}</h4>
                         </div>
-                        <div className="card-content">
-                          <div className="content">
-                            <time dateTime={post.frontmatter.date}>{post.frontmatter.date}</time>
-                            <h4>{post.frontmatter.title}</h4>
-                          </div>
-                        </div>
-                      </div>
-                    </a>
+                      </a>
+                      <footer className="card-footer">
+                        <Link to={post.frontmatter.path} title="View Details" className="card-footer-item view">View Details</Link>
+                      </footer>
+                    </div>
                   </LinkItem>
                 ))
               }
@@ -113,6 +142,7 @@ export const pageQuery = graphql`
           frontmatter {
             title
             templateKey
+            path
             date(formatString: "MMMM DD, YYYY")
             url
             image {
