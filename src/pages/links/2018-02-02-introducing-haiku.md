@@ -1,9 +1,12 @@
 ---
 templateKey: link-post
 path: /links/2018-02-02-introducing-haiku
-title: Introducing Haiku
+title: "Introducing Haiku"
+summary:
+  "Haiku is a design tool for animated user interfaces — for real apps. Think of it as a design portal to your team's codebase."
 date: 2018-02-02T21:59:04-0500
 url: http://haiku.ai/blog/introducing-haiku
 image: 2018-02-02-introducing-haiku.png
+tags:
+  - Design
 ---
-Can you spot the differences between these two images?  The image on the left is a screenshot from Sketch, and the image on the right is a reproduction on iOS. These differences arise when the graphics are rendered.
