@@ -8,4 +8,6 @@ summary:
 date: 2018-02-09T16:45:42-0500
 url: https://uxdesign.cc/motion-in-ux-design-9-points-to-get-started-e891974dc7ee
 tags:
+  - UX
+  - Animation
 ---
