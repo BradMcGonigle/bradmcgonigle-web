@@ -1,5 +1,6 @@
 import React from 'react';
 import Link from 'gatsby-link';
+import scriptLoader from 'react-async-script-loader'
 import styled from 'react-emotion';
 
 import fontawesome from '@fortawesome/fontawesome';
@@ -57,4 +58,6 @@ const Navbar = () => (
   </NavbarWrapper>
 );
 
-export default Navbar;
+export default scriptLoader(
+  '/js/hamburger.js'
+)(Navbar);

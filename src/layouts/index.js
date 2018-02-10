@@ -15,10 +15,6 @@ const TemplateWrapper = ({ children }) => (
         class: 'html has-navbar-fixed-top',
       }}
       title="Brad McGonigle"
-      script={[{
-        type: 'text/javascript',
-        src: '/js/hamburger.js',
-      }]}
     />
     <Navbar />
     {children()}
