@@ -1,5 +1,6 @@
 import React from "react";
 import Script from "react-load-script";
+import styled from 'react-emotion';
 
 const background = [
   'is-danger',
@@ -13,8 +14,12 @@ const background = [
 
 const randomBackground = background[Math.floor(Math.random() * background.length)];
 
+const HeroWrapper = styled('div')`
+  margin-top: -52px;
+`;
+
 const Hero = () => (
-  <div className={`hero is-fullheight is-bold ${randomBackground}`}>
+  <HeroWrapper className={`hero is-fullheight is-bold ${randomBackground}`}>
     <div className="hero-body">
       <div className="container">
         <div className="columns">
@@ -26,7 +31,7 @@ const Hero = () => (
         </div>
       </div>
     </div>
-  </div>
+  </HeroWrapper>
 );
 
 export default class IndexPage extends React.Component {
