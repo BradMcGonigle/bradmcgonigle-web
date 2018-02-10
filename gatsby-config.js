@@ -7,6 +7,9 @@ module.exports = {
   },
   plugins: [
     {
+      resolve: `gatsby-plugin-catch-links`,
+    },
+    {
       resolve: `gatsby-plugin-favicon`,
       options: {
         logo: `./src/favicon.png`,
