@@ -2,9 +2,9 @@
 templateKey: link-post
 path: /links/2018-02-09-the-philly-special-stuns-belichick-super-bowl-lii-eagles-vs-patriots-nfl-turning-point
 image: 2018-02-09-the-philly-special-stuns-belichick-super-bowl-lii-eagles-vs-patriots-nfl-turning-point.jpg
-title: "The "Philly Special" Stuns Belichick (Super Bowl LII) | Eagles vs. Patriots | NFL Turning Point"
+title: "The \"Philly Special\" Stuns Belichick (Super Bowl LII)"
 summary:
-  "Doug Pederson and Nick Foles go with a bold play call on fourth and goal to defeat the New England Patriots in Super Bowl LII.
+  "Doug Pederson and Nick Foles go with a bold play call on fourth and goal to defeat the New England Patriots in Super Bowl LII."
 date: 2018-02-09T23:42:11-0500
 url: https://www.youtube.com/watch?v=Ye6dVwDb_u0
 tags:
