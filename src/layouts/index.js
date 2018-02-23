@@ -26,6 +26,4 @@ TemplateWrapper.propTypes = {
   children: PropTypes.func,
 };
 
-export default scriptLoader(
-  '/js/hamburger.js'
-)(TemplateWrapper);
+export default TemplateWrapper;
