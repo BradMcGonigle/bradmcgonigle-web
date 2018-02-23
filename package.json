@@ -35,7 +35,8 @@
     "react-bulma-components": "^1.2.0",
     "react-emotion": "^8.0.12",
     "react-helmet": "^5.2.0",
-    "react-load-script": "0.0.6"
+    "react-load-script": "0.0.6",
+    "sharp": "^0.19.0"
   },
   "keywords": [
     "gatsby"
