@@ -8,6 +8,6 @@ summary:
 date: 2018-02-17T17:07:34-0500
 url: http://markdotto.com/2018/02/07/github-system-fonts/
 tags:
-  - development
-  - fonts
+  - Development
+  - Fonts
 ---

@@ -8,6 +8,6 @@ summary:
 date: 2018-02-16T00:21:28-0500
 url: https://www.wisdomgeek.com/web-development/using-prettier-format-javascript-code/
 tags:
-  - development
-  - tools
+  - Development
+  - Tools
 ---

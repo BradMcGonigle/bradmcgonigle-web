@@ -8,6 +8,6 @@ summary:
 date: 2018-02-21T23:39:34-0500
 url: https://dev.to/samerbuna/reactjs-frequently-facedproblems--l5g
 tags:
-  - development
-  - react
+  - Development
+  - React
 ---

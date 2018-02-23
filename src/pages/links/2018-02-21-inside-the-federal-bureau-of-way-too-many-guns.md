@@ -8,6 +8,6 @@ summary:
 date: 2018-02-21T15:34:51-0500
 url: https://www.gq.com/story/inside-federal-bureau-of-way-too-many-guns
 tags:
-  - government
+  - Government
 ---
 Computers are illegal at the National Tracing Center.  Illegal!  Just think about that.
