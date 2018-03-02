@@ -17,6 +17,10 @@ const NavbarWrapper = styled(Navbar)`
 const SocialLink = styled(Navbar.Item)`
   padding-left: 0.33rem;
   padding-right: 0.33rem;
+
+  &:last-child {
+    padding-right: 1rem;
+  }
 `;
 
 const Nav = () => (
@@ -31,7 +35,7 @@ const Nav = () => (
       <Navbar.Container position="end" className="has-text-centered-mobile">
         <Link to="/about" className="navbar-item site-nav">About</Link>
         <Link to="/links" className="navbar-item site-nav">Links</Link>
-        <Navbar.Item></Navbar.Item>
+        <Navbar.Item className="is-hidden-mobile"></Navbar.Item>
         <SocialLink href="https://github.com/bradmcgonigle" rel="noopener noreferrer">
           <span className="icon"><FontAwesomeIcon icon={faGithub} /></span>
         </SocialLink>
