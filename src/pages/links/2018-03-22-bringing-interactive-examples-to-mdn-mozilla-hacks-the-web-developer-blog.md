@@ -8,6 +8,6 @@ summary:
 date: 2018-03-22T14:54:21-0400
 url: https://hacks.mozilla.org/2018/03/bringing-interactive-examples-to-mdn
 tags:
-  Development
-  Tools
+  - Development
+  - Tools
 ---

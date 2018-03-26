@@ -8,6 +8,6 @@ summary:
 date: 2018-03-05T16:13:43-0500
 url: https://github.com/CCOSTAN/Home-AssistantConfig
 tags:
-  Home Automation
+  - Home Automation
 ---
 I'd like to think I've delved pretty deep into home automation but then I come across something like this that puts my efforts in perspective.

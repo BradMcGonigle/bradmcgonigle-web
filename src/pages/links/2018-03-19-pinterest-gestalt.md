@@ -8,6 +8,6 @@ summary:
 date: 2018-03-19T14:32:33-0400
 url: https://github.com/pinterest/gestalt
 tags:
-  React
-  UI
+  - React
+  - UI
 ---

@@ -8,5 +8,5 @@ summary:
 date: 2018-03-19T14:32:08-0400
 url: https://v-fonts.com/
 tags:
-  Typography
+  - Typography
 ---

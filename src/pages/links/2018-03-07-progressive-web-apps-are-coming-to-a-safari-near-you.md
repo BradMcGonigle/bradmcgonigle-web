@@ -8,6 +8,6 @@ summary:
 date: 2018-03-07T06:14:33-0500
 url: https://medium.com/awebdeveloper/progressive-web-apps-pwas-are-coming-to-a-safari-near-you-216812aba5a
 tags:
-  Apple
-  Safari
+  - Apple
+  - Safari
 ---
