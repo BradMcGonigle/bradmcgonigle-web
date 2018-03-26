@@ -1,7 +1,7 @@
 ---
 templateKey: link-post
 path: /links/2018-03-05-ccostan-home-assistant-config
-image:
+image: 2018-03-05-ccostan-home-assistant-config.png
 title: "CCOSTAN/Home-AssistantConfig"
 summary:
   "This is my Home Assistant Configuration created with the All In One installer expanded to 16GB. I update it pretty regularly. Home Assistant runs on my Raspberry Pi 3 with Aeon Labs Z Wave Stick (GEN 5). I've also added a 433Mhz Transmitter and receiver. The main SD Card was upgraded to 16GB."
