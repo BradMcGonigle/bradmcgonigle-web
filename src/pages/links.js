@@ -24,6 +24,10 @@ const LinkItem = styled('div')`
       box-shadow: 0 0 2px rgba(0, 0, 0, 0.125);
       text-align: center;
 
+      figure {
+        height: 212px;
+      }
+
       span.icon {
         bottom: 0;
         color: #e7e7e7;
@@ -102,7 +106,7 @@ export default class LinksPage extends React.Component {
                           post.frontmatter.image ?
                           <Img className="image" sizes={post.frontmatter.image.childImageSharp.sizes} />
                            :
-                          <figure className="is-hidden-mobile image is-3by2">
+                          <figure className="is-hidden-mobile image">
                             <span className="icon is-large">
                               <FontAwesomeIcon icon={faExternalLink} />
                             </span>
