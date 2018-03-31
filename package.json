@@ -9,7 +9,7 @@
     "@fortawesome/fontawesome-pro-light": "^5.0.6",
     "@fortawesome/react-fontawesome": "^0.0.17",
     "babel-plugin-emotion": "^8.0.12",
-    "bulma": "^0.6.0",
+    "bulma": "^0.6.2",
     "emotion": "^8.0.12",
     "gatsby": "^1.9.165",
     "gatsby-image": "^1.0.34",
