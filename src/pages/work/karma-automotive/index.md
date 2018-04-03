@@ -18,4 +18,4 @@ technologies: "HTML5, SASS, Gulp, Bower"
 tags:
 ---
 ![Homepage 2018](homepage-2018.png)  
-![Homepage 2016](homepage-original.jpg)
+![Homepage 2016](homepage-original.png)
