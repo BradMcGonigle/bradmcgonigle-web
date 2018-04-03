@@ -85,13 +85,13 @@ export const WorkProjectTemplate = ({
       <section className="section">
         <div className="container content">
           <div className="columns">
-            { (image && !featuredBackground) &&
+            { (image) &&
               <div className="column is-3">
                 <Link to={url}><Img sizes={image.childImageSharp.sizes} /></Link>
               </div>
             }
             <div className="column">
-              <h1 className="title"><Link className="has-text-weight-light has-text-grey" to={url} title={title}>{title}</Link></h1>
+              <h1 className="title"><a className="has-text-weight-light has-text-dark" href={url} title={title}>{title}</a></h1>
               { summary && <p>{summary}</p> }
               <hr />
               <div className="columns">
