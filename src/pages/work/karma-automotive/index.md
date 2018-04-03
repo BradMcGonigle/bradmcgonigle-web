@@ -1,7 +1,7 @@
 ---
 templateKey: work-project
 featured: true
-featuredBackground: "feature-background.jpg"
+featuredBackground: "feature-background.png"
 path: /work/karma-automotive
 client: "Karma Automotive"
 logo: "karma-logo.png"
