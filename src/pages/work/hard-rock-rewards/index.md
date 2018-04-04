@@ -17,4 +17,4 @@ contribution: "Mobile app development, device testing, app store compilation, su
 technologies: "iOS, Android, HTML, CSS3, Gulp, Javascript"
 tags:
 ---
-![Hard Rock Rewards App](app-pages.png)  
+![Hard Rock Rewards App](app-pages.jpg)  

@@ -1,7 +1,7 @@
 ---
 templateKey: work-project
 featured: true
-featuredBackground: "feature-background.png"
+featuredBackground: "feature-background.jpg"
 path: /work/karma-automotive
 client: "Karma Automotive"
 logo: "karma-logo.png"
@@ -17,5 +17,5 @@ contribution: "HTML Development, CSS and Javascript based animations, background
 technologies: "HTML5, SASS, Gulp, Bower"
 tags:
 ---
-![Homepage 2018](homepage-2018.png)  
-![Homepage 2016](homepage-original.png)
+![Homepage 2018](homepage-2018.jpg)  
+![Homepage 2016](homepage-original.jpg)
