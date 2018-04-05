@@ -167,6 +167,7 @@ export const pageQuery = graphql`
         url
         featuredBackground {
           childImageSharp {
+            fadeIn: false,
             sizes(
               maxWidth: 1000,
             ) {
@@ -176,6 +177,7 @@ export const pageQuery = graphql`
         }
         logo {
           childImageSharp {
+            fadeIn: false,
             sizes(
               maxWidth: 1000,
             ) {
