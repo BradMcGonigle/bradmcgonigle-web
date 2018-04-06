@@ -8,7 +8,7 @@ logo: "disney-logo.png"
 title: "Shop Disney Parks Newsletter"
 summary:
   "Get park merchandise for your vacation. Search for thousands of pins, collectibles, Mickey Ears and more in our online shop—or download the app."
-date: 2017-01-01T00:00:00-05:00
+date: 2015-10-01T00:00:00-05:00
 url:
 image: "project-thumbnail.jpg"
 type: "HTML Email"
