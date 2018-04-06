@@ -23,6 +23,7 @@ const ProjectBanner = ({featuredBackground, logo}) => (
   <ProjectBannerSection className="hero is-medium">
     <Img
       css={{ top: 0, left: 0, right: 0, zIndex: -1 }}
+      fadeIn="false"
       style={{ position: `absolute` }}
       sizes={featuredBackground.childImageSharp.sizes}
     />
@@ -31,7 +32,7 @@ const ProjectBanner = ({featuredBackground, logo}) => (
         <div className="columns">
           { logo &&
             <div className="column is-4 is-10-mobile">
-              <Img sizes={logo.childImageSharp.sizes} />
+              <Img fadeIn="false" sizes={logo.childImageSharp.sizes} />
             </div>
           }
         </div>
@@ -167,7 +168,6 @@ export const pageQuery = graphql`
         url
         featuredBackground {
           childImageSharp {
-            fadeIn: false,
             sizes(
               maxWidth: 1000,
             ) {
@@ -177,7 +177,6 @@ export const pageQuery = graphql`
         }
         logo {
           childImageSharp {
-            fadeIn: false,
             sizes(
               maxWidth: 1000,
             ) {

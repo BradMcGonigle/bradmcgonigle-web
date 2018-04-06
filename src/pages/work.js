@@ -22,6 +22,7 @@ const FeaturedProject = ({post}) => (
     <FeaturedSection className="hero is-medium">
       <Img
         css={{ top: 0, left: 0, right: 0, zIndex: -1 }}
+        fadeIn="false"
         style={{ position: `absolute` }}
         sizes={post.frontmatter.featuredBackground.childImageSharp.sizes}
       />
@@ -30,7 +31,7 @@ const FeaturedProject = ({post}) => (
           <div className="columns">
             { post.frontmatter.logo &&
               <div className="column is-4 is-10-mobile">
-                <Img sizes={post.frontmatter.logo.childImageSharp.sizes} />
+                <Img fadeIn="false" sizes={post.frontmatter.logo.childImageSharp.sizes} />
               </div>
             }
           </div>
@@ -102,7 +103,6 @@ export const pageQuery = graphql`
             summary
             featuredBackground {
               childImageSharp {
-                fadeIn: false,
                 sizes(
                   maxWidth: 1000,
                 ) {
@@ -112,7 +112,6 @@ export const pageQuery = graphql`
             }
             logo {
               childImageSharp {
-                fadeIn: false,
                 sizes(
                   maxWidth: 1000,
                 ) {
@@ -122,7 +121,6 @@ export const pageQuery = graphql`
             }
             image {
               childImageSharp {
-                fadeIn: false,
                 sizes(
                   maxWidth: 1000,
                 ) {
