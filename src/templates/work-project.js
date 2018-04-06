@@ -17,31 +17,34 @@ import Footer from '../components/footer';
 const ProjectBannerSection = styled('section')`
   position: relative;
   overflow: hidden;
-`
 
-const ProjectBannerContent = styled('div')`
-  z-index: 1;
+  img.background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index:0;
+  }
 `
 
 const ProjectBanner = ({featuredBackground, logo, title}) => (
   <ProjectBannerSection className="hero is-medium">
     <div className="hero-body">
-      <Img
-        css={{ top: 0, left: 0, right: 0, zIndex: -1 }}
-        fadeIn="true"
-        style={{ position: `absolute` }}
-        sizes={featuredBackground.childImageSharp.sizes}
+      <img
+        className="background"
+        srcset={featuredBackground.childImageSharp.sizes.srcSet}
         title={title}
       />
-      <ProjectBannerContent className="container content">
+      <div className="container content">
         <div className="columns">
           { logo &&
             <div className="column is-4 is-10-mobile">
-              <Img fadeIn="true" sizes={logo.childImageSharp.sizes} title={title} />
+              <img srcset={logo.childImageSharp.sizes.srcSet} title={title} />
             </div>
           }
         </div>
-      </ProjectBannerContent>
+      </div>
     </div>
   </ProjectBannerSection>
 )
@@ -176,7 +179,7 @@ export const pageQuery = graphql`
             sizes(
               maxWidth: 1000,
             ) {
-              ...GatsbyImageSharpSizes_withWebp
+              srcSet
             }
           }
         }
@@ -185,7 +188,7 @@ export const pageQuery = graphql`
             sizes(
               maxWidth: 1000,
             ) {
-              ...GatsbyImageSharpSizes_withWebp
+              srcSet
             }
           }
         }
