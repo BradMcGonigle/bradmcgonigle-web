@@ -19,24 +19,29 @@ const ProjectBannerSection = styled('section')`
   overflow: hidden;
 `
 
-const ProjectBanner = ({featuredBackground, logo}) => (
+const ProjectBannerContent = styled('div')`
+  z-index: 1;
+`
+
+const ProjectBanner = ({featuredBackground, logo, title}) => (
   <ProjectBannerSection className="hero is-medium">
-    <Img
-      css={{ top: 0, left: 0, right: 0, zIndex: -1 }}
-      fadeIn="false"
-      style={{ position: `absolute` }}
-      sizes={featuredBackground.childImageSharp.sizes}
-    />
     <div className="hero-body">
-      <div className="container content">
+      <Img
+        css={{ top: 0, left: 0, right: 0, zIndex: -1 }}
+        fadeIn="true"
+        style={{ position: `absolute` }}
+        sizes={featuredBackground.childImageSharp.sizes}
+        title={title}
+      />
+      <ProjectBannerContent className="container content">
         <div className="columns">
           { logo &&
             <div className="column is-4 is-10-mobile">
-              <Img fadeIn="false" sizes={logo.childImageSharp.sizes} />
+              <Img fadeIn="true" sizes={logo.childImageSharp.sizes} title={title} />
             </div>
           }
         </div>
-      </div>
+      </ProjectBannerContent>
     </div>
   </ProjectBannerSection>
 )
@@ -81,14 +86,14 @@ export const WorkProjectTemplate = ({
         </div>
       </section>
       <div>
-        { hasHero && <ProjectBanner featuredBackground={featuredBackground} logo={logo} /> }
+        { hasHero && <ProjectBanner featuredBackground={featuredBackground} logo={logo} title={title} /> }
       </div>
       <section className="section">
         <div className="container content">
           <div className="columns">
             { (image) &&
               <div className="column is-3">
-                <Link to={url}><Img sizes={image.childImageSharp.sizes} /></Link>
+                <Link to={url}><Img sizes={image.childImageSharp.sizes} title={title} /></Link>
               </div>
             }
             <div className="column">
