@@ -17,30 +17,26 @@ import Footer from '../components/footer';
 const ProjectBannerSection = styled('section')`
   position: relative;
   overflow: hidden;
-
-  img.background {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    z-index:0;
-  }
+  background-image: url('${props => props.src}');
+  background-position: center center;
+  background-size: cover;
 `
 
 const ProjectBanner = ({featuredBackground, logo, title}) => (
-  <ProjectBannerSection className="hero is-medium">
+  <ProjectBannerSection
+    className="hero is-medium"
+    src={featuredBackground.childImageSharp.sizes.src}
+  >
     <div className="hero-body">
-      <img
-        className="background"
-        srcset={featuredBackground.childImageSharp.sizes.srcSet}
-        title={title}
-      />
       <div className="container content">
         <div className="columns">
           { logo &&
             <div className="column is-4 is-10-mobile">
-              <img srcset={logo.childImageSharp.sizes.srcSet} title={title} />
+              <Img
+                fadeIn="false"
+                sizes={logo.childImageSharp.sizes}
+                title={title}
+              />
             </div>
           }
         </div>
@@ -179,7 +175,7 @@ export const pageQuery = graphql`
             sizes(
               maxWidth: 1000,
             ) {
-              srcSet
+              src
             }
           }
         }
@@ -188,7 +184,7 @@ export const pageQuery = graphql`
             sizes(
               maxWidth: 1000,
             ) {
-              srcSet
+              ...GatsbyImageSharpSizes_withWebp
             }
           }
         }
