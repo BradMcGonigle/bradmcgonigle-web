@@ -22,7 +22,7 @@ const TemplateWrapper = ({ children }) => (
 );
 
 TemplateWrapper.propTypes = {
-  children: PropTypes.func,
+  children: PropTypes.array,
 };
 
 export default TemplateWrapper;

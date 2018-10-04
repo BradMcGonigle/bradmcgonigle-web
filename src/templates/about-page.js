@@ -5,6 +5,7 @@ import Img from 'gatsby-image';
 
 import Content, { HTMLContent } from '../components/content';
 import Footer from '../components/footer';
+import Layout from "../components/layout";
 
 
 export const AboutPageTemplate = (
@@ -14,20 +15,22 @@ export const AboutPageTemplate = (
 
   return (
     <div>
-      <section className="section">
-        <div className="container content">
-          <div className="columns">
-            <div className="column is-5">
-              <Img className="image" fluid={image.childImageSharp.fluid} />
-            </div>
-            <div className="column is-5 is-offset-1">
-              <h1 className="title">{title}</h1>
-              <PageContent className="content" content={content} />
+      <Layout>
+        <section className="section">
+          <div className="container content">
+            <div className="columns">
+              <div className="column is-5">
+                <Img className="image" fluid={image.childImageSharp.fluid} />
+              </div>
+              <div className="column is-5 is-offset-1">
+                <h1 className="title">{title}</h1>
+                <PageContent className="content" content={content} />
+              </div>
             </div>
           </div>
-        </div>
-      </section>
-      <Footer />
+        </section>
+        <Footer />
+      </Layout>
     </div>
   );
 };

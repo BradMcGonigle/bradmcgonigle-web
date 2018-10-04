@@ -11,6 +11,7 @@ import { faChevronLeft } from '@fortawesome/fontawesome-pro-light';
 import { HTMLContent } from '../components/content';
 
 import Footer from '../components/footer';
+import Layout from "../components/layout";
 
 
 const ProjectBannerSection = styled('section')`
@@ -72,64 +73,66 @@ export const WorkProjectTemplate = ({
 
   return (
     <div>
-      <section className="section">
-        { helmet || ''}
-        <div className="container content">
-          <h1 className="title is-size-4 has-text-weight-medium">
-            <Link to="/work" className="prev is-size-6"><FontAwesomeIcon icon={faChevronLeft} /></Link>
-            <span>Work <small className="has-text-weight-light">&mdash; A small collection of projects</small></span>
-          </h1>
+      <Layout>
+        <section className="section">
+          { helmet || ''}
+          <div className="container content">
+            <h1 className="title is-size-4 has-text-weight-medium">
+              <Link to="/work" className="prev is-size-6"><FontAwesomeIcon icon={faChevronLeft} /></Link>
+              <span>Work <small className="has-text-weight-light">&mdash; A small collection of projects</small></span>
+            </h1>
+          </div>
+        </section>
+        <div>
+          { hasHero && <ProjectBanner featuredBackground={featuredBackground} logo={logo} title={title} /> }
         </div>
-      </section>
-      <div>
-        { hasHero && <ProjectBanner featuredBackground={featuredBackground} logo={logo} title={title} /> }
-      </div>
-      <section className="section">
-        <div className="container content">
-          <div className="columns">
-            { (image) &&
-              <div className="column is-3">
-                <Link to={url}><Img fluid={image.childImageSharp.fluid} title={title} /></Link>
-              </div>
-            }
-            <div className="column">
-              <h1 className="title"><a className="has-text-weight-light has-text-dark" href={url} title={title}>{title}</a></h1>
-              { summary && <p>{summary}</p> }
-              <hr />
-              <div className="columns">
-                <div className="column">
-                  <p className="heading is-uppercase has-text-weight-light">Product Type</p>
-                  <p>{type}</p>
+        <section className="section">
+          <div className="container content">
+            <div className="columns">
+              { (image) &&
+                <div className="column is-3">
+                  <Link to={url}><Img fluid={image.childImageSharp.fluid} title={title} /></Link>
                 </div>
-                <div className="column">
-                  <p className="heading is-uppercase has-text-weight-light">Lifespan</p>
-                  <p>{lifespan}</p>
-                </div>
-                <div className="column">
-                  <p className="heading is-uppercase has-text-weight-light">Contribution</p>
-                  <p>{contribution}</p>
-                </div>
-                <div className="column">
-                  <p className="heading is-uppercase has-text-weight-light">technologies</p>
-                  <p>{technologies}</p>
+              }
+              <div className="column">
+                <h1 className="title"><a className="has-text-weight-light has-text-dark" href={url} title={title}>{title}</a></h1>
+                { summary && <p>{summary}</p> }
+                <hr />
+                <div className="columns">
+                  <div className="column">
+                    <p className="heading is-uppercase has-text-weight-light">Product Type</p>
+                    <p>{type}</p>
+                  </div>
+                  <div className="column">
+                    <p className="heading is-uppercase has-text-weight-light">Lifespan</p>
+                    <p>{lifespan}</p>
+                  </div>
+                  <div className="column">
+                    <p className="heading is-uppercase has-text-weight-light">Contribution</p>
+                    <p>{contribution}</p>
+                  </div>
+                  <div className="column">
+                    <p className="heading is-uppercase has-text-weight-light">technologies</p>
+                    <p>{technologies}</p>
+                  </div>
                 </div>
               </div>
             </div>
           </div>
-        </div>
-      </section>
+        </section>
 
-      <section className="section">
-        <div className="container">
-          <div className="columns">
-            <div className="column content">
-              <div dangerouslySetInnerHTML={{ __html: html }} />
+        <section className="section">
+          <div className="container">
+            <div className="columns">
+              <div className="column content">
+                <div dangerouslySetInnerHTML={{ __html: html }} />
+              </div>
             </div>
           </div>
-        </div>
-      </section>
+        </section>
 
-      <Footer />
+        <Footer />
+      </Layout>
     </div>
   );
 };
