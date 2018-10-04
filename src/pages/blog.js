@@ -1,11 +1,11 @@
 import React from "react";
-import Link from "gatsby-link";
-import Script from "react-load-script";
-import graphql from "graphql";
+import { Link } from 'gatsby';
+import { graphql } from 'gatsby';
 
-import fontawesome from '@fortawesome/fontawesome';
-import FontAwesomeIcon from '@fortawesome/react-fontawesome';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faArrowRight } from '@fortawesome/fontawesome-pro-light';
+
+import Layout from "../components/layout";
 
 
 export default class BlogPage extends React.Component {
@@ -14,7 +14,8 @@ export default class BlogPage extends React.Component {
     const { edges: posts } = data.allMarkdownRemark;
 
     return (
-      <section className="section">
+      <Layout>
+        <section className="section">
         <div className="container content">
           <div className="columns">
             <div className="column is-8">
@@ -49,7 +50,8 @@ export default class BlogPage extends React.Component {
             </div>
           </div>
         </div>
-      </section>
+        </section>
+      </Layout>
     );
   }
 }

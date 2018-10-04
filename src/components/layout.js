@@ -1,7 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import Helmet from 'react-helmet';
-import scriptLoader from 'react-async-script-loader'
 
 import Navbar from '../components/navbar';
 
@@ -18,7 +17,7 @@ const TemplateWrapper = ({ children }) => (
       title="Brad McGonigle"
     />
     <Navbar />
-    {children()}
+    {children}
   </div>
 );
 

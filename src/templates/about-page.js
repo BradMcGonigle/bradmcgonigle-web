@@ -1,6 +1,5 @@
 import React from 'react';
-import styled from 'react-emotion';
-import graphql from 'graphql';
+import { graphql } from 'gatsby'
 
 import Img from 'gatsby-image';
 
@@ -19,7 +18,7 @@ export const AboutPageTemplate = (
         <div className="container content">
           <div className="columns">
             <div className="column is-5">
-              <Img className="image" sizes={image.childImageSharp.sizes} />
+              <Img className="image" fluid={image.childImageSharp.fluid} />
             </div>
             <div className="column is-5 is-offset-1">
               <h1 className="title">{title}</h1>
@@ -53,12 +52,12 @@ export const aboutPageQuery = graphql`
         title
         image {
           childImageSharp {
-            sizes(
+            fluid(
               maxWidth: 1000,
               cropFocus: ENTROPY,
               quality: 90
             ) {
-              ...GatsbyImageSharpSizes_withWebp
+              ...GatsbyImageSharpFluid_withWebp
             }
           }
         }

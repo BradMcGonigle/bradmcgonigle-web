@@ -1,13 +1,12 @@
 import React from 'react';
 import Img from "gatsby-image";
-import Link from "gatsby-link";
-import graphql from 'graphql';
+import { Link } from 'gatsby';
+import { graphql } from 'gatsby'
 import Helmet from 'react-helmet';
 import styled from 'react-emotion';
 
-import fontawesome from '@fortawesome/fontawesome';
-import FontAwesomeIcon from '@fortawesome/react-fontawesome';
-import { faChevronLeft, faChevronRight, faLink } from '@fortawesome/fontawesome-pro-light';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faChevronLeft, faChevronRight } from '@fortawesome/fontawesome-pro-light';
 
 import Content, { HTMLContent } from '../components/content';
 
@@ -52,7 +51,7 @@ export const LinkPostTemplate = ({
           <div className="columns">
             { image &&
               <div className="column is-4">
-                <a href={url} title="{title}"><Img sizes={image.childImageSharp.sizes} /></a>
+                <a href={url} title="{title}"><Img fluid={image.childImageSharp.fluid} /></a>
               </div>
             }
             <div className="column is-6">
@@ -121,9 +120,9 @@ export const LinkPostTemplate = ({
   );
 };
 
-export default ({ data, pathContext }) => {
+export default ({ data, pageContext }) => {
   const { markdownRemark: post } = data;
-  const { next, prev } = pathContext;
+  const { next, prev } = pageContext;
 
   return (<LinkPostTemplate
     helmet={<Helmet title={`Links | ${post.frontmatter.title}`} />}
@@ -154,10 +153,10 @@ export const pageQuery = graphql`
         url
         image {
           childImageSharp {
-            sizes(
+            fluid(
               maxWidth: 1000,
             ) {
-              ...GatsbyImageSharpSizes_withWebp
+              ...GatsbyImageSharpFluid_withWebp
             }
           }
         }

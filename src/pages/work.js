@@ -1,15 +1,11 @@
 import React from "react";
 import Img from "gatsby-image";
-import Link from "gatsby-link";
-import graphql from "graphql";
+import { Link } from 'gatsby';
+import { graphql } from 'gatsby';
 import styled from 'react-emotion';
 
-import fontawesome from '@fortawesome/fontawesome';
-import FontAwesomeIcon from '@fortawesome/react-fontawesome';
-import { faArrowRight, faExternalLink, faShare } from '@fortawesome/fontawesome-pro-light';
-import { faFacebook, faTwitter } from '@fortawesome/fontawesome-free-brands';
-
 import Footer from '../components/footer';
+import Layout from "../components/layout";
 
 
 const FeaturedSection = styled('section')`
@@ -24,7 +20,7 @@ const FeaturedProject = ({post}) => (
   <Link to={post.frontmatter.path}>
     <FeaturedSection
       className="hero is-medium"
-      src={post.frontmatter.featuredBackground.childImageSharp.sizes.src}
+      src={post.frontmatter.featuredBackground.childImageSharp.fluid.src}
     >
       <div className="hero-body">
         <div className="container content">
@@ -33,7 +29,7 @@ const FeaturedProject = ({post}) => (
               <div className="column is-4 is-10-mobile">
                 <Img
                   fadeIn="false"
-                  sizes={post.frontmatter.logo.childImageSharp.sizes}
+                  fluid={post.frontmatter.logo.childImageSharp.fluid}
                   title={post.frontmatter.title}
                 />
               </div>
@@ -47,7 +43,7 @@ const FeaturedProject = ({post}) => (
 
 const Project = ({post}) => (
   <div className="column is-3">
-    <Link to={post.frontmatter.path}><Img sizes={post.frontmatter.image.childImageSharp.sizes} /></Link>
+    <Link to={post.frontmatter.path}><Img fluid={post.frontmatter.image.childImageSharp.fluid} /></Link>
   </div>
 )
 
@@ -59,32 +55,34 @@ export default class WorkPage extends React.Component {
 
     return (
       <div>
-        <section className="section">
-          <div className="container content">
-            <h1 className="title is-size-4 has-text-weight-medium">
-              <span>Work <small className="has-text-weight-light">&mdash; A small collection of projects</small></span>
-            </h1>
-          </div>
-        </section>
-        { posts
-          .filter(post => post.node.frontmatter.templateKey === "work-project" && post.node.frontmatter.featured)
-          .map(({ node: post }) => (
-            <FeaturedProject post={post} key={post.id} />
-          ))
-        }
-        <section className="section">
-          <div className="container content">
-            <div className="columns">
-              { posts
-                .filter(post => post.node.frontmatter.templateKey === "work-project" && !post.node.frontmatter.featured)
-                .map(({ node: post }) => (
-                  <Project post={post} key={post.id} />
-                ))
-              }
+        <Layout>
+          <section className="section">
+            <div className="container content">
+              <h1 className="title is-size-4 has-text-weight-medium">
+                <span>Work <small className="has-text-weight-light">&mdash; A small collection of projects</small></span>
+              </h1>
             </div>
-          </div>
-        </section>
-        <Footer />
+          </section>
+          { posts
+            .filter(post => post.node.frontmatter.templateKey === "work-project" && post.node.frontmatter.featured)
+            .map(({ node: post }) => (
+              <FeaturedProject post={post} key={post.id} />
+            ))
+          }
+          <section className="section">
+            <div className="container content">
+              <div className="columns">
+                { posts
+                  .filter(post => post.node.frontmatter.templateKey === "work-project" && !post.node.frontmatter.featured)
+                  .map(({ node: post }) => (
+                    <Project post={post} key={post.id} />
+                  ))
+                }
+              </div>
+            </div>
+          </section>
+          <Footer />
+        </Layout>
       </div>
     );
   }
@@ -107,7 +105,7 @@ export const pageQuery = graphql`
             summary
             featuredBackground {
               childImageSharp {
-                sizes(
+                fluid(
                   maxWidth: 1000,
                 ) {
                   src
@@ -116,19 +114,19 @@ export const pageQuery = graphql`
             }
             logo {
               childImageSharp {
-                sizes(
+                fluid(
                   maxWidth: 1000,
                 ) {
-                  ...GatsbyImageSharpSizes_withWebp
+                  ...GatsbyImageSharpFluid_withWebp
                 }
               }
             }
             image {
               childImageSharp {
-                sizes(
+                fluid(
                   maxWidth: 1000,
                 ) {
-                  ...GatsbyImageSharpSizes_withWebp
+                  ...GatsbyImageSharpFluid_withWebp
                 }
               }
             }

@@ -1,5 +1,5 @@
 import React from 'react';
-import graphql from 'graphql';
+import { graphql } from 'gatsby'
 import Helmet from 'react-helmet';
 
 import Content, { HTMLContent } from '../components/content';

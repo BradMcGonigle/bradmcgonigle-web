@@ -1,6 +1,8 @@
 import React from "react";
 import Script from "react-load-script";
-import styled from 'react-emotion';
+import styled from "react-emotion";
+
+import Layout from "../components/layout";
 
 const background = [
   'is-danger',
@@ -24,7 +26,7 @@ const Hero = () => (
       <div className="container">
         <div className="columns">
           <div className="column is-5 content">
-            <h1 className="title is-size-1">👋</h1>
+            <h1 className="title is-size-1"><span role="img" aria-label="Waving Hand">👋</span></h1>
             <h2 className="subtitle">Hi, I'm Brad.</h2>
             <p>I'm a frontend developer and product designer from Orlando, Florida building things on the internet.</p>
           </div>
@@ -51,11 +53,13 @@ export default class IndexPage extends React.Component {
   render() {
     return (
       <div>
-        <Script
-          url="https://identity.netlify.com/v1/netlify-identity-widget.js"
-          onLoad={() => this.handleScriptLoad()}
-        />
-        <Hero />
+        <Layout>
+          <Script
+            url="https://identity.netlify.com/v1/netlify-identity-widget.js"
+            onLoad={() => this.handleScriptLoad()}
+          />
+          <Hero />
+        </Layout>
       </div>
     );
   }

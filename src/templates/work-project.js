@@ -1,15 +1,14 @@
 import React from 'react';
 import Img from "gatsby-image";
-import Link from "gatsby-link";
-import graphql from 'graphql';
+import { Link } from 'gatsby';
+import { graphql } from 'gatsby'
 import Helmet from 'react-helmet';
 import styled from 'react-emotion';
 
-import fontawesome from '@fortawesome/fontawesome';
-import FontAwesomeIcon from '@fortawesome/react-fontawesome';
-import { faChevronLeft, faChevronRight, faLink } from '@fortawesome/fontawesome-pro-light';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faChevronLeft } from '@fortawesome/fontawesome-pro-light';
 
-import Content, { HTMLContent } from '../components/content';
+import { HTMLContent } from '../components/content';
 
 import Footer from '../components/footer';
 
@@ -25,7 +24,7 @@ const ProjectBannerSection = styled('section')`
 const ProjectBanner = ({featuredBackground, logo, title}) => (
   <ProjectBannerSection
     className="hero is-medium"
-    src={featuredBackground.childImageSharp.sizes.src}
+    src={featuredBackground.childImageSharp.fluid.src}
   >
     <div className="hero-body">
       <div className="container content">
@@ -34,7 +33,7 @@ const ProjectBanner = ({featuredBackground, logo, title}) => (
             <div className="column is-4 is-10-mobile">
               <Img
                 fadeIn="false"
-                sizes={logo.childImageSharp.sizes}
+                fluid={logo.childImageSharp.fluid}
                 title={title}
               />
             </div>
@@ -66,8 +65,6 @@ export const WorkProjectTemplate = ({
   type,
   url,
 }) => {
-  const projectContent = contentComponent || Content;
-
   let hasHero = false;
   if (featuredBackground && logo) {
     hasHero = true;
@@ -92,7 +89,7 @@ export const WorkProjectTemplate = ({
           <div className="columns">
             { (image) &&
               <div className="column is-3">
-                <Link to={url}><Img sizes={image.childImageSharp.sizes} title={title} /></Link>
+                <Link to={url}><Img fluid={image.childImageSharp.fluid} title={title} /></Link>
               </div>
             }
             <div className="column">
@@ -172,7 +169,7 @@ export const pageQuery = graphql`
         url
         featuredBackground {
           childImageSharp {
-            sizes(
+            fluid(
               maxWidth: 1000,
             ) {
               src
@@ -181,19 +178,19 @@ export const pageQuery = graphql`
         }
         logo {
           childImageSharp {
-            sizes(
+            fluid(
               maxWidth: 1000,
             ) {
-              ...GatsbyImageSharpSizes_withWebp
+              ...GatsbyImageSharpFluid_withWebp
             }
           }
         }
         image {
           childImageSharp {
-            sizes(
+            fluid(
               maxWidth: 1000,
             ) {
-              ...GatsbyImageSharpSizes_withWebp
+              ...GatsbyImageSharpFluid_withWebp
             }
           }
         }
