@@ -32,9 +32,9 @@ const FeaturedProject = ({post}) => (
             { post.frontmatter.logo &&
               <div className="column is-4 is-10-mobile">
                 <Img
+                  alt={post.frontmatter.title}
                   fadeIn="false"
                   sizes={post.frontmatter.logo.childImageSharp.sizes}
-                  title={post.frontmatter.title}
                 />
               </div>
             }
@@ -47,7 +47,7 @@ const FeaturedProject = ({post}) => (
 
 const Project = ({post}) => (
   <div className="column is-3">
-    <Link to={post.frontmatter.path}><Img sizes={post.frontmatter.image.childImageSharp.sizes} /></Link>
+    <Link to={post.frontmatter.path}><Img alt={post.frontmatter.title} sizes={post.frontmatter.image.childImageSharp.sizes} /></Link>
   </div>
 )
 

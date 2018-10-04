@@ -52,13 +52,13 @@ export const LinkPostTemplate = ({
           <div className="columns">
             { image &&
               <div className="column is-4">
-                <a href={url} title="{title}"><Img sizes={image.childImageSharp.sizes} /></a>
+                <a href={url} title={title}><Img alt={title} sizes={image.childImageSharp.sizes} /></a>
               </div>
             }
             <div className="column is-6">
               <h6 className="subtitle has-text-grey">{date}</h6>
               <h1 className="title">
-                <a href={url} title="{title}">{title}</a>
+                <a href={url} title={title}>{title}</a>
               </h1>
               { summary && <Summary className="subtitle is-italic has-text-grey"><p>{summary}</p></Summary> }
               <PostBody>
