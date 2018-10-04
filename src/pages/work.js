@@ -28,7 +28,7 @@ const FeaturedProject = ({post}) => (
             { post.frontmatter.logo &&
               <div className="column is-4 is-10-mobile">
                 <Img
-                  fadeIn="false"
+                  fadeIn={false}
                   fluid={post.frontmatter.logo.childImageSharp.fluid}
                   title={post.frontmatter.title}
                 />

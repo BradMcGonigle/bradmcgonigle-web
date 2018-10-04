@@ -91,7 +91,7 @@ export const WorkProjectTemplate = ({
             <div className="columns">
               { (image) &&
                 <div className="column is-3">
-                  <Link to={url}><Img fluid={image.childImageSharp.fluid} title={title} /></Link>
+                  <a href={url} title={title}><Img fluid={image.childImageSharp.fluid} title={title} /></a>
                 </div>
               }
               <div className="column">
