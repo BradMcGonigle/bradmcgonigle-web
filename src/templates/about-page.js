@@ -1,17 +1,19 @@
-import React from 'react';
+import React from 'react'
 import { graphql } from 'gatsby'
 
-import Img from 'gatsby-image';
+import Img from 'gatsby-image'
 
-import Content, { HTMLContent } from '../components/content';
-import Footer from '../components/footer';
-import Layout from "../components/layout";
+import Content, { HTMLContent } from '../components/content'
+import Footer from '../components/footer'
+import Layout from '../components/layout'
 
-
-export const AboutPageTemplate = (
-  { title, image, content, contentComponent }
-) => {
-  const PageContent = contentComponent || Content;
+export const AboutPageTemplate = ({
+  title,
+  image,
+  content,
+  contentComponent,
+}) => {
+  const PageContent = contentComponent || Content
 
   return (
     <div>
@@ -32,19 +34,21 @@ export const AboutPageTemplate = (
         <Footer />
       </Layout>
     </div>
-  );
-};
+  )
+}
 
 export default ({ data }) => {
-  const { markdownRemark: post } = data;
+  const { markdownRemark: post } = data
 
-  return (<AboutPageTemplate
-    contentComponent={HTMLContent}
-    title={post.frontmatter.title}
-    image={post.frontmatter.image}
-    content={post.html}
-  />);
-};
+  return (
+    <AboutPageTemplate
+      contentComponent={HTMLContent}
+      title={post.frontmatter.title}
+      image={post.frontmatter.image}
+      content={post.html}
+    />
+  )
+}
 
 export const aboutPageQuery = graphql`
   query AboutPage($path: String!) {
@@ -55,11 +59,7 @@ export const aboutPageQuery = graphql`
         title
         image {
           childImageSharp {
-            fluid(
-              maxWidth: 1000,
-              cropFocus: ENTROPY,
-              quality: 90
-            ) {
+            fluid(maxWidth: 1000, cropFocus: ENTROPY, quality: 90) {
               ...GatsbyImageSharpFluid_withWebp
             }
           }
@@ -67,4 +67,4 @@ export const aboutPageQuery = graphql`
       }
     }
   }
-`;
+`

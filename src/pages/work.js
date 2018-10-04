@@ -1,12 +1,11 @@
-import React from "react";
-import Img from "gatsby-image";
-import { Link } from 'gatsby';
-import { graphql } from 'gatsby';
-import styled from 'react-emotion';
+import React from 'react'
+import Img from 'gatsby-image'
+import { Link } from 'gatsby'
+import { graphql } from 'gatsby'
+import styled from 'react-emotion'
 
-import Footer from '../components/footer';
-import Layout from "../components/layout";
-
+import Footer from '../components/footer'
+import Layout from '../components/layout'
 
 const FeaturedSection = styled('section')`
   position: relative;
@@ -16,7 +15,7 @@ const FeaturedSection = styled('section')`
   background-size: cover;
 `
 
-const FeaturedProject = ({post}) => (
+const FeaturedProject = ({ post }) => (
   <Link to={post.frontmatter.path}>
     <FeaturedSection
       className="hero is-medium"
@@ -25,7 +24,7 @@ const FeaturedProject = ({post}) => (
       <div className="hero-body">
         <div className="container content">
           <div className="columns">
-            { post.frontmatter.logo &&
+            {post.frontmatter.logo && (
               <div className="column is-4 is-10-mobile">
                 <Img
                   fadeIn={false}
@@ -33,7 +32,7 @@ const FeaturedProject = ({post}) => (
                   title={post.frontmatter.title}
                 />
               </div>
-            }
+            )}
           </div>
         </div>
       </div>
@@ -41,17 +40,18 @@ const FeaturedProject = ({post}) => (
   </Link>
 )
 
-const Project = ({post}) => (
+const Project = ({ post }) => (
   <div className="column is-3">
-    <Link to={post.frontmatter.path}><Img fluid={post.frontmatter.image.childImageSharp.fluid} /></Link>
+    <Link to={post.frontmatter.path}>
+      <Img fluid={post.frontmatter.image.childImageSharp.fluid} />
+    </Link>
   </div>
 )
 
-
 export default class WorkPage extends React.Component {
   render() {
-    const { data } = this.props;
-    const { edges: posts } = data.allMarkdownRemark;
+    const { data } = this.props
+    const { edges: posts } = data.allMarkdownRemark
 
     return (
       <div>
@@ -59,32 +59,43 @@ export default class WorkPage extends React.Component {
           <section className="section">
             <div className="container content">
               <h1 className="title is-size-4 has-text-weight-medium">
-                <span>Work <small className="has-text-weight-light">&mdash; A small collection of projects</small></span>
+                <span>
+                  Work{' '}
+                  <small className="has-text-weight-light">
+                    &mdash; A small collection of projects
+                  </small>
+                </span>
               </h1>
             </div>
           </section>
-          { posts
-            .filter(post => post.node.frontmatter.templateKey === "work-project" && post.node.frontmatter.featured)
+          {posts
+            .filter(
+              post =>
+                post.node.frontmatter.templateKey === 'work-project' &&
+                post.node.frontmatter.featured
+            )
             .map(({ node: post }) => (
               <FeaturedProject post={post} key={post.id} />
-            ))
-          }
+            ))}
           <section className="section">
             <div className="container content">
               <div className="columns">
-                { posts
-                  .filter(post => post.node.frontmatter.templateKey === "work-project" && !post.node.frontmatter.featured)
+                {posts
+                  .filter(
+                    post =>
+                      post.node.frontmatter.templateKey === 'work-project' &&
+                      !post.node.frontmatter.featured
+                  )
                   .map(({ node: post }) => (
                     <Project post={post} key={post.id} />
-                  ))
-                }
+                  ))}
               </div>
             </div>
           </section>
           <Footer />
         </Layout>
       </div>
-    );
+    )
   }
 }
 
@@ -105,27 +116,21 @@ export const pageQuery = graphql`
             summary
             featuredBackground {
               childImageSharp {
-                fluid(
-                  maxWidth: 1000,
-                ) {
+                fluid(maxWidth: 1000) {
                   src
                 }
               }
             }
             logo {
               childImageSharp {
-                fluid(
-                  maxWidth: 1000,
-                ) {
+                fluid(maxWidth: 1000) {
                   ...GatsbyImageSharpFluid_withWebp
                 }
               }
             }
             image {
               childImageSharp {
-                fluid(
-                  maxWidth: 1000,
-                ) {
+                fluid(maxWidth: 1000) {
                   ...GatsbyImageSharpFluid_withWebp
                 }
               }
@@ -135,4 +140,4 @@ export const pageQuery = graphql`
       }
     }
   }
-`;
+`

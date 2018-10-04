@@ -1,11 +1,10 @@
-import React from 'react';
-import PropTypes from 'prop-types';
-import Helmet from 'react-helmet';
+import React from 'react'
+import PropTypes from 'prop-types'
+import Helmet from 'react-helmet'
 
-import Navbar from '../components/navbar';
+import Navbar from '../components/navbar'
 
-import './all.scss';
-
+import './all.scss'
 
 const TemplateWrapper = ({ children }) => (
   <div>
@@ -19,10 +18,10 @@ const TemplateWrapper = ({ children }) => (
     <Navbar />
     {children}
   </div>
-);
+)
 
 TemplateWrapper.propTypes = {
   children: PropTypes.array,
-};
+}
 
-export default TemplateWrapper;
+export default TemplateWrapper

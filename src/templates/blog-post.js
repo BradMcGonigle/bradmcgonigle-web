@@ -1,18 +1,21 @@
-import React from 'react';
+import React from 'react'
 import { graphql } from 'gatsby'
-import Helmet from 'react-helmet';
+import Helmet from 'react-helmet'
 
-import Content, { HTMLContent } from '../components/content';
-
+import Content, { HTMLContent } from '../components/content'
 
 export const BlogPostTemplate = ({
-  content, contentComponent, description, title, helmet,
+  content,
+  contentComponent,
+  description,
+  title,
+  helmet,
 }) => {
-  const PostContent = contentComponent || Content;
+  const PostContent = contentComponent || Content
 
   return (
     <section className="section">
-      { helmet || ''}
+      {helmet || ''}
       <div className="container content">
         <div className="columns">
           <div className="column is-10">
@@ -23,20 +26,22 @@ export const BlogPostTemplate = ({
         </div>
       </div>
     </section>
-  );
-};
+  )
+}
 
 export default ({ data }) => {
-  const { markdownRemark: post } = data;
+  const { markdownRemark: post } = data
 
-  return (<BlogPostTemplate
-    content={post.html}
-    contentComponent={HTMLContent}
-    description={post.frontmatter.description}
-    helmet={<Helmet title={`Blog | ${post.frontmatter.title}`} />}
-    title={post.frontmatter.title}
-  />);
-};
+  return (
+    <BlogPostTemplate
+      content={post.html}
+      contentComponent={HTMLContent}
+      description={post.frontmatter.description}
+      helmet={<Helmet title={`Blog | ${post.frontmatter.title}`} />}
+      title={post.frontmatter.title}
+    />
+  )
+}
 
 export const pageQuery = graphql`
   query BlogPostByPath($path: String!) {
@@ -50,4 +55,4 @@ export const pageQuery = graphql`
       }
     }
   }
-`;
+`
