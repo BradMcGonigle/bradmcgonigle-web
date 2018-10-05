@@ -19,7 +19,7 @@ export const AboutPageTemplate = (
         <div className="container content">
           <div className="columns">
             <div className="column is-5">
-              <Img className="image" sizes={image.childImageSharp.sizes} />
+              <Img alt="Its me!" className="image" sizes={image.childImageSharp.sizes} />
             </div>
             <div className="column is-5 is-offset-1">
               <h1 className="title">{title}</h1>

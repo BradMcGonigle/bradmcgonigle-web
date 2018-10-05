@@ -104,7 +104,7 @@ export default class LinksPage extends React.Component {
                       <a href={post.frontmatter.url} title={post.frontmatter.title} className="card-image">
                         {
                           post.frontmatter.image ?
-                          <Img className="image" sizes={post.frontmatter.image.childImageSharp.sizes} />
+                          <Img alt={post.frontmatter.title} className="image" sizes={post.frontmatter.image.childImageSharp.sizes} />
                            :
                           <figure className="is-hidden-mobile image">
                             <span className="icon is-large">
