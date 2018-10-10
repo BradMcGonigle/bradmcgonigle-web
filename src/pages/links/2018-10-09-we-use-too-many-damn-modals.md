@@ -6,7 +6,7 @@ summary:
   "Let's just not. Help Modals are the crutch of the inarticulate designer and developer. "
 date: 2018-10-09T12:00:00-04:00
 url: https://modalzmodalzmodalz.com/
-image: 2018-10-09-we-use-too-many-damn-modals.svg
+image: 2018-10-09-we-use-too-many-damn-modals.png
 tags:
   - UX
 ---
