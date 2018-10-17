@@ -5151,7 +5151,7 @@ gatsby-link@^2.0.4:
     prop-types "^15.6.1"
     ric "^1.3.0"
 
-gatsby-plugin-canonical-urls@^2.0.6:
+gatsby-plugin-canonical-urls@~2.0.0:
   version "2.0.6"
   resolved "https://registry.yarnpkg.com/gatsby-plugin-canonical-urls/-/gatsby-plugin-canonical-urls-2.0.6.tgz#64ef690aad498f356d73db80095e58211dfab0e8"
   dependencies:
@@ -5278,6 +5278,14 @@ gatsby-remark-images@~2.0.0:
     slash "^1.0.0"
     unist-util-select "^1.5.0"
     unist-util-visit-parents "^2.0.1"
+
+gatsby-remark-static-images@^1.0.0:
+  version "1.0.0"
+  resolved "https://registry.yarnpkg.com/gatsby-remark-static-images/-/gatsby-remark-static-images-1.0.0.tgz#bd74ff31f05afd863bd2b0df7377e1572806c491"
+  dependencies:
+    is-relative-url "^2.0.0"
+    slash "^2.0.0"
+    unist-util-select "^1.5.0"
 
 gatsby-source-filesystem@~2.0.0:
   version "2.0.1"
@@ -11217,6 +11225,10 @@ sitemap@^1.12.0:
 slash@^1.0.0:
   version "1.0.0"
   resolved "https://registry.yarnpkg.com/slash/-/slash-1.0.0.tgz#c41f2f6c39fc16d1cd17ad4b5d896114ae470d55"
+
+slash@^2.0.0:
+  version "2.0.0"
+  resolved "https://registry.yarnpkg.com/slash/-/slash-2.0.0.tgz#de552851a1759df3a8f206535442f5ec4ddeab44"
 
 slate-base64-serializer@^0.2.34:
   version "0.2.68"
