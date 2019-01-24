@@ -3,7 +3,7 @@ import Img from 'gatsby-image'
 import { Link } from 'gatsby'
 import { graphql } from 'gatsby'
 import Helmet from 'react-helmet'
-import styled from 'react-emotion'
+import styled from '@emotion/styled'
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faChevronLeft } from '@fortawesome/fontawesome-pro-light'

@@ -1,6 +1,6 @@
 import React from 'react'
 import Script from 'react-load-script'
-import styled from 'react-emotion'
+import styled from '@emotion/styled'
 
 import Layout from '../components/layout'
 

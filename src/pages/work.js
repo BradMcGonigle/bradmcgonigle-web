@@ -2,7 +2,7 @@ import React from 'react'
 import Img from 'gatsby-image'
 import { Link } from 'gatsby'
 import { graphql } from 'gatsby'
-import styled from 'react-emotion'
+import styled from '@emotion/styled'
 
 import Footer from '../components/footer'
 import Layout from '../components/layout'
