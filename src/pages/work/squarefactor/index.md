@@ -17,6 +17,6 @@ contribution: "Front end development, user experience design, keyframe css anima
 technologies: "HTML5, SASS, Javascript, Bower, Gulp"
 tags:
 ---
-![Overview](https://static1.squarespace.com/static/56aff5e61a5203d11aa1a29d/t/56bbe046cf80a130c33d3e0f/1455153231316/?format=2500w)  
+![Overview](overview.jpeg)  
 ![NASCAR](nascar.jpg)  
 ![WARSENAL](warsenal.jpg)

@@ -1,11 +1,9 @@
 import React from 'react';
-import Link from 'gatsby-link';
-import scriptLoader from 'react-async-script-loader'
-import styled from 'react-emotion';
+import { Link } from 'gatsby';
+import styled from '@emotion/styled';
 import { Navbar } from 'react-bulma-components';
 
-import fontawesome from '@fortawesome/fontawesome';
-import FontAwesomeIcon from '@fortawesome/react-fontawesome';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faFacebook, faGithub, faInstagram, faTwitter } from '@fortawesome/fontawesome-free-brands';
 
 
