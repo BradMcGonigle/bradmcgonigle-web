@@ -1,5 +1,5 @@
 import React from 'react';
-import styled from 'react-emotion';
+import styled from '@emotion/styled';
 
 const TagList = styled('div')`
   border-top: 2px solid #f9f9f9;

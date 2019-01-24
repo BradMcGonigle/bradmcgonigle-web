@@ -1,21 +1,24 @@
 module.exports = {
   siteMetadata: {
-    title: `Brad McGonigle`,
-    author: `Brad McGonigle`,
-    description: `Developer, nerd and husband.`,
-    siteUrl: `https://www.bradmcgonigle.com`,
+    title: 'Brad McGonigle',
+    author: 'Brad McGonigle',
+    description: 'Developer, nerd and husband.',
+    siteUrl: 'https://www.bradmcgonigle.com',
   },
   plugins: [
     {
-      resolve: `gatsby-plugin-catch-links`,
+      resolve: 'gatsby-plugin-catch-links',
     },
     {
-      resolve: `gatsby-plugin-canonical-urls`,
-    },
-    {
-      resolve: `gatsby-plugin-favicon`,
+      resolve: 'gatsby-plugin-canonical-urls',
       options: {
-        logo: `./src/favicon.png`,
+        siteUrl: 'https://www.bradmcgonigle.com',
+      },
+    },
+    {
+      resolve: 'gatsby-plugin-favicon',
+      options: {
+        logo: './src/favicon.png',
         injectHTML: true,
         icons: {
           android: true,
@@ -31,36 +34,38 @@ module.exports = {
       }
     },
     {
-      resolve: `gatsby-plugin-google-tagmanager`,
+      resolve: 'gatsby-plugin-google-tagmanager',
       options: {
-        id: `GTM-T6KTKL`,
+        id: 'GTM-T6KTKL',
       },
     },
     {
-      resolve: `gatsby-plugin-nprogress`,
+      resolve: 'gatsby-plugin-nprogress',
       options: {
-        color: `tomato`,
+        color: 'tomato',
         showSpinner: true,
       },
     },
-    `gatsby-plugin-react-helmet`,
-    `gatsby-plugin-sass`,
+    'gatsby-plugin-react-helmet',
+    'gatsby-plugin-sass',
     {
-      resolve: `gatsby-source-filesystem`,
+      resolve: 'gatsby-source-filesystem',
       options: {
-        path: `${__dirname}/src/pages`,
-        name: `pages`,
+        ignore: ['**/\.*'], // ignore files starting with a dot
+        name: 'pages',
+        path: `${__dirname}/src/pages/`,
       },
     },
-    `gatsby-plugin-sharp`,
-    `gatsby-plugin-sitemap`,
-    `gatsby-transformer-sharp`,
+    'gatsby-plugin-sharp',
+    'gatsby-plugin-sitemap',
+    'gatsby-transformer-sharp',
     {
-      resolve: `gatsby-transformer-remark`,
+      resolve: 'gatsby-transformer-remark',
       options: {
         plugins: [
+          'gatsby-remark-static-images',
           {
-            resolve: `gatsby-remark-images`,
+            resolve: 'gatsby-remark-images',
             options: {
               linkImagesToOriginal: false,
               maxWidth: 1400,
@@ -79,7 +84,7 @@ module.exports = {
     },
     // required to be last in the plugin array
     {
-      resolve: `gatsby-plugin-netlify`,
+      resolve: 'gatsby-plugin-netlify',
       options: {
         headers: {},
         allPageHeaders: [],

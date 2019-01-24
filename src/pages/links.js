@@ -1,16 +1,14 @@
-import React from "react";
-import Img from "gatsby-image";
-import Link from "gatsby-link";
-import graphql from "graphql";
-import styled from 'react-emotion';
+import React from 'react'
+import Img from 'gatsby-image'
+import { Link } from 'gatsby'
+import { graphql } from 'gatsby'
+import styled from '@emotion/styled'
 
-import fontawesome from '@fortawesome/fontawesome';
-import FontAwesomeIcon from '@fortawesome/react-fontawesome';
-import { faExternalLink, faShare } from '@fortawesome/fontawesome-pro-light';
-import { faFacebook, faTwitter } from '@fortawesome/fontawesome-free-brands';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faExternalLink } from '@fortawesome/fontawesome-pro-light'
 
-import Footer from '../components/footer';
-
+import Footer from '../components/footer'
+import Layout from '../components/layout'
 
 const LinkItem = styled('div')`
   .card {
@@ -85,53 +83,87 @@ const LinkItem = styled('div')`
 
 export default class LinksPage extends React.Component {
   render() {
-    const { data } = this.props;
-    const { edges: posts } = data.allMarkdownRemark;
+    const { data } = this.props
+    const { edges: posts } = data.allMarkdownRemark
 
     return (
       <div>
-        <section className="section">
-          <div className="container content">
-            <h1 className="title is-size-4 has-text-weight-medium">
-              <span>Links <small className="has-text-weight-light">&mdash; Interesting finds from around the web</small></span>
-            </h1>
-            <div className="columns is-multiline">
-              { posts
-                .filter(post => post.node.frontmatter.templateKey === "link-post")
-                .map(({ node: post }) => (
-                  <LinkItem className="column is-6-tablet is-4-desktop is-3-widescreen" key={post.id}>
-                    <div className="card">
-                      <a href={post.frontmatter.url} title={post.frontmatter.title} className="card-image">
-                        {
-                          post.frontmatter.image ?
-                          <Img alt={post.frontmatter.title} className="image" sizes={post.frontmatter.image.childImageSharp.sizes} />
-                           :
-                          <figure className="is-hidden-mobile image">
-                            <span className="icon is-large">
-                              <FontAwesomeIcon icon={faExternalLink} />
-                            </span>
-                          </figure>
-                        }
-                      </a>
-                      <a href={post.frontmatter.url} title={post.frontmatter.title} className="card-content">
-                        <div className="content">
-                          <time dateTime={post.frontmatter.date} className="has-text-grey">{post.frontmatter.date}</time>
-                          <h4>{post.frontmatter.title}</h4>
-                        </div>
-                      </a>
-                      <footer className="card-footer">
-                        <Link to={post.frontmatter.path} title="View Details" className="card-footer-item view">View Details</Link>
-                      </footer>
-                    </div>
-                  </LinkItem>
-                ))
-              }
+        <Layout>
+          <section className="section">
+            <div className="container content">
+              <h1 className="title is-size-4 has-text-weight-medium">
+                <span>
+                  Links{' '}
+                  <small className="has-text-weight-light">
+                    &mdash; Interesting finds from around the web
+                  </small>
+                </span>
+              </h1>
+              <div className="columns is-multiline">
+                {posts
+                  .filter(
+                    post => post.node.frontmatter.templateKey === 'link-post'
+                  )
+                  .map(({ node: post }) => (
+                    <LinkItem
+                      className="column is-6-tablet is-4-desktop is-3-widescreen"
+                      key={post.id}
+                    >
+                      <div className="card">
+                        <a
+                          href={post.frontmatter.url}
+                          title={post.frontmatter.title}
+                          className="card-image"
+                        >
+                          {post.frontmatter.image ? (
+                            <Img
+                              className="image"
+                              fluid={
+                                post.frontmatter.image.childImageSharp.fluid
+                              }
+                            />
+                          ) : (
+                            <figure className="is-hidden-mobile image">
+                              <span className="icon is-large">
+                                <FontAwesomeIcon icon={faExternalLink} />
+                              </span>
+                            </figure>
+                          )}
+                        </a>
+                        <a
+                          href={post.frontmatter.url}
+                          title={post.frontmatter.title}
+                          className="card-content"
+                        >
+                          <div className="content">
+                            <time
+                              dateTime={post.frontmatter.date}
+                              className="has-text-grey"
+                            >
+                              {post.frontmatter.date}
+                            </time>
+                            <h4>{post.frontmatter.title}</h4>
+                          </div>
+                        </a>
+                        <footer className="card-footer">
+                          <Link
+                            to={post.frontmatter.path}
+                            title="View Details"
+                            className="card-footer-item view"
+                          >
+                            View Details
+                          </Link>
+                        </footer>
+                      </div>
+                    </LinkItem>
+                  ))}
+              </div>
             </div>
-          </div>
-        </section>
-        <Footer />
+          </section>
+          <Footer />
+        </Layout>
       </div>
-    );
+    )
   }
 }
 
@@ -151,12 +183,8 @@ export const pageQuery = graphql`
             url
             image {
               childImageSharp {
-                sizes(
-                  maxWidth: 1000,
-                  maxHeight: 667,
-                  cropFocus: ENTROPY,
-                ) {
-                  ...GatsbyImageSharpSizes_withWebp
+                fluid(maxWidth: 1000, maxHeight: 667, cropFocus: ENTROPY) {
+                  ...GatsbyImageSharpFluid_withWebp
                 }
               }
             }
@@ -165,4 +193,4 @@ export const pageQuery = graphql`
       }
     }
   }
-`;
+`

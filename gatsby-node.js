@@ -1,7 +1,7 @@
 const path = require('path');
 
-exports.createPages = ({ boundActionCreators, graphql }) => {
-  const { createPage } = boundActionCreators;
+exports.createPages = async ({ page, actions, graphql }) => {
+  const { createPage } = actions;
 
   return graphql(`
     {
