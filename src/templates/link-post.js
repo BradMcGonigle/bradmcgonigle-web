@@ -14,7 +14,7 @@ import {
 import Content, { HTMLContent } from '../components/content'
 
 import Tags from '../components/tags'
-import Footer from '../components/footer'
+import SiteFooter from '../components/footer'
 import Layout from '../components/layout'
 
 const Summary = styled('blockquote')`
@@ -138,7 +138,7 @@ export const LinkPostTemplate = ({
           </div>
         </section>
 
-        <Footer />
+        <SiteFooter />
       </Layout>
     </div>
   )

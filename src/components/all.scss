@@ -26,6 +26,16 @@ a {
   transition: 250ms all ease-in-out;
 }
 
+footer, .footer {
+  a {
+    color: $grey;
+
+    &:hover {
+      color: $black-bis;
+    }
+  }
+}
+
 // Helper Classes
 .full-width-image-container {
   width: 100vw;

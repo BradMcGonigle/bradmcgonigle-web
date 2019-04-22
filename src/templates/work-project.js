@@ -10,7 +10,7 @@ import { faChevronLeft } from '@fortawesome/fontawesome-pro-light'
 
 import { HTMLContent } from '../components/content'
 
-import Footer from '../components/footer'
+import SiteFooter from '../components/footer'
 import Layout from '../components/layout'
 
 const ProjectBannerSection = styled('section')`
@@ -161,7 +161,7 @@ export const WorkProjectTemplate = ({
           </div>
         </section>
 
-        <Footer />
+        <SiteFooter />
       </Layout>
     </div>
   )
