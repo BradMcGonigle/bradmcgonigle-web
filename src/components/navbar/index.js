@@ -44,9 +44,9 @@ class Nav extends React.Component {
           <Link to="/" className="navbar-item is-info">
             <strong>B &mdash; M.</strong>
           </Link>
-          <Navbar.Burger active={this.state.open ? 1 : 0} onClick={this.onClick} />
+          <Navbar.Burger className={this.state.open ? 'is-active' : ''} onClick={this.onClick} />
         </Navbar.Brand>
-        <Navbar.Menu active={this.state.open ? 1 : 0}>
+        <Navbar.Menu className={this.state.open ? 'is-active' : ''}>
           <Navbar.Container position="end" className="has-text-centered-mobile">
             <Link to="/about" className="navbar-item site-nav">About</Link>
             <Link to="/work" className="navbar-item site-nav">Work</Link>
