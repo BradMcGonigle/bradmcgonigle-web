@@ -10,5 +10,5 @@ image: 2019-04-17-why-notre-dame-was-a-tinderbox.jpeg
 tags:
   - Animation
   - History
-—
+---
 I really like this WebGL-based visualization. 
