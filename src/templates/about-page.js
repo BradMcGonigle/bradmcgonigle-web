@@ -4,7 +4,7 @@ import { graphql } from 'gatsby'
 import Img from 'gatsby-image'
 
 import Content, { HTMLContent } from '../components/content'
-import Footer from '../components/footer'
+import SiteFooter from '../components/footer'
 import Layout from '../components/layout'
 
 export const AboutPageTemplate = ({
@@ -31,7 +31,7 @@ export const AboutPageTemplate = ({
             </div>
           </div>
         </section>
-        <Footer />
+        <SiteFooter />
       </Layout>
     </div>
   )
