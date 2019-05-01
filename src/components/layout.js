@@ -7,7 +7,7 @@ import Navbar from '../components/navbar'
 import './all.scss'
 
 const TemplateWrapper = ({ children }) => (
-  <div>
+  <React.Fragment>
     <Helmet
       htmlAttributes={{
         lang: 'en',
@@ -17,7 +17,7 @@ const TemplateWrapper = ({ children }) => (
     />
     <Navbar />
     {children}
-  </div>
+  </React.Fragment>
 )
 
 TemplateWrapper.propTypes = {

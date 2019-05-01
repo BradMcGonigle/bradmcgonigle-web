@@ -1,7 +1,7 @@
 import React from 'react'
 import { graphql } from 'gatsby'
-
 import Img from 'gatsby-image'
+import { Columns, Container, Heading, Section } from 'react-bulma-components'
 
 import Content, { HTMLContent } from '../components/content'
 import SiteFooter from '../components/footer'
@@ -16,24 +16,22 @@ export const AboutPageTemplate = ({
   const PageContent = contentComponent || Content
 
   return (
-    <div>
-      <Layout>
-        <section className="section">
-          <div className="container content">
-            <div className="columns">
-              <div className="column is-5">
-                <Img alt="Its me!" className="image" fluid={image.childImageSharp.fluid} />
-              </div>
-              <div className="column is-5 is-offset-1">
-                <h1 className="title">{title}</h1>
-                <PageContent className="content" content={content} />
-              </div>
-            </div>
-          </div>
-        </section>
-        <SiteFooter />
-      </Layout>
-    </div>
+    <Layout>
+      <Section>
+        <Container>
+          <Columns>
+            <Columns.Column size={5}>
+              <Img alt="Its me!" fluid={image.childImageSharp.fluid} />
+            </Columns.Column>
+            <Columns.Column size={5} offset={1}>
+              <Heading>{title}</Heading>
+                <PageContent content={content} />
+            </Columns.Column>
+          </Columns>
+        </Container>
+      </Section>
+      <SiteFooter />
+    </Layout>
   )
 }
 
