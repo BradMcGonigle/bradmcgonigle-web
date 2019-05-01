@@ -4,9 +4,8 @@ import Img from 'gatsby-image'
 import styled from '@emotion/styled'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faExternalLink } from '@fortawesome/fontawesome-pro-light'
-import { Card, Columns, Container, Heading, Hero, Section } from 'react-bulma-components'
+import { Card, Columns, Container, Content, Heading, Section } from 'react-bulma-components'
 
-import ContactForm from '../components/contact-form'
 import Footer from '../components/footer'
 import Layout from '../components/layout'
 
@@ -108,7 +107,7 @@ export default class LinksPage extends React.Component {
                     className="is-6-tablet is-4-desktop is-3-widescreen"
                     key={post.id}
                   >
-                    <div className="card">
+                    <Card>
                       <a
                         href={post.frontmatter.url}
                         title={post.frontmatter.title}
@@ -129,22 +128,23 @@ export default class LinksPage extends React.Component {
                           </figure>
                         )}
                       </a>
-                      <a
+                      <Card.Content
+                        renderAs="a"
                         href={post.frontmatter.url}
                         title={post.frontmatter.title}
                         className="card-content"
                       >
-                        <div className="content">
+                        <Content>
                           <time
                             dateTime={post.frontmatter.date}
                             className="has-text-grey"
                           >
                             {post.frontmatter.date}
                           </time>
-                          <h4>{post.frontmatter.title}</h4>
-                        </div>
-                      </a>
-                      <footer className="card-footer">
+                          <Heading size={5} subtitle>{post.frontmatter.title}</Heading>
+                        </Content>
+                      </Card.Content>
+                      <Card.Footer>
                         <Link
                           to={post.frontmatter.path}
                           title="View Details"
@@ -152,14 +152,13 @@ export default class LinksPage extends React.Component {
                         >
                           View Details
                         </Link>
-                      </footer>
-                    </div>
+                      </Card.Footer>
+                    </Card>
                   </LinkItem>
                 ))}
             </Columns>
           </Container>
         </Section>
-        <ContactForm />
         <Footer />
       </Layout>
     )
