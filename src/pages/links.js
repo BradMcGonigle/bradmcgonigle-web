@@ -1,16 +1,16 @@
 import React from 'react'
+import { graphql, Link } from 'gatsby'
 import Img from 'gatsby-image'
-import { Link } from 'gatsby'
-import { graphql } from 'gatsby'
 import styled from '@emotion/styled'
-
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faExternalLink } from '@fortawesome/fontawesome-pro-light'
+import { Card, Columns, Container, Heading, Hero, Section } from 'react-bulma-components'
 
+import ContactForm from '../components/contact-form'
 import Footer from '../components/footer'
 import Layout from '../components/layout'
 
-const LinkItem = styled('div')`
+const LinkItem = styled(Columns.Column)`
   .card {
     height: 100%;
     overflow: hidden;
@@ -87,82 +87,81 @@ export default class LinksPage extends React.Component {
     const { edges: posts } = data.allMarkdownRemark
 
     return (
-      <div>
-        <Layout>
-          <section className="section">
-            <div className="container content">
-              <h1 className="title is-size-4 has-text-weight-medium">
-                <span>
-                  Links{' '}
-                  <small className="has-text-weight-light">
-                    &mdash; Interesting finds from around the web
-                  </small>
-                </span>
-              </h1>
-              <div className="columns is-multiline">
-                {posts
-                  .filter(
-                    post => post.node.frontmatter.templateKey === 'link-post'
-                  )
-                  .map(({ node: post }) => (
-                    <LinkItem
-                      className="column is-6-tablet is-4-desktop is-3-widescreen"
-                      key={post.id}
-                    >
-                      <div className="card">
-                        <a
-                          href={post.frontmatter.url}
-                          title={post.frontmatter.title}
-                          className="card-image"
-                        >
-                          {post.frontmatter.image ? (
-                            <Img
-                              className="image"
-                              fluid={
-                                post.frontmatter.image.childImageSharp.fluid
-                              }
-                            />
-                          ) : (
-                            <figure className="is-hidden-mobile image">
-                              <span className="icon is-large">
-                                <FontAwesomeIcon icon={faExternalLink} />
-                              </span>
-                            </figure>
-                          )}
-                        </a>
-                        <a
-                          href={post.frontmatter.url}
-                          title={post.frontmatter.title}
-                          className="card-content"
-                        >
-                          <div className="content">
-                            <time
-                              dateTime={post.frontmatter.date}
-                              className="has-text-grey"
-                            >
-                              {post.frontmatter.date}
-                            </time>
-                            <h4>{post.frontmatter.title}</h4>
-                          </div>
-                        </a>
-                        <footer className="card-footer">
-                          <Link
-                            to={post.frontmatter.path}
-                            title="View Details"
-                            className="card-footer-item view"
+      <Layout>
+        <Section>
+          <Container>
+            <Heading size={4} className="has-text-weight-medium">
+              <span>
+                Links{' '}
+                <small className="has-text-weight-light">
+                  &mdash; Interesting finds from around the web
+                </small>
+              </span>
+            </Heading>
+            <Columns multiline>
+              {posts
+                .filter(
+                  post => post.node.frontmatter.templateKey === 'link-post'
+                )
+                .map(({ node: post }) => (
+                  <LinkItem
+                    className="is-6-tablet is-4-desktop is-3-widescreen"
+                    key={post.id}
+                  >
+                    <div className="card">
+                      <a
+                        href={post.frontmatter.url}
+                        title={post.frontmatter.title}
+                        className="card-image"
+                      >
+                        {post.frontmatter.image ? (
+                          <Img
+                            className="image"
+                            fluid={
+                              post.frontmatter.image.childImageSharp.fluid
+                            }
+                          />
+                        ) : (
+                          <figure className="is-hidden-mobile image">
+                            <span className="icon is-large">
+                              <FontAwesomeIcon icon={faExternalLink} />
+                            </span>
+                          </figure>
+                        )}
+                      </a>
+                      <a
+                        href={post.frontmatter.url}
+                        title={post.frontmatter.title}
+                        className="card-content"
+                      >
+                        <div className="content">
+                          <time
+                            dateTime={post.frontmatter.date}
+                            className="has-text-grey"
                           >
-                            View Details
-                          </Link>
-                        </footer>
-                      </div>
-                    </LinkItem>
-                  ))}
-              </div>
-            </div>
-          </section>
-          <Footer />
-        </Layout>
-      </div>
+                            {post.frontmatter.date}
+                          </time>
+                          <h4>{post.frontmatter.title}</h4>
+                        </div>
+                      </a>
+                      <footer className="card-footer">
+                        <Link
+                          to={post.frontmatter.path}
+                          title="View Details"
+                          className="card-footer-item view"
+                        >
+                          View Details
+                        </Link>
+                      </footer>
+                    </div>
+                  </LinkItem>
+                ))}
+            </Columns>
+          </Container>
+        </Section>
+        <ContactForm />
+        <Footer />
+      </Layout>
     )
   }
 }

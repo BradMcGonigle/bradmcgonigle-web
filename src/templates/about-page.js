@@ -24,7 +24,7 @@ export const AboutPageTemplate = ({
               <Img alt="Its me!" fluid={image.childImageSharp.fluid} />
             </Columns.Column>
             <Columns.Column size={5} offset={1}>
-              <Heading>{title}</Heading>
+              <Heading size={1}>{title}</Heading>
                 <PageContent content={content} />
             </Columns.Column>
           </Columns>

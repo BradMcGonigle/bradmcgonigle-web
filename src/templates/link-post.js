@@ -42,7 +42,7 @@ export const LinkPostTemplate = ({
       <Section>
         {helmet || ''}
         <Container>
-          <h1 className="title is-size-4 has-text-weight-medium">
+          <Heading size={4} className="has-text-weight-medium">
             <Link to="/links" className="prev is-size-6">
               <FontAwesomeIcon icon={faChevronLeft} />
             </Link>
@@ -52,7 +52,7 @@ export const LinkPostTemplate = ({
                 &mdash; Interesting finds
               </small>
             </span>
-          </h1>
+          </Heading>
           <Columns>
             {image && (
               <Columns.Column size={4}>
@@ -62,12 +62,12 @@ export const LinkPostTemplate = ({
               </Columns.Column>
             )}
             <Columns.Column size={6}>
-              <h6 className="subtitle has-text-grey">{date}</h6>
-              <h1 className="title">
+              <Heading subtitle className="has-text-grey">{date}</Heading>
+              <Heading>
                 <a href={url} title="{title}">
                   {title}
                 </a>
-              </h1>
+              </Heading>
               {summary && (
                 <Summary className="subtitle is-italic has-text-grey">
                   <p>{summary}</p>
@@ -89,10 +89,10 @@ export const LinkPostTemplate = ({
               <Columns.Column size={4}>
                 {next && (
                   <React.Fragment>
-                    <h6 className="subtitle is-size-7 has-text-weight-bold is-uppercase">
+                    <Heading size={7} subtitle className="has-text-weight-bold is-uppercase">
                       Next
-                    </h6>
-                    <h5 className="title is-size-4 has-text-weight-light">
+                    </Heading>
+                    <Heading size={4} className="has-text-weight-light">
                       <Link className="link prev" to={next.frontmatter.path}>
                         <FontAwesomeIcon
                           icon={faChevronLeft}
@@ -102,7 +102,7 @@ export const LinkPostTemplate = ({
                       <Link to={next.frontmatter.path}>
                         <span>{next.frontmatter.title}</span>
                       </Link>
-                    </h5>
+                    </Heading>
                   </React.Fragment>
                 )}
               </Columns.Column>
@@ -110,10 +110,10 @@ export const LinkPostTemplate = ({
               <Columns.Column size={4} offset={4} className="has-text-right-tablet has-text-centered-mobile">
                 {prev && (
                   <React.Fragment>
-                    <h6 className="subtitle is-size-7 has-text-weight-bold is-uppercase">
+                    <Heading subtitle size={7} className="has-text-weight-bold is-uppercase">
                       Previous
-                    </h6>
-                    <h5 className="title is-size-4 has-text-weight-light">
+                    </Heading>
+                    <Heading size={4} className="has-text-weight-light">
                       <Link to={prev.frontmatter.path}>
                         <span>{prev.frontmatter.title}</span>
                       </Link>
@@ -123,7 +123,7 @@ export const LinkPostTemplate = ({
                           className="is-size-6"
                         />
                       </Link>
-                    </h5>
+                    </Heading>
                   </React.Fragment>
                 )}
               </Columns.Column>
