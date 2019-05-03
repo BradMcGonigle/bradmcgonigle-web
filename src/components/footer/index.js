@@ -43,7 +43,6 @@ const SiteFooter = () => (
           <hr />
           <p className="is-size-4">
             <NavLink to="/about">About</NavLink>
-            <NavLink to="/work">Work</NavLink>
             <NavLink to="/links">Links</NavLink>
           </p>
         </FooterNav>

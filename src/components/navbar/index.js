@@ -49,7 +49,6 @@ class Nav extends React.Component {
         <Navbar.Menu className={this.state.open ? 'is-active' : ''}>
           <Navbar.Container position="end" className="has-text-centered-mobile">
             <Link to="/about" className="navbar-item site-nav">About</Link>
-            <Link to="/work" className="navbar-item site-nav">Work</Link>
             <Link to="/links" className="navbar-item site-nav">Links</Link>
             <Navbar.Item className="is-hidden-mobile"></Navbar.Item>
             <SocialLink href="https://github.com/bradmcgonigle" rel="noopener noreferrer">
