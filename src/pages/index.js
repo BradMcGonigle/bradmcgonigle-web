@@ -1,5 +1,4 @@
 import React from 'react'
-import Script from 'react-load-script'
 import styled from '@emotion/styled'
 
 import Layout from '../components/layout'
@@ -45,19 +44,6 @@ const Hero = () => (
 )
 
 export default class IndexPage extends React.Component {
-  handleScriptLoad() {
-    if (typeof window !== `undefined` && window.netlifyIdentity) {
-      window.netlifyIdentity.on('init', user => {
-        if (!user) {
-          window.netlifyIdentity.on('login', () => {
-            document.location.href = '/admin/'
-          })
-        }
-      })
-    }
-    window.netlifyIdentity.init()
-  }
-
   render() {
     return (
       <div>
