@@ -48,10 +48,6 @@ export default class IndexPage extends React.Component {
     return (
       <div>
         <Layout>
-          <Script
-            url="https://identity.netlify.com/v1/netlify-identity-widget.js"
-            onLoad={() => this.handleScriptLoad()}
-          />
           <Hero />
         </Layout>
       </div>
