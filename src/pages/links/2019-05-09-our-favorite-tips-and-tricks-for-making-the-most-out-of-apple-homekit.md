@@ -13,6 +13,6 @@ tags:
   - HomeKit
   - Home Automation
 ---
-My favorite tip from this article is to use duplicate but differently named zones to make controlling all the devices in a room or group of rooms easier.
+My favorite tip from this article is to use zones to make controlling all the devices in a room accessible from different names when invoked using Siri.
 
 For instance, if you have a room named ‘Living Room’, you could add that room to a zone called ‘Family Room.’  With this you can now ask Siri, “turn off all the lights in the living room” or “turn if all the lights in the family room” and all the same lights will be turned off for either command.
