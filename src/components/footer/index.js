@@ -1,12 +1,16 @@
 import React from 'react'
 import { Link } from 'gatsby'
-import { Columns, Container, Footer } from 'react-bulma-components'
+import { Columns, Container, Section } from 'react-bulma-components'
 
 import styled from '@emotion/styled';
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faFacebook, faGithub, faInstagram, faTwitter } from '@fortawesome/fontawesome-free-brands';
+import { faFacebook, faGithub, faInstagram, faTwitter } from '@fortawesome/free-brands-svg-icons';
 
+
+const FooterWrapper = styled(Section)`
+  border-top: 1px solid #eee;
+`;
 
 const FooterNav = styled(Columns.Column)`
   p {
@@ -14,16 +18,11 @@ const FooterNav = styled(Columns.Column)`
   }
 `;
 
-const ObfuscatedEmail = styled('span')`
-  unicode-bidi:bidi-override;
-  direction: rtl;
-`;
-
 const NavLink = styled(Link)`
   padding-left: 1rem;
   padding-right: 1rem;
 
-  &:first-child {
+  &:first-of-type {
     padding-left: 0;
   }
 `;
@@ -33,16 +32,14 @@ const SocialLink = styled('a')`
   padding-right: 0.33rem;
 `;
 
-const SiteFooter = () => (
-  <Footer>
+const Footer = () => (
+  <FooterWrapper className="has-background-white-er">
     <Container fluid>
       <Columns className="content">
         <FooterNav size={8} className="has-text-centered-mobile">
-          <h4>Want to get in touch?</h4>
-          <p className="is-size-6">Shoot me an email at <a href="mailto:brad@bradmcgonigle.com"><ObfuscatedEmail>moc.elginogcmdarb@darb</ObfuscatedEmail></a></p>
-          <hr />
           <p className="is-size-4">
             <NavLink to="/about">About</NavLink>
+            <NavLink to="/blog">Blog</NavLink>
             <NavLink to="/links">Links</NavLink>
           </p>
         </FooterNav>
@@ -61,14 +58,14 @@ const SiteFooter = () => (
               <span className="icon"><FontAwesomeIcon icon={faFacebook} /></span>
             </SocialLink>
           </p>
-          <p className="is-size-6 has-text-weight-light">&copy; {(new Date().getFullYear())}. All rights reserved.</p>
+          <p className="is-size-6 has-text-weight-light margin-bottom-0">&copy; {(new Date().getFullYear())}. All rights reserved.</p>
           <p className="is-size-6 has-text-weight-light">
             Built with <a href="http://www.gatsbyjs.org">Gatsby</a> and <a href="http://bulma.io">Bulma</a> running on <a href="https://netlify.com">Netlify</a>.
           </p>
         </Columns.Column>
       </Columns>
     </Container>
-  </Footer>
+  </FooterWrapper>
 );
 
-export default SiteFooter;
+export default Footer;

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="3000px" height="3000px" viewBox="0 0 3000 3000" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 53.2 (72643) - https://sketchapp.com -->
+    <title>Artboard</title>
+    <desc>Created with Sketch.</desc>
+    <g id="Artboard" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="figma" transform="translate(502.000000, 1.250000)" fill-rule="nonzero">
+            <path d="M499,2996.75 C774.448,2996.75 998,2772.974 998,2497.25 L998,1997.75 L499,1997.75 C223.552,1997.75 0,2221.526 0,2497.25 C0,2772.974 223.552,2996.75 499,2996.75 Z" id="path0_fill" fill="#0ACF83"></path>
+            <path d="M0,1499.25 C0,1223.526 223.552,999.75 499,999.75 L998,999.75 L998,1998.75 L499,1998.75 C223.552,1998.75 0,1774.974 0,1499.25 Z" id="path1_fill" fill="#A259FF"></path>
+            <path d="M0,500.25 C0,224.526 223.552,0.75 499,0.75 L998,0.75 L998,999.75 L499,999.75 C223.552,999.75 0,775.974 0,500.25 Z" id="path1_fill_1_" fill="#F24E1E"></path>
+            <path d="M998,0.75 L1497.5,0.75 C1773.224,0.75 1997,224.526 1997,500.25 C1997,775.974 1773.224,999.75 1497.5,999.75 L998,999.75 L998,0.75 Z" id="path2_fill" fill="#FF7262"></path>
+            <path d="M1997,1499.25 C1997,1774.974 1773.224,1998.75 1497.5,1998.75 C1221.776,1998.75 998,1774.974 998,1499.25 C998,1223.526 1221.776,999.75 1497.5,999.75 C1773.224,999.75 1997,1223.526 1997,1499.25 Z" id="path3_fill" fill="#1ABCFE"></path>
+        </g>
+    </g>
+</svg>

@@ -1,47 +1,41 @@
 import React from 'react'
-import { graphql, StaticQuery } from 'gatsby'
-import { Columns, Container, Section } from 'react-bulma-components'
+import { graphql, Link, StaticQuery } from 'gatsby'
+import { Columns, Container, Hero } from 'react-bulma-components'
 
-import Layout from '../components/layout'
-import LinkItemCard from '../components/links/link-item-card'
-import SectionHeader from '../components/section-header'
-import SEO from '../components/seo'
+import LinkItemCard from './link-item-card'
+import SectionHeader from '../section-header'
 
-const LinkPosts = ({ data }) => {
+const LinksRecentLinks = ({ data }) => {
   const { edges: posts } = data.allMarkdownRemark
 
   return (
-    <Layout>
-      <SEO
-        keywords={[`links`]}
-        title="Links"
-      />
-      <Section>
+    <Hero color="light">
+      <Hero.Body>
         <Container>
-          <SectionHeader section="Links" tagline="Interesting finds from around the web" />
+          <SectionHeader isSubSection link="/links" section="Links" tagline="Interesting finds from around the web" />
           <Columns multiline>
             {posts
               .map(({ node: post }) => (
                 <LinkItemCard post={post} key={post.id} />
               ))}
           </Columns>
+          <Link to="/links">View More</Link>
         </Container>
-      </Section>
-    </Layout>
+      </Hero.Body>
+    </Hero>
   )
 }
 
 export default props => (
   <StaticQuery
     query={graphql`
-      query LinksQuery {
+      query RecentLinkPosts {
         allMarkdownRemark(
-          sort: { order: DESC, fields: [frontmatter___date] }
+          sort: { order: DESC, fields: [frontmatter___date] },
           filter: {
-            frontmatter: {
-              templateKey: { eq: "link-post" }
-            }
+            frontmatter: { templateKey: { eq: "link-post" } }
           }
+          limit: 4
         ) {
           edges {
             node {
@@ -57,7 +51,7 @@ export default props => (
                 image {
                   childImageSharp {
                     fluid(
-                      maxWidth: 1000, maxHeight: 667, cropFocus: ATTENTION
+                      maxWidth: 1000, maxHeight: 667, cropFocus: ENTROPY
                       traceSVG: {
                         turdSize: 10
                         background: "#fefefe"
@@ -75,6 +69,6 @@ export default props => (
         }
       }
     `}
-    render={data => <LinkPosts data={data} {...props} />}
+    render={data => <LinksRecentLinks data={data} {...props} />}
   />
 )

@@ -2,26 +2,22 @@ import React from 'react'
 import styled from '@emotion/styled'
 
 import Layout from '../components/layout'
+import BlogRecentPosts from '../components/blog/recent-posts'
+import LinksRecentLinks from '../components/links/recent-links'
+import SEO from '../components/seo'
 
-const background = [
-  'is-danger',
-  'is-dark',
-  'is-info',
-  'is-light',
-  'is-primary',
-  'is-success',
-  'is-warning',
-]
+import { COLORS } from '../constants/colors';
+import { RandomColor } from '../helpers/random-color'
 
-const randomBackground =
-  background[Math.floor(Math.random() * background.length)]
+
+const backgroundColor = RandomColor(COLORS)
 
 const HeroWrapper = styled('div')`
   margin-top: -52px;
 `
 
 const Hero = () => (
-  <HeroWrapper className={`hero is-fullheight is-bold ${randomBackground}`}>
+  <HeroWrapper className={`hero is-medium is-bold is-${backgroundColor}`}>
     <div className="hero-body">
       <div className="container">
         <div className="columns">
@@ -46,11 +42,16 @@ const Hero = () => (
 export default class IndexPage extends React.Component {
   render() {
     return (
-      <div>
+      <React.Fragment>
         <Layout>
+          <SEO
+            title="Home"
+          />
           <Hero />
+          <BlogRecentPosts />
+          <LinksRecentLinks />
         </Layout>
-      </div>
+      </React.Fragment>
     )
   }
 }

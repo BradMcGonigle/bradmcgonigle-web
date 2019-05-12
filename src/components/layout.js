@@ -1,27 +1,20 @@
 import React from 'react'
-import PropTypes from 'prop-types'
-import Helmet from 'react-helmet'
 
+import ContactForm from '../components/contact-form'
+import Footer from '../components/footer'
 import Navbar from '../components/navbar'
 
 import './all.scss'
 
-const TemplateWrapper = ({ children }) => (
+const Layout = ({ children }) => (
   <React.Fragment>
-    <Helmet
-      htmlAttributes={{
-        lang: 'en',
-        class: 'html has-navbar-fixed-top',
-      }}
-      title="Brad McGonigle"
-    />
     <Navbar />
-    {children}
+    <main>{children}</main>
+    <footer>
+      <ContactForm />
+      <Footer />
+    </footer>
   </React.Fragment>
 )
 
-TemplateWrapper.propTypes = {
-  children: PropTypes.array,
-}
-
-export default TemplateWrapper
+export default Layout

@@ -4,7 +4,7 @@ import styled from '@emotion/styled';
 import { Navbar } from 'react-bulma-components';
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faFacebook, faGithub, faInstagram, faTwitter } from '@fortawesome/fontawesome-free-brands';
+import { faFacebook, faGithub, faInstagram, faTwitter } from '@fortawesome/free-brands-svg-icons';
 
 
 const NavbarWrapper = styled(Navbar)`
@@ -31,7 +31,6 @@ class Nav extends React.Component {
   }
 
   onClick = () => {
-    console.log(this.state.open);
     this.setState({
       open: !this.state.open
     });
