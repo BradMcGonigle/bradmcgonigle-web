@@ -2,7 +2,6 @@ import React from 'react'
 import styled from '@emotion/styled'
 
 import Layout from '../components/layout'
-import BlogRecentPosts from '../components/blog/recent-posts'
 import LinksRecentLinks from '../components/links/recent-links'
 import SEO from '../components/seo'
 
@@ -48,7 +47,6 @@ export default class IndexPage extends React.Component {
             title="Home"
           />
           <Hero />
-          <BlogRecentPosts />
           <LinksRecentLinks />
         </Layout>
       </React.Fragment>
