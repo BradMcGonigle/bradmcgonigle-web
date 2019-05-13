@@ -30,7 +30,7 @@ export default ({ jobs }) => (
 
 export const jobsQuery = graphql`
   fragment jobsQuery on Query {
-    jobs: allFile(filter: { relativePath: { regex: "/career/jobs/logos/" } }) {
+    jobs: allFile(filter: { relativePath: { regex: "/about/jobs/logos/" } }) {
       nodes {
         name
         publicURL

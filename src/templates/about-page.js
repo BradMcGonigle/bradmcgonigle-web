@@ -9,8 +9,8 @@ import { ContentWrapper, HTMLContent } from '../components/content'
 import Layout from '../components/layout'
 import SEO from '../components/seo'
 
-import Jobs from '../pages/career/jobs'
-import Tools from '../pages/career/tools'
+import Jobs from '../components/about/career/jobs'
+import Tools from '../components/about/career/tools'
 
 import { COLORS } from '../constants/colors';
 import { RandomColor } from '../helpers/random-color'

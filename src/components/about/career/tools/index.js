@@ -4,7 +4,7 @@ import { Columns, Container, Content, Heading, Hero } from 'react-bulma-componen
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faBracketsCurly, faLanguage } from '@fortawesome/pro-light-svg-icons';
 
-import shuffleArray from '../../../helpers/shuffle-array';
+import shuffleArray from '../../../../helpers/shuffle-array';
 
 import {
   Css3Logo,
