@@ -1,6 +1,6 @@
 # BradMcGonigle.com
 
-This repo contains the personal website of Brad McGonigle that is built with [Gatsby](https://www.gatsbyjs.org/) and [Bulma](http://bulma.io) running on [Netlify](https://netlify.com).  It also uses [Netlify CMS](https://www.netlifycms.org) for basic content management.
+This repo contains the personal website of Brad McGonigle that is built with [Gatsby](https://www.gatsbyjs.org/) and [Bulma](http://bulma.io) running on [Netlify](https://netlify.com).
 
 It follows the [JAMstack architecture](https://jamstack.org) by using Git as a single source of truth, and [Netlify](https://www.netlify.com) for continuous deployment, and CDN distribution.
 
@@ -29,9 +29,6 @@ $ cd [SITE_DIRECTORY_NAME]
 $ npm run build
 $ npm run serve
 ```
-
-### Setting up the CMS
-Follow the [Netlify CMS Quick Start Guide](https://www.netlifycms.org/docs/quick-start/#authentication) to set up authentication, and hosting.
 
 ## Debugging
 Windows users might encounter ```node-gyp``` errors when trying to npm install.
