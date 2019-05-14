@@ -204,6 +204,54 @@ $colors: map-merge($colors, $addColors);
   }
 }
 
+.blog-featured-image{
+  margin: 1rem 0;
+}
+
+.card {
+  &.no-border {
+    box-shadow: none;
+  }
+
+  .img {
+    border: 1px inset #eee;
+  }
+}
+
+.horizontal-card {
+  flex-direction: row;
+  //display: flex;
+  flex-basis: 50ex;
+  flex-grow: 0;
+  flex-shrink: 1;
+
+  .card-image {
+    flex: 2;
+    margin: 0;
+  }
+
+  .image {
+     min-height: 100%;
+  }
+
+  .card-content {
+    flex: 1;
+  }
+
+  &.is-right {
+    flex-direction: row-reverse;
+  }
+
+	.card {
+	  &.is-horizontal {
+
+	    &.is-mobile {
+
+      }
+    }
+  }
+}
+
 // Post Detail - Prev/Next
 .prev-next-nav {
   .title {
