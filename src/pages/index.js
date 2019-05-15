@@ -1,5 +1,6 @@
 import React from 'react'
 import styled from '@emotion/styled'
+import { Columns, Container, Content, Heading, Hero } from 'react-bulma-components'
 
 import Layout from '../components/layout'
 import LinksRecentLinks from '../components/links/recent-links'
@@ -11,30 +12,33 @@ import { RandomColor } from '../helpers/random-color'
 
 const backgroundColor = RandomColor(COLORS)
 
-const HeroWrapper = styled('div')`
+const HeroWrapper = styled(Hero)`
   margin-top: -52px;
+  padding-top: 52px;
 `
 
-const Hero = () => (
-  <HeroWrapper className={`hero is-medium is-bold is-${backgroundColor}`}>
-    <div className="hero-body">
-      <div className="container">
-        <div className="columns">
-          <div className="column is-5 content">
-            <h1 className="title is-size-1">
-              <span role="img" aria-label="Waving Hand">
-                👋
-              </span>
-            </h1>
-            <h2 className="subtitle">Hi, I'm Brad.</h2>
-            <p>
-              I'm a frontend developer and product designer from Orlando,
-              Florida building things on the internet.
-            </p>
-          </div>
-        </div>
-      </div>
-    </div>
+const Intro = () => (
+  <HeroWrapper size="medium" className={`is-${backgroundColor} is-bold`}>
+    <Hero.Body>
+      <Container>
+        <Columns>
+          <Columns.Column size={5}>
+            <Content>
+              <Heading>
+                <span role="img" aria-label="Waving Hand">
+                  👋
+                </span>
+              </Heading>
+              <Heading renderAs="h2" subtitle>Hi, I'm Brad.</Heading>
+              <p>
+                I'm a frontend developer and product designer from Orlando,
+                Florida building things on the internet.
+              </p>
+            </Content>
+          </Columns.Column>
+        </Columns>
+      </Container>
+    </Hero.Body>
   </HeroWrapper>
 )
 
@@ -46,7 +50,7 @@ export default class IndexPage extends React.Component {
           <SEO
             title="Home"
           />
-          <Hero />
+          <Intro />
           <LinksRecentLinks />
         </Layout>
       </React.Fragment>
