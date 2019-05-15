@@ -12,7 +12,7 @@ export default ({ jobs }) => (
             <Heading renderAs="h3" size={5} subtitle>I've been fortunate to work at some incredible companies.</Heading>
           </Columns.Column>
         </Columns>
-        <Columns>
+        <Columns className="is-mobile">
           {jobs
             .map(job => (
               <Columns.Column

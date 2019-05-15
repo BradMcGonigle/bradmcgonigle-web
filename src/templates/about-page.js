@@ -32,17 +32,17 @@ export const AboutPage = ({ data }) => {
       <Hero className={`is-${sectionColor} is-bold`}>
         <Hero.Body>
           <Container>
-            <Columns>
+            <Columns className="is-vcentered">
               <Columns.Column size={5}>
                 <p className="has-opacity-50"><span className="icon is-large"><FontAwesomeIcon icon={faUserAstronaut} size="3x" /></span></p>
                 <Heading renderAs="h1" size={4}>{page.frontmatter.title}</Heading>
                 <PageContent content={page.html} />
                 <hr className="has-opacity-15" />
-                <Columns className="has-opacity-25">
-                  <Columns.Column size={2}><span className="icon is-large"><FontAwesomeIcon icon={faWater} size="2x" /></span></Columns.Column>
-                  <Columns.Column size={2}><span className="icon is-large"><FontAwesomeIcon icon={faHockeySticks} size="2x" /></span></Columns.Column>
-                  <Columns.Column size={2}><span className="icon is-large"><FontAwesomeIcon icon={faFootballBall} size="2x" /></span></Columns.Column>
-                  <Columns.Column size={2}><span className="icon is-large"><FontAwesomeIcon icon={faKnifeKitchen} size="2x" /></span></Columns.Column>
+                <Columns className="is-mobile has-opacity-25">
+                  <Columns.Column size="one-quarter"><span className="icon is-large"><FontAwesomeIcon icon={faWater} size="2x" /></span></Columns.Column>
+                  <Columns.Column size="one-quarter"><span className="icon is-large"><FontAwesomeIcon icon={faHockeySticks} size="2x" /></span></Columns.Column>
+                  <Columns.Column size="one-quarter"><span className="icon is-large"><FontAwesomeIcon icon={faFootballBall} size="2x" /></span></Columns.Column>
+                  <Columns.Column size="one-quarter"><span className="icon is-large"><FontAwesomeIcon icon={faKnifeKitchen} size="2x" /></span></Columns.Column>
                 </Columns>
               </Columns.Column>
               <Columns.Column size={4} offset={2}>

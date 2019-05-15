@@ -50,11 +50,15 @@ const ToolLogos = [
 ]
 
 const Icon = ({ icon }) => (
-  <Columns.Column size={2} className="has-text-centered">
+  <Columns.Column
+    mobile={{ size: 'one-quarter'}}
+    tablet={{ size: 3}}
+    className="has-text-centered"
+  >
     <span className="icon is-large">
       <img alt={icon.name} src={icon.svg} className="is-paddingless background-transparent" />
     </span>
-    <Heading renderAs="p" size={6} subtitle className="has-text-grey-light">{icon.name}</Heading>
+    <Heading renderAs="p" size={6} subtitle className="has-text-grey-light is-hidden-touch">{icon.name}</Heading>
   </Columns.Column>
 )
 
@@ -71,7 +75,7 @@ export default () => (
                 <p><span className="icon is-large has-text-grey-light"><FontAwesomeIcon icon={faLanguage} size="4x" /></span></p>
                 <Heading renderAs="h4" size={6} subtitle className="has-text-weight-semibold has-text-grey">Languages</Heading>
               </div>
-              <Columns centered>
+              <Columns centered breakpoint="mobile">
                 {LanguageIcons
                   .map(icon => (
                     <Icon icon={icon} />
@@ -84,7 +88,7 @@ export default () => (
                 <p><span className="icon is-large has-text-grey-light"><FontAwesomeIcon icon={faBracketsCurly} size="4x" /></span></p>
                 <Heading renderAs="h4" size={6} subtitle className="has-text-weight-semibold has-text-grey">Frameworks &amp; Tools</Heading>
               </div>
-              <Columns centered>
+              <Columns centered className="is-mobile">
                 {shuffleArray(ToolLogos)
                   .map(icon => (
                     <Icon icon={icon} />
