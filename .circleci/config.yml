@@ -36,7 +36,8 @@ workflows:
                 - master
 jobs:
   build:
-    machine: true
+    machine: 
+      enabled: true
       image: circleci/classic:latest
     working_directory: ~/repo
     steps:
