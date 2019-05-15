@@ -1,87 +1,136 @@
 import React from 'react'
-import { Link } from 'gatsby'
-import { graphql } from 'gatsby'
+import { graphql, StaticQuery } from 'gatsby'
+import { Columns, Container, Section } from 'react-bulma-components'
 
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faArrowRight } from '@fortawesome/fontawesome-pro-light'
-
+import BlogFeaturedPostTease from '../components/blog/featured-post-tease'
+import BlogRecentPostTease from '../components/blog/recent-post-tease'
+import BlogPostTease from '../components/blog/post-tease'
 import Layout from '../components/layout'
+import LinksRecentLinks from '../components/links/recent-links'
+import SectionHeader from '../components/section-header'
+import SEO from '../components/seo'
 
-export default class BlogPage extends React.Component {
-  render() {
-    const { data } = this.props
-    const { edges: posts } = data.allMarkdownRemark
+export const BlogIndex = ({ data }) => {
+  const { edges: posts } = data.allMarkdownRemark
 
-    return (
-      <Layout>
-        <section className="section">
-          <div className="container content">
-            <div className="columns">
-              <div className="column is-8">
-                <h1 className="title is-size-4 has-text-weight-medium">
-                  Writings{' '}
-                  <small className="has-text-weight-light">
-                    &mdash; Thoughts on things
-                  </small>
-                </h1>
-                {posts
-                  .filter(
-                    post => post.node.frontmatter.templateKey === 'blog-post'
-                  )
-                  .map(({ node: post }, i, { length }) => (
-                    <div className="content" key={post.id}>
-                      <p className="has-text-weight-light margin-bottom-0">
-                        <small>{post.frontmatter.date}</small>
-                      </p>
-                      <h2 className="title has-text-weight-light margin-top-0">
-                        <Link
-                          className="has-text-primary"
-                          to={post.frontmatter.path}
-                        >
-                          {post.frontmatter.title}
-                        </Link>
-                      </h2>
-                      <p>
-                        {post.excerpt}
-                        <br />
-                        <br />
-                        <Link
-                          className="button is-small is-info"
-                          to={post.frontmatter.path}
-                        >
-                          <span>Keep Reading</span>
-                          <span className="icon is-small">
-                            <FontAwesomeIcon icon={faArrowRight} />
-                          </span>
-                        </Link>
-                      </p>
-                      {i < length - 1 && <hr />}
-                    </div>
-                  ))}
-              </div>
-            </div>
-          </div>
-        </section>
-      </Layout>
-    )
-  }
+  return (
+    <Layout>
+      <SEO
+        keywords={[`blog`]}
+        title="Blog"
+      />
+      <Section>
+        <Container>
+          <SectionHeader section="Writings" tagline="Thoughts on things" />
+          <Columns>
+          {posts
+            .map(({ node: post }, i, { length }) => (
+              <React.Fragment>
+                {i === 0  &&
+                  <Columns.Column size={12} key={post.id}>
+                    <BlogFeaturedPostTease post={post} />
+                  </Columns.Column>
+                }
+              </React.Fragment>
+            ))
+          }
+          </Columns>
+          <Columns>
+            {posts
+              .map(({ node: post }, i, { length }) => (
+                <React.Fragment>
+                  {i !== 0 && i <= 3 &&
+                    <Columns.Column size={4} key={post.id}>
+                      <BlogRecentPostTease post={post} />
+                    </Columns.Column>
+                  }
+                </React.Fragment>
+              ))
+            }
+          </Columns>
+          <Columns>
+            {posts
+              .map(({ node: post }, i, { length }) => (
+                <React.Fragment>
+                  {i > 3  &&
+                    <Columns.Column size={6} key={post.id}>
+                      <BlogPostTease post={post} />
+                    </Columns.Column>
+                  }
+                </React.Fragment>
+              ))
+            }
+          </Columns>
+        </Container>
+      </Section>
+      <LinksRecentLinks />
+    </Layout>
+  )
 }
 
-export const pageQuery = graphql`
-  query BlogQuery {
-    allMarkdownRemark(sort: { order: DESC, fields: [frontmatter___date] }) {
-      edges {
-        node {
-          excerpt(pruneLength: 400)
-          id
-          frontmatter {
-            title
-            templateKey
-            date(formatString: "MMMM DD, YYYY")
-            path
+export default props => (
+  <StaticQuery
+    query={graphql`
+      query BlogPostsQuery {
+        allMarkdownRemark(
+          sort: { order: DESC, fields: [frontmatter___date] }
+          filter: {
+            frontmatter: { templateKey: { eq: "blog-post" } }
+          }
+        ) {
+          edges {
+            node {
+              excerpt(pruneLength: 600)
+              id
+              fields {
+                readingTime {
+                  text
+                }
+              }
+              frontmatter {
+                title
+                description
+                templateKey
+                date(formatString: "MMMM DD, YYYY")
+                path
+                featuredImage {
+                  childImageSharp {
+                    fluid(
+                      maxWidth: 3000
+                      traceSVG: {
+                        turdSize: 10
+                        background: "#fefefe"
+                        color: "#def1fd"
+                      }
+                    ) {
+                      tracedSVG
+                      ...GatsbyImageSharpFluid_withWebp
+                    }
+                  }
+                }
+                featuredImageAlt
+                image {
+                  childImageSharp {
+                    fluid(
+                      maxWidth: 3000
+                      traceSVG: {
+                        turdSize: 10
+                        background: "#fefefe"
+                        color: "#def1fd"
+                      }
+                    ) {
+                      tracedSVG
+                      ...GatsbyImageSharpFluid_withWebp
+                    }
+                  }
+                }
+                imageAlt
+              }
+            }
           }
         }
       }
-    }
-  }
-`
+    `}
+    render={data => <BlogIndex data={data} {...props} />}
+  />
+)

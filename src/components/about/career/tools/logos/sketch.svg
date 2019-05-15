@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="3000px" height="3000px" viewBox="0 0 3000 3000" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 53.2 (72643) - https://sketchapp.com -->
+    <title>Artboard</title>
+    <desc>Created with Sketch.</desc>
+    <g id="Artboard" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="sketch" transform="translate(0.000000, 146.000000)" fill-rule="nonzero">
+            <polygon id="Path" fill="#FDB300" points="654.545458 89.1914065 1500 0 2345.45455 89.1914065 3000 965.98828 1500 2709 0 965.98828"></polygon>
+            <g id="Group" transform="translate(0.000000, 966.000000)">
+                <polygon id="Path" fill="#EA6C00" points="607.565385 0 1499.97711 1742.55854 0 0"></polygon>
+                <polygon id="Path" fill="#EA6C00" transform="translate(2249.961608, 871.279271) scale(-1, 1) translate(-2249.961608, -871.279271) " points="2107.53844 0 2999.95016 1742.55854 1499.97305 0"></polygon>
+                <polygon id="Path" fill="#FDAD00" points="607.565385 0 2392.38884 0 1499.97711 1742.55854"></polygon>
+            </g>
+            <g id="Group">
+                <polygon id="Path" fill="#FDD231" points="1499.97711 0 654.532415 89.2000394 607.565385 966.093913"></polygon>
+                <polygon id="Path" fill="#FDD231" transform="translate(1946.178367, 483.046957) scale(-1, 1) translate(-1946.178367, -483.046957) " points="2392.38423 0 1546.93953 89.2000394 1499.9725 966.093913"></polygon>
+                <polygon id="Path" fill="#FDAD00" transform="translate(2672.683957, 527.646976) scale(-1, 1) translate(-2672.683957, -527.646976) " points="2345.41393 966.093913 2999.95398 89.2000394 2952.97932 966.093913"></polygon>
+                <polygon id="Path" fill="#FDAD00" points="0 966.093913 654.532415 89.2000394 607.565385 966.093913"></polygon>
+                <polygon id="Path" fill="#FEEEB7" points="1499.97711 0 607.565385 966.093913 2392.38884 966.093913"></polygon>
+            </g>
+        </g>
+    </g>
+</svg>

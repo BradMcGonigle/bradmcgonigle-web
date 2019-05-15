@@ -2,7 +2,7 @@ module.exports = {
   siteMetadata: {
     title: 'Brad McGonigle',
     author: 'Brad McGonigle',
-    description: 'Developer, nerd and husband.',
+    description: 'Father, husband, developer, and nerd.',
     siteUrl: 'https://www.bradmcgonigle.com',
   },
   plugins: [
@@ -63,6 +63,7 @@ module.exports = {
       resolve: 'gatsby-transformer-remark',
       options: {
         plugins: [
+          `gatsby-remark-reading-time`,
           'gatsby-remark-static-images',
           {
             resolve: 'gatsby-remark-images',

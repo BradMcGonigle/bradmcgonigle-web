@@ -1,58 +1,84 @@
 import React from 'react'
-import { graphql } from 'gatsby'
-import Helmet from 'react-helmet'
+import { graphql, StaticQuery } from 'gatsby'
+import { Columns, Container, Section } from 'react-bulma-components'
 
-import Content, { HTMLContent } from '../components/content'
+import BlogPostDetail from '../components/blog/post-detail'
+import Layout from '../components/layout'
+import SectionHeader from '../components/section-header'
 
-export const BlogPostTemplate = ({
-  content,
-  contentComponent,
-  description,
-  title,
-  helmet,
-}) => {
-  const PostContent = contentComponent || Content
-
-  return (
-    <section className="section">
-      {helmet || ''}
-      <div className="container content">
-        <div className="columns">
-          <div className="column is-10">
-            <h1 className="title">{title}</h1>
-            <p>{description}</p>
-            <PostContent content={content} />
-          </div>
-        </div>
-      </div>
-    </section>
-  )
-}
-
-export default ({ data }) => {
+const BlogPostDetailWrapper = ({ data, pageContext }) => {
   const { markdownRemark: post } = data
 
   return (
-    <BlogPostTemplate
-      content={post.html}
-      contentComponent={HTMLContent}
-      description={post.frontmatter.description}
-      helmet={<Helmet title={`Blog | ${post.frontmatter.title}`} />}
-      title={post.frontmatter.title}
-    />
+    <Layout>
+      <Section>
+        <Container>
+          <Columns>
+            <Columns.Column size={7}>
+              <SectionHeader link="/blog" section="Writings" tagline="Thoughts on things" />
+            </Columns.Column>
+          </Columns>
+        </Container>
+      </Section>
+      <BlogPostDetail post={post} />
+    </Layout>
   )
 }
 
-export const pageQuery = graphql`
-  query BlogPostByPath($path: String!) {
-    markdownRemark(frontmatter: { path: { eq: $path } }) {
-      html
-      frontmatter {
-        path
-        date(formatString: "MMMM DD, YYYY")
-        title
-        description
+export default props => (
+  <StaticQuery
+    query={graphql`
+      query BlogPostByPath($path: String!) {
+        markdownRemark(frontmatter: { path: { eq: $path } }) {
+          html
+          fields {
+            readingTime {
+              text
+            }
+          }
+          frontmatter {
+            path
+            date(formatString: "MMMM DD, YYYY")
+            title
+            description
+            category
+            featuredImage {
+              childImageSharp {
+                fluid(
+                  maxWidth: 3000
+                  traceSVG: {
+                    turdSize: 10
+                    background: "#fefefe"
+                    color: "#def1fd"
+                  }
+                ) {
+                  tracedSVG
+                  ...GatsbyImageSharpFluid_withWebp
+                }
+              }
+            }
+            featuredImageAlt
+            image {
+              childImageSharp {
+                fluid(
+                  maxWidth: 3000
+                  traceSVG: {
+                    turdSize: 10
+                    background: "#fefefe"
+                    color: "#def1fd"
+                  }
+                ) {
+                  tracedSVG
+                  ...GatsbyImageSharpFluid_withWebp
+                }
+              }
+            }
+            imageAlt
+            tags
+          }
+        }
       }
-    }
-  }
-`
+    `}
+    render={data => <BlogPostDetailWrapper data={data} {...props} />}
+  />
+)

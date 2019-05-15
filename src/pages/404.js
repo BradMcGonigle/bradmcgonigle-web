@@ -1,6 +1,6 @@
 import React from 'react'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faArrowLeft } from '@fortawesome/fontawesome-pro-light';
+import { faArrowLeft } from '@fortawesome/pro-light-svg-icons';
 import { Columns, Container, Content, Heading, Hero } from 'react-bulma-components'
 
 import Layout from '../components/layout'

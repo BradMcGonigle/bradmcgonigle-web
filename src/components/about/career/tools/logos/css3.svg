@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="3000px" height="3000px" viewBox="0 0 3000 3000" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 53.2 (72643) - https://sketchapp.com -->
+    <title>Artboard</title>
+    <desc>Created with Sketch.</desc>
+    <g id="Artboard" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="css-5" transform="translate(178.000000, 1.000000)" fill-rule="nonzero">
+            <polygon id="Path" fill="#1572B6" points="240.753247 2700.20912 0 0 2645 0 2403.94805 2699.761 1320.85714 3000"></polygon>
+            <polygon id="Path" fill="#33A9DC" points="1323 2770 2198.19481 2527.24956 2404 220 1323 220"></polygon>
+            <polygon id="Path" fill="#FFFFFF" points="1323 1198.39105 1760.98921 1198.39105 1791.14388 859.160626 1323 859.160626 1323 528 2153 528 2145.08813 616.917226 2063.73022 1530 1323 1530"></polygon>
+            <polygon id="Path" fill="#EBEBEB" points="1324.25298 2058.83878 1322.75894 2058.83878 953.880395 1959.17534 930.274558 1695 598 1695 644.464653 2215.13256 1323.05775 2404 1325 2404 1325 2058.83878"></polygon>
+            <polygon id="Path" fill="#FFFFFF" points="1733.01289 1516.14937 1693.15653 1959.32784 1324 2058.95711 1324 2404 2002.45387 2215.79479 2007.37994 2159.78133 2065 1516 1733.01289 1516"></polygon>
+            <path d="M1323,529 L1323,860.078174 L523.852359,860.078174 L516.986316,785.708787 L501.910875,617.85499 L494,529 L1323,529 Z M1321.80591,1198.92183 L1321.80591,1530 L957.457868,1530 L951.039611,1455.63061 L935.96417,1287.77682 L928.053295,1198.92183 L1321.65664,1198.92183 L1321.80591,1198.92183 Z" id="Shape" fill="#EBEBEB"></path>
+        </g>
+    </g>
+</svg>

@@ -1,68 +1,86 @@
 import React from 'react'
-import { graphql } from 'gatsby'
+import { graphql, StaticQuery } from 'gatsby'
 import Img from 'gatsby-image'
-import { Columns, Container, Heading, Section } from 'react-bulma-components'
+import { Box, Columns, Container, Heading, Hero } from 'react-bulma-components'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faFootballBall, faHockeySticks, faKnifeKitchen, faWater, faUserAstronaut } from '@fortawesome/pro-light-svg-icons';
 
-import Content, { HTMLContent } from '../components/content'
-import SiteFooter from '../components/footer'
+import { ContentWrapper, HTMLContent } from '../components/content'
 import Layout from '../components/layout'
+import SEO from '../components/seo'
 
-export const AboutPageTemplate = ({
-  title,
-  image,
-  content,
-  contentComponent,
-}) => {
-  const PageContent = contentComponent || Content
+import Jobs from '../components/about/career/jobs'
+import Tools from '../components/about/career/tools'
+
+import { COLORS } from '../constants/colors';
+import { RandomColor } from '../helpers/random-color'
+
+
+const sectionColor = RandomColor(COLORS)
+
+export const AboutPage = ({ data }) => {
+  const { markdownRemark: page } = data
+  const { nodes: jobs } = data.jobs
+  const PageContent = HTMLContent || ContentWrapper
 
   return (
     <Layout>
-      <Section>
-        <Container>
-          <Columns>
-            <Columns.Column size={5}>
-              <Img alt="Its me!" fluid={image.childImageSharp.fluid} />
-            </Columns.Column>
-            <Columns.Column size={5} offset={1}>
-              <Heading size={1}>{title}</Heading>
-                <PageContent content={content} />
-            </Columns.Column>
-          </Columns>
-        </Container>
-      </Section>
-      <SiteFooter />
+      <SEO
+        keywords={[`about`]}
+        title="About"
+      />
+      <Hero className={`is-${sectionColor} is-bold`}>
+        <Hero.Body>
+          <Container>
+            <Columns className="is-vcentered">
+              <Columns.Column size={5}>
+                <p className="has-opacity-50"><span className="icon is-large"><FontAwesomeIcon icon={faUserAstronaut} size="3x" /></span></p>
+                <Heading renderAs="h1" size={4}>{page.frontmatter.title}</Heading>
+                <PageContent content={page.html} />
+                <hr className="has-opacity-15" />
+                <Columns className="is-mobile has-opacity-25">
+                  <Columns.Column size="one-quarter"><span className="icon is-large"><FontAwesomeIcon icon={faWater} size="2x" /></span></Columns.Column>
+                  <Columns.Column size="one-quarter"><span className="icon is-large"><FontAwesomeIcon icon={faHockeySticks} size="2x" /></span></Columns.Column>
+                  <Columns.Column size="one-quarter"><span className="icon is-large"><FontAwesomeIcon icon={faFootballBall} size="2x" /></span></Columns.Column>
+                  <Columns.Column size="one-quarter"><span className="icon is-large"><FontAwesomeIcon icon={faKnifeKitchen} size="2x" /></span></Columns.Column>
+                </Columns>
+              </Columns.Column>
+              <Columns.Column size={4} offset={2}>
+                <Box>
+                  <Img alt="Its me!" fluid={page.frontmatter.image.childImageSharp.fluid} />
+                </Box>
+              </Columns.Column>
+            </Columns>
+          </Container>
+        </Hero.Body>
+      </Hero>
+      <Jobs jobs={jobs} />
+      <Tools />
     </Layout>
   )
 }
 
-export default ({ data }) => {
-  const { markdownRemark: post } = data
-
-  return (
-    <AboutPageTemplate
-      contentComponent={HTMLContent}
-      title={post.frontmatter.title}
-      image={post.frontmatter.image}
-      content={post.html}
-    />
-  )
-}
-
-export const aboutPageQuery = graphql`
-  query AboutPage($path: String!) {
-    markdownRemark(frontmatter: { path: { eq: $path } }) {
-      html
-      frontmatter {
-        path
-        title
-        image {
-          childImageSharp {
-            fluid(maxWidth: 1000, cropFocus: ENTROPY, quality: 90) {
-              ...GatsbyImageSharpFluid_withWebp
+export default props => (
+  <StaticQuery
+    query={graphql`
+      query aboutPageQuery($path: String!) {
+        markdownRemark(frontmatter: { path: { eq: $path } }) {
+          html
+          frontmatter {
+            path
+            title
+            image {
+              childImageSharp {
+                fluid(maxWidth: 650, cropFocus: ENTROPY, quality: 90) {
+                  ...GatsbyImageSharpFluid_withWebp
+                }
+              }
             }
           }
         }
+        ...jobsQuery
       }
-    }
-  }
-`
+    `}
+    render={data => <AboutPage data={data} {...props} />}
+  />
+)
