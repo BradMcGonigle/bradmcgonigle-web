@@ -1,6 +1,8 @@
 import React from 'react'
 import { graphql, Link, StaticQuery } from 'gatsby'
-import { Columns, Container, Hero } from 'react-bulma-components'
+import { Button, Columns, Container, Hero } from 'react-bulma-components'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faChevronRight } from '@fortawesome/pro-light-svg-icons'
 
 import LinkItemCard from './link-item-card'
 import SectionHeader from '../section-header'
@@ -19,7 +21,9 @@ const LinksRecentLinks = ({ data }) => {
                 <LinkItemCard post={post} key={post.id} />
               ))}
           </Columns>
-          <Link to="/links">View More</Link>
+          <p className="has-text-right">
+            <Link to="/links">View more <FontAwesomeIcon icon={faChevronRight} size="xs" /></Link>
+          </p>
         </Container>
       </Hero.Body>
     </Hero>
