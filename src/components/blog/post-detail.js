@@ -1,6 +1,6 @@
 import React from 'react'
 import Img from 'gatsby-image'
-import { Columns, Container, Content, Heading, Hero, Section } from 'react-bulma-components'
+import { Columns, Container, Heading, Hero, Section } from 'react-bulma-components'
 
 import { ContentWrapper, HTMLContent } from '../content'
 import { Image } from '../shared'

@@ -1,9 +1,7 @@
 import React from 'react'
 import { Link } from 'gatsby'
 import Img from 'gatsby-image'
-import { Box, Button, Content, Heading, Level, Media} from 'react-bulma-components'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faAngleRight } from '@fortawesome/pro-light-svg-icons'
+import { Content, Heading, Media} from 'react-bulma-components'
 
 const BlogPostTease = ({ post }) => (
   <Link to={post.frontmatter.path}>

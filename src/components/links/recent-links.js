@@ -1,6 +1,6 @@
 import React from 'react'
 import { graphql, Link, StaticQuery } from 'gatsby'
-import { Button, Columns, Container, Hero } from 'react-bulma-components'
+import { Columns, Container, Hero } from 'react-bulma-components'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faChevronRight } from '@fortawesome/pro-light-svg-icons'
 
