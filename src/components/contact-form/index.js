@@ -47,7 +47,6 @@ class ContactForm extends React.Component {
 
   render() {
     const { name, email, message, isFormSubmitted } = this.state;
-    console.log(isFormSubmitted);
     return (
       <React.Fragment>
         <OverlappedSection className={`has-background-${sectionColor} has-text-centered`}>
