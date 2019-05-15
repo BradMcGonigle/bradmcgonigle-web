@@ -2,7 +2,7 @@ version: 2.1
 executors:
   node-executor:
     docker:
-      - image: circleci/node:9
+      - image: circleci/node:10
 commands:
   gatsby-build:
     steps:
