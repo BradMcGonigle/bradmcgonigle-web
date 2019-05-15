@@ -16,9 +16,11 @@ const SocialLink = styled(Navbar.Item)`
   padding-left: 0.33rem;
   padding-right: 0.33rem;
 
-  &:last-child {
-    padding-right: 1rem;
-  }
+  @media only screen and (min-width: 1024px) {
+    &:last-child {
+      padding-right: 1rem;
+    }
+
 `;
 
 class Nav extends React.Component {
@@ -46,7 +48,7 @@ class Nav extends React.Component {
           <Navbar.Burger className={this.state.open ? 'is-active' : ''} onClick={this.onClick} />
         </Navbar.Brand>
         <Navbar.Menu className={this.state.open ? 'is-active' : ''}>
-          <Navbar.Container position="end" className="has-text-centered-mobile">
+          <Navbar.Container position="end" className="has-text-centered">
             <Link to="/about" className="navbar-item site-nav">About</Link>
             <Link to="/links" className="navbar-item site-nav">Links</Link>
             <Navbar.Item className="is-hidden-mobile"></Navbar.Item>
