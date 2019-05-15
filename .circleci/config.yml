@@ -13,6 +13,7 @@ commands:
       - run:
           name: Install Dependencies
           command: yarn install
+          command: npm rebuild
       - save_cache:
           key: yarn-cache-{{ checksum "yarn.lock" }}
           paths:
