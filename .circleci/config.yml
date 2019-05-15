@@ -36,9 +36,7 @@ workflows:
                 - master
 jobs:
   build:
-    machine: 
-      enabled: true
-      image: circleci/classic:latest
+    executor: node-executor
     working_directory: ~/repo
     steps:
       - gatsby-build
