@@ -36,7 +36,6 @@ workflows:
                 - master
 jobs:
   build:
-    executor: node-executor
     machine: true
     working_directory: ~/repo
     steps:
