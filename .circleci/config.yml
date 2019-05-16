@@ -17,7 +17,7 @@ commands:
           key: yarn-cache-{{ checksum "yarn.lock" }}
           paths:
             - ./node_modules
-            - ./.cache
+            - ./public
       - run:
           name: Gatsby Build
           command: GATSBY_CPU_COUNT=2 yarn build
