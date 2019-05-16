@@ -10,8 +10,6 @@ commands:
       - restore_cache:
           keys:
             - yarn-cache-{{ checksum "yarn.lock" }}
-          paths:
-            - ./public
       - run:
           name: Install Dependencies
           command: yarn install && npm rebuild
@@ -19,10 +17,15 @@ commands:
           key: yarn-cache-{{ checksum "yarn.lock" }}
           paths:
             - ./node_modules
-            - ./public
+      - restore_cache:
+          keys: gatsby-public-cache-{{ .Branch }}
       - run:
           name: Gatsby Build
           command: GATSBY_CPU_COUNT=2 yarn build
+      - save_cache:
+          key: gatsby-public-cache-{{ .Branch }}
+          paths:
+            - ./public
 workflows:
   version: 2
   build-deploy:
