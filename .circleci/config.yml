@@ -18,7 +18,8 @@ commands:
           paths:
             - ./node_modules
       - restore_cache:
-          keys: gatsby-public-cache-{{ .Branch }}
+          keys: 
+            - gatsby-public-cache-{{ .Branch }}
       - run:
           name: Gatsby Build
           command: GATSBY_CPU_COUNT=2 yarn build
