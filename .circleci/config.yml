@@ -46,7 +46,7 @@ jobs:
       - gatsby-build
       - run:
           name: Netlify Deploy
-          command: ./node_modules/.bin/netlify deploy -s $NETLIFY_SITE_ID -t $NETLIFY_ACCESS_TOKEN --dir=public
+          command: ./node_modules/.bin/netlify deploy --site $NETLIFY_SITE_ID --auth $NETLIFY_ACCESS_TOKEN --dir=public
   release:
     executor: node-executor
     environment:
@@ -57,4 +57,4 @@ jobs:
       - gatsby-build
       - run:
           name: Netlify Deploy
-          command: ./node_modules/.bin/netlify deploy -s $NETLIFY_SITE_ID -t $NETLIFY_ACCESS_TOKEN --prod --dir=public
+          command: ./node_modules/.bin/netlify deploy --site $NETLIFY_SITE_ID --auth $NETLIFY_ACCESS_TOKEN --prod --dir=public
