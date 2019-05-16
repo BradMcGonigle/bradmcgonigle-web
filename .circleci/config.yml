@@ -19,7 +19,7 @@ commands:
             - ./node_modules
       - run:
           name: Gatsby Build
-          command: yarn build
+          command: GATSBY_CPU_COUNT=2 yarn build
 workflows:
   version: 2
   build-deploy:
