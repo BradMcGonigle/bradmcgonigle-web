@@ -4,7 +4,7 @@ import { Columns, Container, Section } from 'react-bulma-components'
 
 import Layout from '../components/layout'
 import LinkItem from '../components/links/link-item'
-import PreviousNext  from '../components/previous-next'
+import PreviousNext from '../components/previous-next'
 import SectionHeader from '../components/section-header'
 
 const LinkPostDetail = ({ data, pageContext }) => {
@@ -15,7 +15,11 @@ const LinkPostDetail = ({ data, pageContext }) => {
     <Layout>
       <Section>
         <Container>
-          <SectionHeader link="/links" section="Links" tagline="Interesting finds from around the web" />
+          <SectionHeader
+            link="/links"
+            section="Links"
+            tagline="Interesting finds from around the web"
+          />
           <Columns>
             <LinkItem post={post} key={post.id} />
           </Columns>

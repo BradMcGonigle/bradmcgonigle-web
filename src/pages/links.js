@@ -12,18 +12,17 @@ const LinkPosts = ({ data }) => {
 
   return (
     <Layout>
-      <SEO
-        keywords={[`links`]}
-        title="Links"
-      />
+      <SEO keywords={[`links`]} title="Links" />
       <Section>
         <Container>
-          <SectionHeader section="Links" tagline="Interesting finds from around the web" />
+          <SectionHeader
+            section="Links"
+            tagline="Interesting finds from around the web"
+          />
           <Columns multiline>
-            {posts
-              .map(({ node: post }) => (
-                <LinkItemCard post={post} key={post.id} />
-              ))}
+            {posts.map(({ node: post }) => (
+              <LinkItemCard post={post} key={post.id} />
+            ))}
           </Columns>
         </Container>
       </Section>
@@ -37,11 +36,7 @@ export default props => (
       query LinksQuery {
         allMarkdownRemark(
           sort: { order: DESC, fields: [frontmatter___date] }
-          filter: {
-            frontmatter: {
-              templateKey: { eq: "link-post" }
-            }
-          }
+          filter: { frontmatter: { templateKey: { eq: "link-post" } } }
         ) {
           edges {
             node {
@@ -57,7 +52,9 @@ export default props => (
                 image {
                   childImageSharp {
                     fluid(
-                      maxWidth: 1000, maxHeight: 667, cropFocus: ATTENTION
+                      maxWidth: 1000
+                      maxHeight: 667
+                      cropFocus: ATTENTION
                       traceSVG: {
                         turdSize: 10
                         background: "#fefefe"

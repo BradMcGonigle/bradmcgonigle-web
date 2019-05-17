@@ -1,14 +1,19 @@
 import React from 'react'
 import styled from '@emotion/styled'
-import { Columns, Container, Content, Heading, Hero } from 'react-bulma-components'
+import {
+  Columns,
+  Container,
+  Content,
+  Heading,
+  Hero,
+} from 'react-bulma-components'
 
 import Layout from '../components/layout'
 import LinksRecentLinks from '../components/links/recent-links'
 import SEO from '../components/seo'
 
-import { COLORS } from '../constants/colors';
+import { COLORS } from '../constants/colors'
 import { RandomColor } from '../helpers/random-color'
-
 
 const backgroundColor = RandomColor(COLORS)
 
@@ -29,7 +34,9 @@ const Intro = () => (
                   👋
                 </span>
               </Heading>
-              <Heading renderAs="h2" subtitle>Hi, I'm Brad.</Heading>
+              <Heading renderAs="h2" subtitle>
+                Hi, I'm Brad.
+              </Heading>
               <p>
                 I'm a frontend developer and product designer from Orlando,
                 Florida building things on the internet.
@@ -47,9 +54,7 @@ export default class IndexPage extends React.Component {
     return (
       <React.Fragment>
         <Layout>
-          <SEO
-            title="Home"
-          />
+          <SEO title="Home" />
           <Intro />
           <LinksRecentLinks />
         </Layout>

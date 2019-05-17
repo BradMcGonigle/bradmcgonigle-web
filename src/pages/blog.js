@@ -15,51 +15,42 @@ export const BlogIndex = ({ data }) => {
 
   return (
     <Layout>
-      <SEO
-        keywords={[`blog`]}
-        title="Blog"
-      />
+      <SEO keywords={[`blog`]} title="Blog" />
       <Section>
         <Container>
           <SectionHeader section="Writings" tagline="Thoughts on things" />
           <Columns>
-          {posts
-            .map(({ node: post }, i, { length }) => (
+            {posts.map(({ node: post }, i, { length }) => (
               <React.Fragment>
-                {i === 0  &&
+                {i === 0 && (
                   <Columns.Column size={12} key={post.id}>
                     <BlogFeaturedPostTease post={post} />
                   </Columns.Column>
-                }
+                )}
               </React.Fragment>
-            ))
-          }
+            ))}
           </Columns>
           <Columns>
-            {posts
-              .map(({ node: post }, i, { length }) => (
-                <React.Fragment>
-                  {i !== 0 && i <= 3 &&
-                    <Columns.Column size={4} key={post.id}>
-                      <BlogRecentPostTease post={post} />
-                    </Columns.Column>
-                  }
-                </React.Fragment>
-              ))
-            }
+            {posts.map(({ node: post }, i, { length }) => (
+              <React.Fragment>
+                {i !== 0 && i <= 3 && (
+                  <Columns.Column size={4} key={post.id}>
+                    <BlogRecentPostTease post={post} />
+                  </Columns.Column>
+                )}
+              </React.Fragment>
+            ))}
           </Columns>
           <Columns>
-            {posts
-              .map(({ node: post }, i, { length }) => (
-                <React.Fragment>
-                  {i > 3  &&
-                    <Columns.Column size={6} key={post.id}>
-                      <BlogPostTease post={post} />
-                    </Columns.Column>
-                  }
-                </React.Fragment>
-              ))
-            }
+            {posts.map(({ node: post }, i, { length }) => (
+              <React.Fragment>
+                {i > 3 && (
+                  <Columns.Column size={6} key={post.id}>
+                    <BlogPostTease post={post} />
+                  </Columns.Column>
+                )}
+              </React.Fragment>
+            ))}
           </Columns>
         </Container>
       </Section>
@@ -74,9 +65,7 @@ export default props => (
       query BlogPostsQuery {
         allMarkdownRemark(
           sort: { order: DESC, fields: [frontmatter___date] }
-          filter: {
-            frontmatter: { templateKey: { eq: "blog-post" } }
-          }
+          filter: { frontmatter: { templateKey: { eq: "blog-post" } } }
         ) {
           edges {
             node {

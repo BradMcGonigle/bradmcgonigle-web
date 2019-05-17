@@ -6,8 +6,6 @@ const COLORS = [
   'slategray',
   'rebeccapurple',
   'teal',
-];
+]
 
-export {
-  COLORS,
-}
+export { COLORS }

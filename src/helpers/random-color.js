@@ -1,1 +1,2 @@
-export const RandomColor = (colors) => colors[Math.floor(Math.random() * colors.length)]
+export const RandomColor = colors =>
+  colors[Math.floor(Math.random() * colors.length)]

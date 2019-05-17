@@ -15,7 +15,11 @@ const BlogPostDetailWrapper = ({ data, pageContext }) => {
         <Container>
           <Columns>
             <Columns.Column size={7}>
-              <SectionHeader link="/blog" section="Writings" tagline="Thoughts on things" />
+              <SectionHeader
+                link="/blog"
+                section="Writings"
+                tagline="Thoughts on things"
+              />
             </Columns.Column>
           </Columns>
         </Container>
