@@ -64,7 +64,7 @@
     "build": "gatsby build",
     "develop": "gatsby develop",
     "serve": "gatsby serve",
-    "format": "prettier --trailing-comma es5 --no-semi --single-quote --write src/**/*.js"
+    "format": "prettier --write src/**/*.js"
   },
   "devDependencies": {
     "prettier": "1.17.0"
