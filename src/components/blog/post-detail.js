@@ -1,6 +1,12 @@
 import React from 'react'
 import Img from 'gatsby-image'
-import { Columns, Container, Heading, Hero, Section } from 'react-bulma-components'
+import {
+  Columns,
+  Container,
+  Heading,
+  Hero,
+  Section,
+} from 'react-bulma-components'
 
 import { ContentWrapper, HTMLContent } from '../content'
 import { Image } from '../shared'
@@ -8,7 +14,7 @@ import SEO from '../seo'
 import Tags from '../tags'
 
 export const BlogPostDetail = ({ post }) => {
-  const PostContent = HTMLContent || ContentWrapper;
+  const PostContent = HTMLContent || ContentWrapper
 
   return (
     <React.Fragment>
@@ -20,17 +26,34 @@ export const BlogPostDetail = ({ post }) => {
         <Container>
           <Columns>
             <Columns.Column size={9}>
-              <Heading renderAs="h5" size={6} subtitle className="has-text-grey">
+              <Heading
+                renderAs="h5"
+                size={6}
+                subtitle
+                className="has-text-grey"
+              >
                 {post.frontmatter.date}
-                <span className="has-text-grey-light"> &mdash; {post.fields.readingTime.text}</span>
+                <span className="has-text-grey-light">
+                  {' '}
+                  &mdash; {post.fields.readingTime.text}
+                </span>
               </Heading>
-              <Heading renderAs="h2" size={3}>{post.frontmatter.title}</Heading>
-              <Heading renderAs="h4" size={4} subtitle className="has-text-grey margin-bottom-025">{post.frontmatter.description}</Heading>
+              <Heading renderAs="h2" size={3}>
+                {post.frontmatter.title}
+              </Heading>
+              <Heading
+                renderAs="h4"
+                size={4}
+                subtitle
+                className="has-text-grey margin-bottom-025"
+              >
+                {post.frontmatter.description}
+              </Heading>
             </Columns.Column>
           </Columns>
         </Container>
       </Section>
-      {post.frontmatter.featuredImage &&
+      {post.frontmatter.featuredImage && (
         <Hero>
           <Image
             caption={post.frontmatter.featuredImageAlt}
@@ -38,16 +61,20 @@ export const BlogPostDetail = ({ post }) => {
             isHero
           />
         </Hero>
-      }
+      )}
       <Section>
         <Container>
           <Columns>
             <Columns.Column size={9}>
-              {post.frontmatter.image &&
+              {post.frontmatter.image && (
                 <Hero>
-                  <Img fluid={post.frontmatter.image.childImageSharp.fluid} alt={post.frontmatter.imageAlt} className="blog-featured-image" />
+                  <Img
+                    fluid={post.frontmatter.image.childImageSharp.fluid}
+                    alt={post.frontmatter.imageAlt}
+                    className="blog-featured-image"
+                  />
                 </Hero>
-              }
+              )}
               <PostContent content={post.html} className="blog-post" />
               <hr />
               <Tags list={post.frontmatter.tags || []} ignore="link" />
@@ -59,4 +86,4 @@ export const BlogPostDetail = ({ post }) => {
   )
 }
 
-export default BlogPostDetail;
+export default BlogPostDetail

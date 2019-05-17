@@ -14,32 +14,33 @@ const BlogRecentPosts = ({ data }) => {
       <Hero.Body>
         <Container>
           <Content>
-            <SectionHeader isSubSection link="/blog" section="Writings" tagline="Thoughts on things" />
+            <SectionHeader
+              isSubSection
+              link="/blog"
+              section="Writings"
+              tagline="Thoughts on things"
+            />
             <Columns>
-            {posts
-              .map(({ node: post }, i, { length }) => (
+              {posts.map(({ node: post }, i, { length }) => (
                 <React.Fragment>
-                  {i === 0  &&
+                  {i === 0 && (
                     <Columns.Column size={12} key={post.id}>
                       <BlogFeaturedPostTease post={post} />
                     </Columns.Column>
-                  }
+                  )}
                 </React.Fragment>
-              ))
-            }
+              ))}
             </Columns>
             <Columns>
-              {posts
-                .map(({ node: post }, i, { length }) => (
-                  <React.Fragment>
-                    {i !== 0 && i <= 3 &&
-                      <Columns.Column size={4} key={post.id}>
-                        <BlogRecentPostTease post={post} />
-                      </Columns.Column>
-                    }
-                  </React.Fragment>
-                ))
-              }
+              {posts.map(({ node: post }, i, { length }) => (
+                <React.Fragment>
+                  {i !== 0 && i <= 3 && (
+                    <Columns.Column size={4} key={post.id}>
+                      <BlogRecentPostTease post={post} />
+                    </Columns.Column>
+                  )}
+                </React.Fragment>
+              ))}
             </Columns>
           </Content>
           <Link to="/blog">Read More </Link>
@@ -55,9 +56,7 @@ export default props => (
       query BlogRecentPosts {
         allMarkdownRemark(
           sort: { order: DESC, fields: [frontmatter___date] }
-          filter: {
-            frontmatter: { templateKey: { eq: "blog-post" } }
-          }
+          filter: { frontmatter: { templateKey: { eq: "blog-post" } } }
           limit: 4
         ) {
           edges {

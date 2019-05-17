@@ -12,7 +12,11 @@ export const PreviousNext = ({ next, prev }) => (
           <Columns.Column size={4}>
             {next && (
               <React.Fragment>
-                <Heading size={6} subtitle className="has-text-weight-bold is-uppercase">
+                <Heading
+                  size={6}
+                  subtitle
+                  className="has-text-weight-bold is-uppercase"
+                >
                   Next
                 </Heading>
                 <Heading size={4} className="has-text-weight-light">
@@ -30,10 +34,18 @@ export const PreviousNext = ({ next, prev }) => (
             )}
           </Columns.Column>
           {prev && next && <hr className="is-hidden-tablet" />}
-          <Columns.Column size={4} offset={4} className="has-text-right-tablet has-text-centered-mobile">
+          <Columns.Column
+            size={4}
+            offset={4}
+            className="has-text-right-tablet has-text-centered-mobile"
+          >
             {prev && (
               <React.Fragment>
-                <Heading subtitle size={6} className="has-text-weight-bold is-uppercase">
+                <Heading
+                  subtitle
+                  size={6}
+                  className="has-text-weight-bold is-uppercase"
+                >
                   Previous
                 </Heading>
                 <Heading size={4} className="has-text-weight-light">
@@ -56,4 +68,4 @@ export const PreviousNext = ({ next, prev }) => (
   </Hero>
 )
 
-export default PreviousNext;
+export default PreviousNext

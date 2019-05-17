@@ -6,15 +6,33 @@ import { Card, Heading } from 'react-bulma-components'
 const BlogFeaturedPostTease = ({ post }) => (
   <Link to={post.frontmatter.path}>
     <Card className="no-border horizontal-card is-flex-tablet">
-      {post.frontmatter.featuredImage &&
-        <Img fluid={post.frontmatter.featuredImage.childImageSharp.fluid} alt={post.frontmatter.featuredImageAlt} className="card-image blog-featured-image" />
-      }
+      {post.frontmatter.featuredImage && (
+        <Img
+          fluid={post.frontmatter.featuredImage.childImageSharp.fluid}
+          alt={post.frontmatter.featuredImageAlt}
+          className="card-image blog-featured-image"
+        />
+      )}
       <Card.Content>
-        <Heading renderAs="h5" size={6} subtitle className="has-text-grey-light">
+        <Heading
+          renderAs="h5"
+          size={6}
+          subtitle
+          className="has-text-grey-light"
+        >
           {post.frontmatter.date} &mdash; {post.fields.readingTime.text}
         </Heading>
-        <Heading renderAs="h2" size={3}>{post.frontmatter.title}</Heading>
-        <Heading renderAs="h4" size={5} subtitle className="has-text-grey margin-bottom-025">{post.frontmatter.description}</Heading>
+        <Heading renderAs="h2" size={3}>
+          {post.frontmatter.title}
+        </Heading>
+        <Heading
+          renderAs="h4"
+          size={5}
+          subtitle
+          className="has-text-grey margin-bottom-025"
+        >
+          {post.frontmatter.description}
+        </Heading>
       </Card.Content>
     </Card>
   </Link>

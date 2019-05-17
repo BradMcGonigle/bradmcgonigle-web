@@ -14,15 +14,21 @@ const LinksRecentLinks = ({ data }) => {
     <Hero color="light">
       <Hero.Body>
         <Container>
-          <SectionHeader isSubSection link="/links" section="Links" tagline="Interesting finds from around the web" />
+          <SectionHeader
+            isSubSection
+            link="/links"
+            section="Links"
+            tagline="Interesting finds from around the web"
+          />
           <Columns multiline>
-            {posts
-              .map(({ node: post }) => (
-                <LinkItemCard post={post} key={post.id} />
-              ))}
+            {posts.map(({ node: post }) => (
+              <LinkItemCard post={post} key={post.id} />
+            ))}
           </Columns>
           <p className="has-text-right">
-            <Link to="/links">View more <FontAwesomeIcon icon={faChevronRight} size="xs" /></Link>
+            <Link to="/links">
+              View more <FontAwesomeIcon icon={faChevronRight} size="xs" />
+            </Link>
           </p>
         </Container>
       </Hero.Body>
@@ -35,10 +41,8 @@ export default props => (
     query={graphql`
       query RecentLinkPosts {
         allMarkdownRemark(
-          sort: { order: DESC, fields: [frontmatter___date] },
-          filter: {
-            frontmatter: { templateKey: { eq: "link-post" } }
-          }
+          sort: { order: DESC, fields: [frontmatter___date] }
+          filter: { frontmatter: { templateKey: { eq: "link-post" } } }
           limit: 4
         ) {
           edges {
@@ -55,7 +59,9 @@ export default props => (
                 image {
                   childImageSharp {
                     fluid(
-                      maxWidth: 1000, maxHeight: 667, cropFocus: ENTROPY
+                      maxWidth: 1000
+                      maxHeight: 667
+                      cropFocus: ENTROPY
                       traceSVG: {
                         turdSize: 10
                         background: "#fefefe"

@@ -7,14 +7,18 @@ export const Image = ({ caption, image, isHero, url }) => (
     <a href={url} title={caption}>
       <Img fluid={image} alt={caption} />
     </a>
-    {isHero ?
+    {isHero ? (
       <Container>
-        <figcaption><small>{caption}</small></figcaption>
+        <figcaption>
+          <small>{caption}</small>
+        </figcaption>
       </Container>
-    :
-      <figcaption><small>{caption}</small></figcaption>
-    }
+    ) : (
+      <figcaption>
+        <small>{caption}</small>
+      </figcaption>
+    )}
   </figure>
 )
 
-export default Image;
+export default Image

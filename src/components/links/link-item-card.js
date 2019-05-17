@@ -88,9 +88,7 @@ const LinkItemCard = ({ post }) => (
         {post.frontmatter.image ? (
           <Img
             className="image"
-            fluid={
-              post.frontmatter.image.childImageSharp.fluid
-            }
+            fluid={post.frontmatter.image.childImageSharp.fluid}
           />
         ) : (
           <figure className="is-hidden-mobile image">
@@ -107,13 +105,12 @@ const LinkItemCard = ({ post }) => (
         className="card-content"
       >
         <Content>
-          <time
-            dateTime={post.frontmatter.date}
-            className="has-text-grey"
-          >
+          <time dateTime={post.frontmatter.date} className="has-text-grey">
             {post.frontmatter.date}
           </time>
-          <Heading size={5} subtitle className="margin-top-0">{post.frontmatter.title}</Heading>
+          <Heading size={5} subtitle className="margin-top-0">
+            {post.frontmatter.title}
+          </Heading>
         </Content>
       </Card.Content>
       <Card.Footer>
@@ -129,4 +126,4 @@ const LinkItemCard = ({ post }) => (
   </LinkItemCardWrapper>
 )
 
-export default LinkItemCard;
+export default LinkItemCard

@@ -1,16 +1,20 @@
-import React from 'react';
-import { Link } from 'gatsby';
-import styled from '@emotion/styled';
-import { Navbar } from 'react-bulma-components';
+import React from 'react'
+import { Link } from 'gatsby'
+import styled from '@emotion/styled'
+import { Navbar } from 'react-bulma-components'
 
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faFacebook, faGithub, faInstagram, faTwitter } from '@fortawesome/free-brands-svg-icons';
-
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import {
+  faFacebook,
+  faGithub,
+  faInstagram,
+  faTwitter,
+} from '@fortawesome/free-brands-svg-icons'
 
 const NavbarWrapper = styled(Navbar)`
   backdrop-filter: saturate(200%) blur(25px);
   background-color: rgba(255, 255, 255, 0.75);
-`;
+`
 
 const SocialLink = styled(Navbar.Item)`
   padding-left: 0.33rem;
@@ -21,48 +25,79 @@ const SocialLink = styled(Navbar.Item)`
       padding-right: 1rem;
     }
 
-`;
+`
 
 class Nav extends React.Component {
   constructor(props) {
-    super(props);
+    super(props)
 
     this.state = {
-       open: false,
-     }
+      open: false,
+    }
   }
 
   onClick = () => {
     this.setState({
-      open: !this.state.open
-    });
+      open: !this.state.open,
+    })
   }
 
   render() {
     return (
-      <NavbarWrapper className="is-fixed-top is-transparent" role="navigation" aria-label="main navigation">
+      <NavbarWrapper
+        className="is-fixed-top is-transparent"
+        role="navigation"
+        aria-label="main navigation"
+      >
         <Navbar.Brand>
           <Link to="/" className="navbar-item is-info">
             <strong>B &mdash; M.</strong>
           </Link>
-          <Navbar.Burger className={this.state.open ? 'is-active' : ''} onClick={this.onClick} />
+          <Navbar.Burger
+            className={this.state.open ? 'is-active' : ''}
+            onClick={this.onClick}
+          />
         </Navbar.Brand>
         <Navbar.Menu className={this.state.open ? 'is-active' : ''}>
           <Navbar.Container position="end" className="has-text-centered">
-            <Link to="/about" className="navbar-item site-nav">About</Link>
-            <Link to="/links" className="navbar-item site-nav">Links</Link>
-            <Navbar.Item className="is-hidden-mobile"></Navbar.Item>
-            <SocialLink href="https://github.com/bradmcgonigle" rel="noopener noreferrer">
-              <span className="icon"><FontAwesomeIcon icon={faGithub} /></span>
+            <Link to="/about" className="navbar-item site-nav">
+              About
+            </Link>
+            <Link to="/links" className="navbar-item site-nav">
+              Links
+            </Link>
+            <Navbar.Item className="is-hidden-mobile" />
+            <SocialLink
+              href="https://github.com/bradmcgonigle"
+              rel="noopener noreferrer"
+            >
+              <span className="icon">
+                <FontAwesomeIcon icon={faGithub} />
+              </span>
             </SocialLink>
-            <SocialLink href="https://instagram.com/bradmcgonigle" rel="noopener noreferrer">
-              <span className="icon"><FontAwesomeIcon icon={faInstagram} /></span>
+            <SocialLink
+              href="https://instagram.com/bradmcgonigle"
+              rel="noopener noreferrer"
+            >
+              <span className="icon">
+                <FontAwesomeIcon icon={faInstagram} />
+              </span>
             </SocialLink>
-            <SocialLink href="https://twitter.com/bradmcgonigle" rel="noopener noreferrer">
-              <span className="icon"><FontAwesomeIcon icon={faTwitter} /></span>
+            <SocialLink
+              href="https://twitter.com/bradmcgonigle"
+              rel="noopener noreferrer"
+            >
+              <span className="icon">
+                <FontAwesomeIcon icon={faTwitter} />
+              </span>
             </SocialLink>
-            <SocialLink href="https://facebook.com/bradmcgonigle" rel="noopener noreferrer">
-              <span className="icon"><FontAwesomeIcon icon={faFacebook} /></span>
+            <SocialLink
+              href="https://facebook.com/bradmcgonigle"
+              rel="noopener noreferrer"
+            >
+              <span className="icon">
+                <FontAwesomeIcon icon={faFacebook} />
+              </span>
             </SocialLink>
           </Navbar.Container>
         </Navbar.Menu>
