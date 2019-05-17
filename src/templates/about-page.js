@@ -71,7 +71,15 @@ export default props => (
             title
             image {
               childImageSharp {
-                fluid(maxWidth: 650, cropFocus: ENTROPY, quality: 90) {
+                fluid(
+                  maxWidth: 650, cropFocus: ENTROPY, quality: 90
+                  traceSVG: {
+                    turdSize: 10
+                    background: "#fefefe"
+                    color: "#eee"
+                  }
+                ) {
+                  tracedSVG
                   ...GatsbyImageSharpFluid_withWebp
                 }
               }

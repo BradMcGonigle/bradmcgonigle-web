@@ -82,7 +82,7 @@ export default props => (
                       traceSVG: {
                         turdSize: 10
                         background: "#fefefe"
-                        color: "#def1fd"
+                        color: "#eeeeee"
                       }
                     ) {
                       tracedSVG
@@ -97,7 +97,7 @@ export default props => (
                       traceSVG: {
                         turdSize: 10
                         background: "#fefefe"
-                        color: "#def1fd"
+                        color: "#eeeeee"
                       }
                     ) {
                       tracedSVG
