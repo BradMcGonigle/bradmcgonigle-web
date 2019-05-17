@@ -5,7 +5,7 @@
 
 This repo contains the personal website of Brad McGonigle that is built with [Gatsby](https://www.gatsbyjs.org/) and [Bulma](http://bulma.io) running on [Netlify](https://netlify.com).
 
-It follows the [JAMstack architecture](https://jamstack.org) by using Git as a single source of truth, and [Netlify](https://www.netlify.com) for continuous deployment, and CDN distribution.
+It follows the [JAMstack architecture](https://jamstack.org) by using Git as a single source of truth, and [Netlify](https://www.netlify.com) for continuous deployment and CDN distribution.
 
 ## Prerequisites
 
@@ -18,14 +18,7 @@ It follows the [JAMstack architecture](https://jamstack.org) by using Git as a s
 $ git clone https://github.com/bradmcgongile/bradmcgongile.git
 $ cd [REPO_NAME]
 $ yarn
-$ npm run develop
-```
-
-To test the CMS locally, you'll need run a production build of the site:
-
-```
-$ npm run build
-$ npm run serve
+$ yarn develop
 ```
 
 ## Getting Started (Without Netlify)
@@ -33,8 +26,8 @@ $ npm run serve
 ```
 $ gatsby new [SITE_DIRECTORY_NAME] https://github.com/bradmcgongile/bradmcgongile/
 $ cd [SITE_DIRECTORY_NAME]
-$ npm run build
-$ npm run serve
+$ yarn build
+$ yarn serve
 ```
 
 ## Debugging
