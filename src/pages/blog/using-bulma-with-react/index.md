@@ -1,5 +1,5 @@
 ---
-templateKey: 'blog-post'
+templateKey: blog-post
 path: /blog/using-bulma-with-react
 category: Development
 title: >-

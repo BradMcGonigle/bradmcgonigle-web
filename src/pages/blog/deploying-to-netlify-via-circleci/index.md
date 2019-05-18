@@ -1,5 +1,5 @@
 ---
-templateKey: 'blog-post'
+templateKey: blog-post
 path: /blog/deploying-to-netlify-via-circleci
 category: Development
 title: >-
