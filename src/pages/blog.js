@@ -3,7 +3,7 @@ import { graphql, StaticQuery } from 'gatsby'
 import { Columns, Container, Section } from 'react-bulma-components'
 
 import BlogFeaturedPostTease from '../components/blog/featured-post-tease'
-import BlogRecentPostTease from '../components/blog/recent-post-tease'
+import BlogPostTeaseCard from '../components/blog/post-tease-card'
 import BlogPostTease from '../components/blog/post-tease'
 import Layout from '../components/layout'
 import LinksRecentLinks from '../components/links/recent-links'
@@ -20,6 +20,12 @@ export const BlogIndex = ({ data }) => {
         <Container>
           <SectionHeader section="Writings" tagline="Thoughts on things" />
           <Columns>
+            {posts.map(({ node: post }) => (
+              <Columns.Column size={6} key={post.id}>
+                <BlogPostTeaseCard post={post} />
+              </Columns.Column>
+            ))}
+            {/*
             {posts.map(({ node: post }, i, { length }) => (
               <React.Fragment>
                 {i === 0 && (
@@ -35,7 +41,7 @@ export const BlogIndex = ({ data }) => {
               <React.Fragment>
                 {i !== 0 && i <= 3 && (
                   <Columns.Column size={4} key={post.id}>
-                    <BlogRecentPostTease post={post} />
+                    <BlogPostTeaseCard post={post} />
                   </Columns.Column>
                 )}
               </React.Fragment>
@@ -51,6 +57,7 @@ export const BlogIndex = ({ data }) => {
                 )}
               </React.Fragment>
             ))}
+            */}
           </Columns>
         </Container>
       </Section>
@@ -69,7 +76,7 @@ export default props => (
         ) {
           edges {
             node {
-              excerpt(pruneLength: 600)
+              excerpt(pruneLength: 350)
               id
               fields {
                 readingTime {

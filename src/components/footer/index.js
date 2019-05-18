@@ -43,6 +43,7 @@ const Footer = () => (
         <FooterNav size={8} className="has-text-centered-mobile">
           <p className="is-size-4">
             <NavLink to="/about">About</NavLink>
+            <NavLink to="/blog">Blog</NavLink>
             <NavLink to="/links">Links</NavLink>
           </p>
         </FooterNav>

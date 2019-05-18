@@ -22,7 +22,7 @@ export const BlogPostDetail = ({ post }) => {
         keywords={post.frontmatter.tags}
         title={`${post.frontmatter.title} | Blog`}
       />
-      <Section>
+      <Section className="padding-top-050">
         <Container>
           <Columns>
             <Columns.Column size={9}>
@@ -54,7 +54,7 @@ export const BlogPostDetail = ({ post }) => {
         </Container>
       </Section>
       {post.frontmatter.featuredImage && (
-        <Hero>
+        <Hero className="margin-bottom-2">
           <Image
             caption={post.frontmatter.featuredImageAlt}
             image={post.frontmatter.featuredImage.childImageSharp.fluid}
@@ -62,18 +62,17 @@ export const BlogPostDetail = ({ post }) => {
           />
         </Hero>
       )}
-      <Section>
+      <Section className="padding-top-050">
         <Container>
           <Columns>
             <Columns.Column size={9}>
-              {post.frontmatter.image && (
-                <Hero>
-                  <Img
-                    fluid={post.frontmatter.image.childImageSharp.fluid}
-                    alt={post.frontmatter.imageAlt}
-                    className="blog-featured-image"
+              {!post.frontmatter.featuredImage && post.frontmatter.image && (
+                <div className="margin-bottom-2">
+                  <Image
+                    image={post.frontmatter.image.childImageSharp.fluid}
+                    caption={post.frontmatter.imageAlt}
                   />
-                </Hero>
+                </div>
               )}
               <PostContent content={post.html} className="blog-post" />
               <hr />

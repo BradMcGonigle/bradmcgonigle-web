@@ -209,6 +209,9 @@ $colors: map-merge($colors, $addColors);
 }
 
 .card {
+  width: 100%;
+  height: 100%;
+
   &.no-border {
     box-shadow: none;
   }
@@ -216,6 +219,10 @@ $colors: map-merge($colors, $addColors);
   .img {
     border: 1px inset #eee;
   }
+}
+
+a.card {
+  display: inline-block;
 }
 
 .horizontal-card {

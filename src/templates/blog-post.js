@@ -50,6 +50,8 @@ export default props => (
               childImageSharp {
                 fluid(
                   maxWidth: 3000
+                  maxHeight: 1250
+                  cropFocus: ATTENTION
                   traceSVG: {
                     turdSize: 10
                     background: "#fefefe"

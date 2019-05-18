@@ -8,6 +8,7 @@ import {
   Hero,
 } from 'react-bulma-components'
 
+import BlogRecentPosts from '../components/blog/recent-posts'
 import Layout from '../components/layout'
 import LinksRecentLinks from '../components/links/recent-links'
 import SEO from '../components/seo'
@@ -56,6 +57,7 @@ export default class IndexPage extends React.Component {
         <Layout>
           <SEO title="Home" />
           <Intro />
+          <BlogRecentPosts />
           <LinksRecentLinks />
         </Layout>
       </React.Fragment>

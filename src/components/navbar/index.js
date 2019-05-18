@@ -63,6 +63,9 @@ class Nav extends React.Component {
             <Link to="/about" className="navbar-item site-nav">
               About
             </Link>
+            <Link to="/blog" className="navbar-item site-nav">
+              Blog
+            </Link>
             <Link to="/links" className="navbar-item site-nav">
               Links
             </Link>
