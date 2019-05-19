@@ -9,7 +9,6 @@ import SectionHeader from '../components/section-header'
 
 const LinkPostDetail = ({ data, pageContext }) => {
   const { markdownRemark: post } = data
-  console.log(pageContext)
   const { next, prev } = pageContext
 
   return (
