@@ -23,7 +23,7 @@ class SectionHeader extends React.Component {
         )}
         <span>
           {sectionTitle}
-          <small className="has-text-weight-light">&mdash; {tagline}</small>
+          <small className="has-text-weight-light"> &mdash; {tagline}</small>
         </span>
       </Heading>
     )
