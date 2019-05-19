@@ -3,7 +3,7 @@ import Img from 'gatsby-image'
 import { Container } from 'react-bulma-components'
 
 export const Image = ({ caption, image, isHero, url }) => (
-  <figure class="image">
+  <figure className="image">
     {url ? (
       <a href={url} title={caption}>
         <Img fluid={image} alt={caption} />
