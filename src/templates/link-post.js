@@ -25,7 +25,7 @@ const LinkPostDetail = ({ data, pageContext }) => {
           </Columns>
         </Container>
       </Section>
-      <PreviousNext next={next} prev={prev} />
+      {/*<PreviousNext next={next} prev={prev} />*/}
     </Layout>
   )
 }
