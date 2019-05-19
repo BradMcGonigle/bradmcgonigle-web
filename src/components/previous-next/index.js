@@ -4,7 +4,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faChevronLeft, faChevronRight } from '@fortawesome/pro-light-svg-icons'
 import { Columns, Container, Heading, Hero } from 'react-bulma-components'
 
-export const PreviousNext = ({ next, prev }) => (
+export const PreviousNext = ({ next, previous }) => (
   <Hero className="prev-next-nav is-semi-light">
     <Hero.Body>
       <Container>
@@ -33,13 +33,13 @@ export const PreviousNext = ({ next, prev }) => (
               </React.Fragment>
             )}
           </Columns.Column>
-          {prev && next && <hr className="is-hidden-tablet" />}
+          {previous && next && <hr className="is-hidden-tablet" />}
           <Columns.Column
             size={4}
             offset={4}
             className="has-text-right-tablet has-text-centered-mobile"
           >
-            {prev && (
+            {previous && (
               <React.Fragment>
                 <Heading
                   subtitle
@@ -49,10 +49,10 @@ export const PreviousNext = ({ next, prev }) => (
                   Previous
                 </Heading>
                 <Heading size={4} className="has-text-weight-light">
-                  <Link to={prev.frontmatter.path}>
-                    <span>{prev.frontmatter.title}</span>
+                  <Link to={previous.frontmatter.path}>
+                    <span>{previous.frontmatter.title}</span>
                   </Link>
-                  <Link className="link next" to={prev.frontmatter.path}>
+                  <Link className="link next" to={previous.frontmatter.path}>
                     <FontAwesomeIcon
                       icon={faChevronRight}
                       className="is-size-6"
