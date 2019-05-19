@@ -9,6 +9,7 @@ import SectionHeader from '../components/section-header'
 
 const LinkPostDetail = ({ data, pageContext }) => {
   const { markdownRemark: post } = data
+  console.log(pageContext)
   const { next, prev } = pageContext
 
   return (
@@ -25,7 +26,7 @@ const LinkPostDetail = ({ data, pageContext }) => {
           </Columns>
         </Container>
       </Section>
-      <PreviousNext next={next} prev={prev} />
+      {/*<PreviousNext next={next} prev={prev} />*/}
     </Layout>
   )
 }
