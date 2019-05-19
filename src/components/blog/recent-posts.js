@@ -1,16 +1,18 @@
 import React from 'react'
 import { graphql, Link, StaticQuery } from 'gatsby'
 import { Columns, Container, Content, Hero } from 'react-bulma-components'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faChevronRight } from '@fortawesome/pro-light-svg-icons'
 
 import BlogFeaturedPostTease from './featured-post-tease'
-import BlogRecentPostTease from './recent-post-tease'
+import BlogPostTeaseCard from './post-tease-card'
 import SectionHeader from '../section-header'
 
 const BlogRecentPosts = ({ data }) => {
   const { edges: posts } = data.allMarkdownRemark
 
   return (
-    <Hero className="is-bold">
+    <Hero color="white">
       <Hero.Body>
         <Container>
           <Content>
@@ -21,6 +23,12 @@ const BlogRecentPosts = ({ data }) => {
               tagline="Thoughts on things"
             />
             <Columns>
+              {posts.map(({ node: post }) => (
+                <Columns.Column size={6} key={post.id}>
+                  <BlogPostTeaseCard post={post} />
+                </Columns.Column>
+              ))}
+              {/*
               {posts.map(({ node: post }, i, { length }) => (
                 <React.Fragment>
                   {i === 0 && (
@@ -36,14 +44,19 @@ const BlogRecentPosts = ({ data }) => {
                 <React.Fragment>
                   {i !== 0 && i <= 3 && (
                     <Columns.Column size={4} key={post.id}>
-                      <BlogRecentPostTease post={post} />
+                      <BlogPostTeaseCard post={post} />
                     </Columns.Column>
                   )}
                 </React.Fragment>
               ))}
+              */}
             </Columns>
           </Content>
-          <Link to="/blog">Read More </Link>
+          <p className="has-text-right">
+            <Link to="/blog">
+              View more <FontAwesomeIcon icon={faChevronRight} size="xs" />
+            </Link>
+          </p>
         </Container>
       </Hero.Body>
     </Hero>
