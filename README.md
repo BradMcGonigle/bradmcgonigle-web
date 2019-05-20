@@ -1,6 +1,6 @@
 # BradMcGonigle.com
 
-![CircleCI](https://circleci.com/gh/BradMcGonigle/bradmcgonigle/tree/master.svg?style=svg)](https://circleci.com/gh/BradMcGonigle/bradmcgonigle/tree/master)
+[![CircleCI](https://circleci.com/gh/BradMcGonigle/bradmcgonigle/tree/master.svg?style=svg)](https://circleci.com/gh/BradMcGonigle/bradmcgonigle/tree/master)
 
 This repo contains the personal website of Brad McGonigle that is built with [Gatsby](https://www.gatsbyjs.org/) and [Bulma](http://bulma.io) running on [Netlify](https://netlify.com).
 
