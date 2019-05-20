@@ -26,7 +26,7 @@ Slow build times can stem from many things but with GatsbyJS it's usually image 
 
 This site uses the `gatsby-image` plugin combined with `gatsby-plugin-sharp` and `gatsby-transformer-sharp` to process all the images into multiple sizes and resolutions to serve the optimal image based on device size and screen resolution. I won’t cover that setup here but Gatsby provides a [helpful doc](https://www.gatsbyjs.org/docs/working-with-images/) that can get you started. While using responsive image sets provides obvious benefits, it means that Gatsby needs to generate a minimum of two _(but usually many more)_ different sized images for each image on the site at build time. As you can imagine, processing so many images can quickly become taxing on even modern machines.
 
-### Caching the Netlify cache
+## Caching the Netlify cache
 
 My first attempt to solve my build timeout woes was to the implement [`gatsby-plugin-netlify-cache`](https://www.npmjs.com/package/gatsby-plugin-netlify-cache) plugin.
 
@@ -34,11 +34,11 @@ When running `gatsby build`, a `.cache` folder is created to cache the build fil
 
 At first this caching method worked great and took my builds from around the 15 minute limit down to around 7 minutes. Great, problem solved right? Almost but not quite. Once, I needed to do a 'clear cache and deploy site' and I was right back to my builds timing out. I needed another solution and using CircleCI became exactly that.
 
-### Building with CircleCI
+## Building with CircleCI
 
 Similar to Netlify's continuous deployment flow, CircleCI directly integrates with a Git repo and creates a build for every commit to the `master` branch. After a successful build, I can use [netlify-cli](https://www.npmjs.com/package/netlify-cli) to deploy those builds directly to my Netlify production site. Let’s walk though my setup.
 
-#### Setup
+### Setup
 
 Since I use Github, the initial setup was easy. CircleCI uses a [`YAML` config file](https://circleci.com/docs/2.0/getting-started/#adding-a-yml-file) within a `.circleci` folder at the root of your repo which instructs CircleCI how to build your project. There are a ton of [configuration options](https://circleci.com/docs/2.0/configuration-reference/) but for the initial setup I stuck with their example `config.yml` file.
 
@@ -226,7 +226,7 @@ jobs:
           command: ./node_modules/.bin/netlify deploy --site $NETLIFY_SITE_ID --auth $NETLIFY_ACCESS_TOKEN --prod --dir=public
 ```
 
-### Fast and Successful Builds
+## Fast and Successful Builds
 
 Using CircleCI and the configuration above to handle my GatsbyJS builds _(sans tests because **tisk, tisk** I have none at the moment)_, took my 15+ minute build times down to around 4 minutes including deployment. Saving time is one thing but having builds finish each and every time I run them is the real improvement to my deployment flow.
 

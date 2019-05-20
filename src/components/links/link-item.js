@@ -38,7 +38,7 @@ export const LinkItem = ({ post }) => {
         <Heading renderAs="h4" size={6} subtitle className="has-text-grey">
           {post.frontmatter.date}
         </Heading>
-        <Heading renderAs="h2" size={3}>
+        <Heading renderAs="h1" size={3}>
           <a href={post.frontmatter.url} title="{post.frontmatter.title}">
             {post.frontmatter.title}
           </a>

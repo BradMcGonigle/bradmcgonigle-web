@@ -38,7 +38,7 @@ export const BlogPostDetail = ({ post }) => {
                   &mdash; {post.fields.readingTime.text}
                 </span>
               </Heading>
-              <Heading renderAs="h2" size={3}>
+              <Heading renderAs="h1" size={3}>
                 {post.frontmatter.title}
               </Heading>
               <Heading
