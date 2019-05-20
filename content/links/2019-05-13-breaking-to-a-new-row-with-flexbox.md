@@ -3,7 +3,7 @@ templateKey: link-post
 path: /links/2019-05-13-breaking-to-a-new-row-with-flexbox
 title: >-
     Breaking to a new row with flexbox
-summary: >-
+description: >-
     Here’s the challenge: if you want to create a flexbox layout with several rows of items, how do you control which item ends up in which row? Presume you want to create a layout that looks something like this, with three stacked items and alternating full-width items: 
 date: 2019-05-13T09:02:43-04:00
 url: https://tobiasahlin.com/blog/flexbox-break-to-new-row/

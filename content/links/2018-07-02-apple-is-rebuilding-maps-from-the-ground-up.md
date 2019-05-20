@@ -3,7 +3,7 @@ templateKey: link-post
 path: /links/2018-07-02-apple-is-rebuilding-maps-from-the-ground-up
 image: 2018-07-02-apple-is-rebuilding-maps-from-the-ground-up.png
 title: "Apple Is Rebuilding Maps From the Ground Up"
-summary:
+description:
   "I’m not sure if you’re aware, but the launch of Apple Maps went poorly."
 date: 2018-07-02T20:58:01-0400
 url: https://techcrunch.com/2018/06/29/apple-is-rebuilding-maps-from-the-ground-up/
