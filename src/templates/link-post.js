@@ -39,7 +39,7 @@ export default props => (
           html
           frontmatter {
             title
-            summary
+            description
             path
             date(formatString: "MMMM DD, YYYY")
             url
