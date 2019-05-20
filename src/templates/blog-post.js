@@ -6,7 +6,7 @@ import BlogPostDetail from '../components/blog/post-detail'
 import Layout from '../components/layout'
 import SectionHeader from '../components/section-header'
 
-const BlogPostDetailWrapper = ({ data, pageContext }) => {
+const BlogPostDetailWrapper = ({ data }) => {
   const { markdownRemark: post } = data
 
   return (

@@ -7,7 +7,7 @@ import { Image } from '../shared'
 import SEO from '../seo'
 import Tags from '../tags'
 
-const Summary = styled('blockquote')`
+const Description = styled('blockquote')`
   font-size: 0.85rem;
   margin-top: -1.25rem !important;
 `
@@ -38,15 +38,15 @@ export const LinkItem = ({ post }) => {
         <Heading renderAs="h4" size={6} subtitle className="has-text-grey">
           {post.frontmatter.date}
         </Heading>
-        <Heading renderAs="h2" size={3}>
+        <Heading renderAs="h1" size={3}>
           <a href={post.frontmatter.url} title="{post.frontmatter.title}">
             {post.frontmatter.title}
           </a>
         </Heading>
-        {post.frontmatter.summary && (
-          <Summary className="subtitle is-italic has-text-grey">
-            <p>{post.frontmatter.summary}</p>
-          </Summary>
+        {post.frontmatter.description && (
+          <Description className="subtitle is-italic has-text-grey">
+            <p>{post.frontmatter.description}</p>
+          </Description>
         )}
         <PostBody>
           <PostContent content={post.frontmatter.html} />

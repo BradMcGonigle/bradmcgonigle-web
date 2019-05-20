@@ -20,15 +20,15 @@ tags:
 
 There are few choices when integrating Bulma into React but my favorite is [react-bulma-components](https://github.com/couds/react-bulma-components). It’s well documented, supports all of [Bulma](https://bulma.io/)’s features and releases typically come quickly after official Bulma releases.
 
-### Getting Started
+## Getting Started
 
 First we need to add [react-bulma-components](https://github.com/couds/react-bulma-components) to our React project.
 
-#### NPM
+### NPM
 
 `npm install react-bulma-components`
 
-#### Yarn
+### Yarn
 
 `yarn add react-bulma-components`
 
@@ -68,7 +68,7 @@ Passing `renderAs=“a”` along with a `href` will make our button markup rende
 
 With [react-bulma-components](https://github.com/couds/react-bulma-components), all of our Bulma components can accept whatever props you want including `className` which will be prepended to any of the classes derived from the other props passed to our component.
 
-### Bulma's Grid
+## Bulma's Grid
 
 Bulma is dubbed _CSS framework based on Flexbox_ so at its core, one of its most powerful uses is for simplifying layouts. [Columns](https://bulma.io/documentation/columns/) are Bulma’s building blocks for creating responsive layouts that just work. Bulma uses a 12 column layout but has the flexibility to work with fixed width columns as well as percentage-based columns. A basic fixed-width column in Bulma might looks like `<div class=“column is-6">Column Content</div>` where `is-6` defines the size of the column based on it's container size. If we wanted our column to be percentage-based, instead of using the `is-6` class we would use `is-half`. Since Bulma uses flexbox at it's core, for a two column layout we technically only need to define the size of our first column. Based on the first columns size setting, our second column will automatically adjust to take up the remaining container. The html looks like this.
 
@@ -96,7 +96,7 @@ import { Columns, Container } from 'react-bulma-components'
 
 The component above will render the same html above.
 
-### Plenty More to Explore
+## Plenty More to Explore
 
 Of course, Bulma offers so much more than button styling and grid layout. There are styles for easily implementing navigation bars, breadcrumbs, tags, cards, forms, and so much more that all are available in [react-bulma-components](https://github.com/couds/react-bulma-components). I encourage you to check out the [bulma docs](https://bulma.io/documentation/) as well as their [showcase](https://bulma.io/expo/) which can give you an idea of the possibilities with Bulma with or with React.
 
