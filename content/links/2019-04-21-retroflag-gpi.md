@@ -2,7 +2,7 @@
 templateKey: link-post
 path: /links/2019-04-21-retroflag-gpi
 title: "Retroflag GPi"
-summary:
+description:
   ""
 date: 2019-04-22T12:00:00-04:00
 url: http://retroflag.com/gpi-case.html

@@ -2,7 +2,7 @@
 templateKey: link-post
 path: /links/2018-10-04-homekit-support-rolling-out-for-netatmo-welcome-security-camera
 title: "HomeKit support rolling out for Netatmo Welcome security camera"
-summary:
+description:
   "Netatmo is beginning to deploy HomeKit support for owners of its Welcome indoor security camera, beginning with beta testers, the company has confirmed."
 date: 2018-10-04T12:00:00-04:00
 url: https://www.google.com/amp/s/appleinsider.com/articles/18/10/02/homekit-support-rolling-out-for-netatmo-welcome-security-camera/amp/
