@@ -3,8 +3,8 @@ templateKey: blog-post
 path: /blog/using-bulma-with-react
 category: Development
 title: >-
-  Using Bulma with react
-date: 2019-05-05T10:00:00.000Z
+  Using Bulma with React
+date: 2019-05-10T10:00:00.000Z
 description: >-
   CSS frameworks are nothing new and Bulma has become one of the popular choices for rapid frontend prototyping and development.
 featuredImage: css-code.jpg
