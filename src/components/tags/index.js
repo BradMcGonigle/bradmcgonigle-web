@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'gatsby'
 import { Tag } from 'react-bulma-components'
 
 export default function Tags({ list = [], ignore }) {
@@ -8,11 +9,19 @@ export default function Tags({ list = [], ignore }) {
   tags = tags.sort() // Sort alphabetically
   return (
     <Tag.Group>
-      {tags.map((tag, index) => (
-        <Tag className="has-text-weight-light is-lowercase" key={index}>
-          {tag}
-        </Tag>
-      ))}
+      {tags.map((tag, index) => {
+        const tagSlug = tag.toLowerCase()
+
+        return (
+          <Link
+            to={`/tags/${tagSlug}`}
+            className="tag is-link has-text-weight-light is-capitalized"
+            key={index}
+          >
+            {tag}
+          </Link>
+        )
+      })}
     </Tag.Group>
   )
 }
