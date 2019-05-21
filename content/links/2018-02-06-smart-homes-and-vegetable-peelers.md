@@ -8,6 +8,6 @@ date: 2018-02-06T23:42:40-0500
 url: https://www.ben-evans.com/benedictevans/2018/1/4/smart-homes-and-vegetable-peelers
 image: 2018-02-06-smart-homes-and-vegetable-peelers.jpg
 tags:
-  - IOT
+  - Internet of Things
   - Smart Home
 ---

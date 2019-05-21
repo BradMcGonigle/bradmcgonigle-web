@@ -8,8 +8,8 @@ date: 2018-10-03T12:00:00-04:00
 url: https://blog.halide.cam/iphone-xs-why-its-a-whole-new-camera-ddf9780d714c
 image: 2018-10-03-iphone-xs-why-its-a-whole-new-camera.jpeg
 tags:
-  - ios
+  - iOS
   - apple
-  - iphone
-  - photography
+  - iPhone
+  - Photography
 ---

@@ -61,11 +61,12 @@
   "license": "MIT",
   "main": "n/a",
   "scripts": {
-    "start": "npm run develop",
     "build": "gatsby build",
+    "clean": "gatsby clean",
     "develop": "gatsby develop",
+    "format": "prettier --write 'src/**/*.js'",
     "serve": "gatsby serve",
-    "format": "prettier --write 'src/**/*.js'"
+    "serveProd": "gatsby build && gatsby serve"
   },
   "devDependencies": {
     "prettier": "1.17.0"

@@ -9,6 +9,6 @@ url: https://www.google.com/amp/s/appleinsider.com/articles/18/10/02/homekit-sup
 image: 2018-10-04-homekit-support-rolling-out-for-netatmo-welcome-security-camera.jpeg
 tags:
   - homekit
-  - iot
+  - Internet of Things
 ---
 I’ve had the Netatmo Welcome camera for a long time now since they promised HomeKit support. It’s nice to see a company actually deliver on their promise.

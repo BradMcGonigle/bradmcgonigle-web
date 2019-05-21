@@ -9,6 +9,6 @@ url: https://uncrate.com/lego-apple-park/
 image: 2018-10-03-lego-apple-park.jpeg
 tags:
   - apple
-  - lego
+  - Lego
 ---
 Amazing work and incredibly fun!
