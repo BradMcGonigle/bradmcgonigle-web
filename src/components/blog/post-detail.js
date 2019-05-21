@@ -16,11 +16,20 @@ import Tags from '../tags'
 export const BlogPostDetail = ({ post }) => {
   const PostContent = HTMLContent || ContentWrapper
 
+  let postImage
+  if (post.frontmatter.featuredImage) {
+    postImage = post.frontmatter.featuredImage.childImageSharp.fluid.src
+  } else {
+    postImage = post.frontmatter.image.childImageSharp.fluid.src
+  }
+
   return (
     <React.Fragment>
       <SEO
+        description={post.frontmatter.description}
+        image={postImage}
         keywords={post.frontmatter.tags}
-        title={`${post.frontmatter.title} | Blog`}
+        title={post.frontmatter.title}
       />
       <Section className="padding-top-050">
         <Container>

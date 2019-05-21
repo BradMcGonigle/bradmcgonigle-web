@@ -23,7 +23,8 @@ export const LinkItem = ({ post }) => {
     <React.Fragment>
       <SEO
         keywords={post.frontmatter.tags}
-        title={`${post.frontmatter.title} | Links`}
+        description={post.frontmatter.description}
+        title={post.frontmatter.title}
       />
       {post.frontmatter.image && (
         <Columns.Column size={4}>
