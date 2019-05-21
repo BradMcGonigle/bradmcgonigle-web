@@ -19,11 +19,19 @@ const PostBody = styled('div')`
 export const LinkItem = ({ post }) => {
   const PostContent = HTMLContent || ContentWrapper
 
+  let postImage
+  if (post.frontmatter.featuredImage) {
+    postImage = post.frontmatter.featuredImage.childImageSharp.fluid.src
+  } else {
+    postImage = post.frontmatter.image.childImageSharp.fluid.src
+  }
+
   return (
     <React.Fragment>
       <SEO
-        keywords={post.frontmatter.tags}
         description={post.frontmatter.description}
+        image={postImage}
+        keywords={post.frontmatter.tags}
         title={post.frontmatter.title}
       />
       {post.frontmatter.image && (
