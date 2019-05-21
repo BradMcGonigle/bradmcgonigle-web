@@ -22,7 +22,7 @@ export const LinkItem = ({ post }) => {
   let postImage
   if (post.frontmatter.featuredImage) {
     postImage = post.frontmatter.featuredImage.childImageSharp.fluid.src
-  } else {
+  } else if (post.frontmatter.image) {
     postImage = post.frontmatter.image.childImageSharp.fluid.src
   }
 
