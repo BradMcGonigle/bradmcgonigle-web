@@ -9,7 +9,12 @@ import Tags from '../tags'
 
 const Description = styled('blockquote')`
   font-size: 0.85rem;
-  margin-top: -1.25rem !important;
+  line-height: 1.5rem;
+  margin: -0.75rem 0 1rem 0;
+  border-bottom: 1px solid #f6f6f6;
+  border-top: 1px solid #f6f6f6;
+  border-left: 4px solid #eee;
+  padding: 0.35rem 0 0.35rem 1rem;
 `
 
 export const LinkItem = ({ post }) => {
@@ -24,7 +29,11 @@ export const LinkItem = ({ post }) => {
       {post.frontmatter.image && (
         <Columns.Column size={4}>
           <Image
-            caption={post.frontmatter.title}
+            caption={
+              post.frontmatter.imageAlt
+                ? post.frontmatter.imageAlt
+                : post.frontmatter.title
+            }
             image={post.frontmatter.image.childImageSharp.fluid}
             url={post.frontmatter.url}
           />
@@ -40,7 +49,7 @@ export const LinkItem = ({ post }) => {
           </a>
         </Heading>
         {post.frontmatter.description && (
-          <Description className="subtitle is-italic has-text-grey">
+          <Description className="is-italic has-text-grey">
             <p>{post.frontmatter.description}</p>
           </Description>
         )}

@@ -58,6 +58,7 @@ export default props => (
                 }
               }
             }
+            imageAlt
             tags
           }
         }
