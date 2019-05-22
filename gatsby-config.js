@@ -1,9 +1,10 @@
 module.exports = {
   siteMetadata: {
-    title: 'Brad McGonigle',
     author: 'Brad McGonigle',
     description: 'Father, husband, developer, and nerd.',
     siteUrl: 'https://www.bradmcgonigle.com',
+    title: 'Brad McGonigle',
+    twitterHandle: '@bradmcgonigle',
   },
   plugins: [
     {
