@@ -15,8 +15,6 @@ const Description = styled('blockquote')`
 export const LinkItem = ({ post }) => {
   const PostContent = HTMLContent || ContentWrapper
 
-  console.log(post)
-
   return (
     <React.Fragment>
       <SEO
