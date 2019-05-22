@@ -14,4 +14,5 @@ tags:
   - Apple
   - Privacy
 ---
-Apple’s proposal is exactly how ad tracking should have always worked. We’ve lived with completely over-obtrusive ad tracking on the web for far too long. Proposals in the past  like Do Not Track because they needed support from the ad networks and they have no interest in doing anything but tracking more data, not less.  The web needs this proposal to succeed.
+
+Apple’s proposal is exactly how ad tracking should have always worked. We’ve lived with completely over-obtrusive ad tracking on the web for far too long. Proposals in the past  like Do Not Track failed because they needed support from the ad networks who have no interest in doing anything but tracking more data, not less. It seems this proposal doesn't have that such hurdle so if browsers support becomes widely adopted than the ad networks might be forced to live with the results.
