@@ -104,11 +104,22 @@ module.exports = {
           {
             serialize: ({ query: { site, allMarkdownRemark } }) => {
               return allMarkdownRemark.edges.map(edge => {
+                let image
+                if (edge.node.frontmatter.featuredImage) {
+                  image =
+                    edge.node.frontmatter.featuredImage.childImageSharp.fluid
+                      .src
+                } else if (edge.node.frontmatter.image) {
+                  image = edge.node.frontmatter.image.childImageSharp.fluid.src
+                }
                 return Object.assign({}, edge.node.frontmatter, {
                   description: edge.node.frontmatter.description,
                   date: edge.node.frontmatter.date,
                   url: site.siteMetadata.siteUrl + edge.node.frontmatter.path,
                   guid: site.siteMetadata.siteUrl + edge.node.frontmatter.path,
+                  enclosure: {
+                    url: site.siteMetadata.siteUrl + image,
+                  },
                   custom_elements: [{ 'content:encoded': edge.node.html }],
                 })
               })
@@ -128,6 +139,26 @@ module.exports = {
                         title
                         description
                         date
+                        featuredImage {
+                          childImageSharp {
+                            fluid(
+                              maxWidth: 3000
+                              maxHeight: 1250
+                              cropFocus: ATTENTION
+                            ) {
+                              src
+                            }
+                          }
+                        }
+                        image {
+                          childImageSharp {
+                            fluid(
+                              maxWidth: 3000
+                            ) {
+                              src
+                            }
+                          }
+                        }
                       }
                     }
                   }
@@ -140,11 +171,22 @@ module.exports = {
           {
             serialize: ({ query: { site, allMarkdownRemark } }) => {
               return allMarkdownRemark.edges.map(edge => {
+                let image
+                if (edge.node.frontmatter.featuredImage) {
+                  image =
+                    edge.node.frontmatter.featuredImage.childImageSharp.fluid
+                      .src
+                } else if (edge.node.frontmatter.image) {
+                  image = edge.node.frontmatter.image.childImageSharp.fluid.src
+                }
                 return Object.assign({}, edge.node.frontmatter, {
                   description: edge.node.frontmatter.description,
                   date: edge.node.frontmatter.date,
                   url: site.siteMetadata.siteUrl + edge.node.frontmatter.path,
                   guid: site.siteMetadata.siteUrl + edge.node.frontmatter.path,
+                  enclosure: {
+                    url: site.siteMetadata.siteUrl + image,
+                  },
                   custom_elements: [{ 'content:encoded': edge.node.html }],
                 })
               })
@@ -164,6 +206,26 @@ module.exports = {
                         title
                         description
                         date
+                        featuredImage {
+                          childImageSharp {
+                            fluid(
+                              maxWidth: 3000
+                              maxHeight: 1250
+                              cropFocus: ATTENTION
+                            ) {
+                              src
+                            }
+                          }
+                        }
+                        image {
+                          childImageSharp {
+                            fluid(
+                              maxWidth: 3000
+                            ) {
+                              src
+                            }
+                          }
+                        }
                       }
                     }
                   }
@@ -176,11 +238,22 @@ module.exports = {
           {
             serialize: ({ query: { site, allMarkdownRemark } }) => {
               return allMarkdownRemark.edges.map(edge => {
+                let image
+                if (edge.node.frontmatter.featuredImage) {
+                  image =
+                    edge.node.frontmatter.featuredImage.childImageSharp.fluid
+                      .src
+                } else if (edge.node.frontmatter.image) {
+                  image = edge.node.frontmatter.image.childImageSharp.fluid.src
+                }
                 return Object.assign({}, edge.node.frontmatter, {
                   description: edge.node.frontmatter.description,
                   date: edge.node.frontmatter.date,
                   url: site.siteMetadata.siteUrl + edge.node.frontmatter.path,
                   guid: site.siteMetadata.siteUrl + edge.node.frontmatter.path,
+                  enclosure: {
+                    url: site.siteMetadata.siteUrl + image,
+                  },
                   custom_elements: [{ 'content:encoded': edge.node.html }],
                 })
               })
@@ -200,6 +273,26 @@ module.exports = {
                         title
                         description
                         date
+                        featuredImage {
+                          childImageSharp {
+                            fluid(
+                              maxWidth: 3000
+                              maxHeight: 1250
+                              cropFocus: ATTENTION
+                            ) {
+                              src
+                            }
+                          }
+                        }
+                        image {
+                          childImageSharp {
+                            fluid(
+                              maxWidth: 3000
+                            ) {
+                              src
+                            }
+                          }
+                        }
                       }
                     }
                   }
