@@ -12,10 +12,6 @@ const Description = styled('blockquote')`
   margin-top: -1.25rem !important;
 `
 
-const PostBody = styled('div')`
-  margin-top: 1.5rem;
-`
-
 export const LinkItem = ({ post }) => {
   const PostContent = HTMLContent || ContentWrapper
 
@@ -57,9 +53,7 @@ export const LinkItem = ({ post }) => {
             <p>{post.frontmatter.description}</p>
           </Description>
         )}
-        <PostBody>
-          <PostContent content={post.frontmatter.html} />
-        </PostBody>
+        <PostContent content={post.html} />
         <Tags list={post.frontmatter.tags || []} ignore="link" />
       </Columns.Column>
     </React.Fragment>
