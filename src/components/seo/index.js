@@ -30,7 +30,7 @@ function SEO({ description, image, keywords, lang, meta, title, type }) {
   )
 
   const metaDescription = description || site.siteMetadata.description
-  const image = image || site.siteMetadata.image
+  const metaImage = image || site.siteMetadata.image
   const metaType = type || 'website'
 
   return (
@@ -60,7 +60,7 @@ function SEO({ description, image, keywords, lang, meta, title, type }) {
         },
         {
           property: `og:image`,
-          content: site.siteMetadata.siteUrl + image,
+          content: site.siteMetadata.siteUrl + metaImage,
         },
         {
           name: `twitter:card`,
