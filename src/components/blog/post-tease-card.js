@@ -4,10 +4,17 @@ import { Card, Heading } from 'react-bulma-components'
 
 const BlogPostTeaseCard = ({ small, post }) => (
   <Card renderAs="a" href={post.frontmatter.path} className="no-border">
-    {post.frontmatter.image && (
+    {!post.frontmatter.featuredImage && post.frontmatter.image && (
       <Img
         fluid={post.frontmatter.image.childImageSharp.fluid}
         alt={post.frontmatter.image}
+        className="card-image"
+      />
+    )}
+    {post.frontmatter.featuredImage && !post.frontmatter.image && (
+      <Img
+        fluid={post.frontmatter.featuredImage.childImageSharp.fluid}
+        alt={post.frontmatter.featuredImage}
         className="card-image"
       />
     )}

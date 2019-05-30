@@ -21,7 +21,7 @@ export const BlogIndex = ({ data }) => {
           <SectionHeader section="Writings" tagline="Thoughts on things" />
           <Columns>
             {posts.map(({ node: post }) => (
-              <Columns.Column size={6} key={post.id}>
+              <Columns.Column size={4} key={post.id}>
                 <BlogPostTeaseCard post={post} />
               </Columns.Column>
             ))}
