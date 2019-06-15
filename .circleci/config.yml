@@ -43,6 +43,7 @@ workflows:
                 - master
 jobs:
   build:
+    machine: true
     executor: node-executor
     environment:
       NETLIFY_SITE_ID: 6835649b-b4f3-47b2-a5cf-5c711952c4f9
@@ -54,6 +55,7 @@ jobs:
           name: Netlify Deploy
           command: ./node_modules/.bin/netlify deploy --site $NETLIFY_SITE_ID --auth $NETLIFY_ACCESS_TOKEN --dir=public
   release:
+    machine: true
     executor: node-executor
     environment:
       NETLIFY_SITE_ID: 6835649b-b4f3-47b2-a5cf-5c711952c4f9
