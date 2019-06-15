@@ -1,7 +1,8 @@
 version: 2.1
 executors:
   node-executor:
-    machine: true
+    docker:
+      - image: circleci/node:10
 commands:
   gatsby-build:
     steps:
