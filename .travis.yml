@@ -1,15 +1,26 @@
 language: node_js
 node_js:
-  - '8'
+  - '10'
 os:
   - linux
 dist: trusty
 sudo: required
 cache:
   yarn: true
-after_success:
-  - yarn build && netlify deploy --site \${NETLIFY_SITE_ID} --auth \${NETLIFY_AUTH_TOKEN} --prod
-    --dir=public
+before_deploy:
+  - yarn add netlify-cli
+  - yarn build
+deploy:
+  provider: script
+  script: netlify deploy -s \${NETLIFY_SITE_ID} -t \${NETLIFY_ACCESS_TOKEN} ./build
+  skip_cleanup: true
+  on:
+    all_branches: true
+  provider: script
+  script: netlify deploy -s \${NETLIFY_SITE_ID} -t \${NETLIFY_ACCESS_TOKEN} ./build --prod --dir=public
+  skip_cleanup: true
+  on:
+    branch: master
 env:
   matrix:
     - secure: ZVlRAyvRDWOwaAoGiZGY4eEw6tOKvRn80oZGSrgVIfo+PcBMtsdJwkJSJWvVQtur9WTE0OadkprSr+cznZ6SgejoKw4SiNRxA3dpawejdtVEWUntTZ32medvDOIkEle/HIm8CTOZ+eih/jpvF/fEs3X1Yr5Y+nqmoqsGRCHBYRxiqpZ4yR7oforUShE/s2bBnFabXGi3YjR16HvmMk214kRd7K3Mk/FEKyw1JFIGksQuOqT4Td9EryLHAwmraffuNWSZfo+7DWspj3STveJrAcV3e9mLZckKngr14DdJtcWCG9m92x7DLU6CcRCD5j+pfgxStZbWaLLdSJhyhnTZQ3BYlSQY/TjkCGoWxze6R+BBL/lyrEqq6Xz2d5VwG/MxbrVsEbietCdULFGDacNMNwTCbivAIJYXgqdq6BTiba4XpnAUBTDX6qmWVbnLjE+MlGKcFO9s59xx2OtIweLFzA0DOvbORYUnK2x5XQA8hbN10rhU5EUcVbdZv4FfDlh3yf3CENdZGcBgWP57tHzFXrmyQXYuLubSccHliBSsvH70gjYoKyToaGbrz0jpTaOzrMCL2ySaoEzi4cC0ouYw02B/QaHEx+AZw0hp7wDfo1UOTkgGNoRxQey6B0Nvmhe5ed9/QPY+QgGK7tw62FgDUm+vxSdoyMJ1aGzeVuQuBHY=
