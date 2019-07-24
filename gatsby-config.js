@@ -181,6 +181,7 @@ module.exports = {
                   date: edge.node.frontmatter.date,
                   url: site.siteMetadata.siteUrl + edge.node.frontmatter.path,
                   guid: site.siteMetadata.siteUrl + edge.node.frontmatter.path,
+                  source: edge.node.frontmatter.url,
                   custom_elements: [{ 'content:encoded': edge.node.html }],
                 })
               })
@@ -200,6 +201,7 @@ module.exports = {
                         title
                         description
                         date
+                        url
                       }
                     }
                   }
