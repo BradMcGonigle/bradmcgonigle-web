@@ -23,12 +23,6 @@ const BlogRecentPosts = ({ data }) => {
               tagline="Thoughts on things"
             />
             <Columns>
-              {posts.map(({ node: post }) => (
-                <Columns.Column size={4} key={post.id}>
-                  <BlogPostTeaseCard post={post} />
-                </Columns.Column>
-              ))}
-              {/*
               {posts.map(({ node: post }, i, { length }) => (
                 <React.Fragment>
                   {i === 0 && (
@@ -49,7 +43,6 @@ const BlogRecentPosts = ({ data }) => {
                   )}
                 </React.Fragment>
               ))}
-              */}
             </Columns>
           </Content>
           <p className="has-text-right">
