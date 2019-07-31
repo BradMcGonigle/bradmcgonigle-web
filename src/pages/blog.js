@@ -20,12 +20,6 @@ export const BlogIndex = ({ data }) => {
         <Container>
           <SectionHeader section="Writings" tagline="Thoughts on things" />
           <Columns>
-            {posts.map(({ node: post }) => (
-              <Columns.Column size={4} key={post.id}>
-                <BlogPostTeaseCard post={post} />
-              </Columns.Column>
-            ))}
-            {/*
             {posts.map(({ node: post }, i, { length }) => (
               <React.Fragment>
                 {i === 0 && (
@@ -57,7 +51,6 @@ export const BlogIndex = ({ data }) => {
                 )}
               </React.Fragment>
             ))}
-            */}
           </Columns>
         </Container>
       </Section>
