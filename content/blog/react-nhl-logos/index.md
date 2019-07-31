@@ -6,12 +6,12 @@ title: >-
   Introducing React NHL Logos
 date: 2019-07-31T16:38:09-04:00
 description: >-
-  React components for NHL team logos
+  An NPM package which includes the primary logos for all 31 NHL teams as well as the NHL shield logo in SVG format available as React components. React NHL Logos has a component for each team and NHL logo which outputs an inline SVG making it a breeze to manipulate, animate or alter directly.
 featuredImage: react-nhl-logos.jpg
 featuredImageAlt: >-
   National Hockey League Logos
-image:
-imageAlt:
+image: react-nhl-logos.jpg
+imageAlt: National Hockey League Logos
 tags:
   - Development
   - React
@@ -22,7 +22,7 @@ Inspired by [Chris Katsaras'](https://github.com/ChrisKatsaras) [_React NBA Logo
 
 The package includes the primary logos for all 31 NHL teams as well as the NHL shield logo in SVG format available as React components. A few years ago I watched [Why Inline SVG is Best SVG](https://www.youtube.com/watch?v=af4ZQJ14yu8) and it still remains a great explainer for why using inline svgs is better than using the various [methods of displaying SVGs](https://css-tricks.com/using-svg) on a webpage. [React NHL Logos](https://github.com/bradmcgonigle/react-nhl-logos) has a component for each team and NHL logo which outputs an inline SVG making it a breeze to manipulate, animate or alter directly.
 
-Below is the README for the package which details installation, usage and the available configuration options _(there is only one right now)_ but I have a few more ideas for things like alternate logos that I hope to include in a future release.
+Below is part of the [README](https://github.com/BradMcGonigle/react-nhl-logos/blob/master/README.md) for the package which details installation, usage and the available configuration options _(there is only one right now)_ but I have a few more ideas for things like alternate logos that I hope to include in a future release.
 
 ## Install
 
