@@ -29,6 +29,7 @@ export const BlogPostDetail = ({ post }) => {
         image={postImage}
         keywords={post.frontmatter.tags}
         title={post.frontmatter.title}
+        url={post.frontmatter.path}
       />
       <Section className="padding-top-050">
         <Container>
