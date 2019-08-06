@@ -7,14 +7,14 @@ const BlogPostTeaseCard = ({ small, post }) => (
     {!post.frontmatter.featuredImage && post.frontmatter.image && (
       <Img
         fluid={post.frontmatter.image.childImageSharp.fluid}
-        alt={post.frontmatter.image}
+        alt={post.frontmatter.imageAlt}
         className="card-image"
       />
     )}
     {post.frontmatter.featuredImage && !post.frontmatter.image && (
       <Img
         fluid={post.frontmatter.featuredImage.childImageSharp.fluid}
-        alt={post.frontmatter.featuredImage}
+        alt={post.frontmatter.featuredImageAlt}
         className="card-image"
       />
     )}
