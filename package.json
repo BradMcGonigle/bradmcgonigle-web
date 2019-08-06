@@ -16,6 +16,7 @@
     "bulma": "~0.7.2",
     "bulma-helpers": "^0.3.6",
     "bulma-timeline": "^3.0.3",
+    "dotenv": "^8.0.0",
     "emotion": "~10.0.5",
     "eslint-plugin-emotion": "^10.0.6",
     "gatsby": "^2.3.34",
@@ -61,11 +62,13 @@
   "license": "MIT",
   "main": "n/a",
   "scripts": {
-    "start": "npm run develop",
     "build": "gatsby build",
+    "deploy": "./scripts/netlify-deploy.sh",
     "develop": "gatsby develop",
+    "format": "prettier --write 'src/**/*.js'",
     "serve": "gatsby serve",
-    "format": "prettier --write 'src/**/*.js'"
+    "start": "npm run develop",
+    "test": "echo \"Error: no test specified\""
   },
   "devDependencies": {
     "prettier": "1.17.0"

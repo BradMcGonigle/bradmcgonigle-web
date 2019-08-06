@@ -10,9 +10,8 @@ description: >-
 featuredImage: css-code.jpg
 featuredImageAlt: >-
   CSS Code
-image: css-code.jpg
-imageAlt: >-
-  CSS Code
+image:
+imageAlt:
 tags:
   - React
   - CSS

@@ -9,7 +9,19 @@ import Tags from '../tags'
 
 const Description = styled('blockquote')`
   font-size: 0.85rem;
-  margin-top: -1.25rem !important;
+  line-height: 1.5rem;
+  margin: -0.75rem 0 1rem 0;
+  border-left: 4px solid #eee;
+  padding: 0.35rem 0 0.35rem 1rem;
+`
+
+const PostBody = styled('div')`
+  margin-top: 1.5rem;
+  line-height: 1.75rem;
+`
+
+const TagsWrapper = styled('div')`
+  margin-top: 1.5rem;
 `
 
 export const LinkItem = ({ post }) => {
@@ -33,7 +45,11 @@ export const LinkItem = ({ post }) => {
       {post.frontmatter.image && (
         <Columns.Column size={4}>
           <Image
-            caption={post.frontmatter.title}
+            caption={
+              post.frontmatter.imageAlt
+                ? post.frontmatter.imageAlt
+                : post.frontmatter.title
+            }
             image={post.frontmatter.image.childImageSharp.fluid}
             url={post.frontmatter.url}
           />
@@ -48,13 +64,17 @@ export const LinkItem = ({ post }) => {
             {post.frontmatter.title}
           </a>
         </Heading>
-        {post.frontmatter.description && (
-          <Description className="subtitle is-italic has-text-grey">
-            <p>{post.frontmatter.description}</p>
+        {post.frontmatter.summary && (
+          <Description className="is-italic has-text-grey">
+            <p>{post.frontmatter.summary}</p>
           </Description>
         )}
-        <PostContent content={post.html} />
-        <Tags list={post.frontmatter.tags || []} ignore="link" />
+        <PostBody>
+          <PostContent content={post.html} />
+        </PostBody>
+        <TagsWrapper>
+          <Tags list={post.frontmatter.tags || []} ignore="link" />
+        </TagsWrapper>
       </Columns.Column>
     </React.Fragment>
   )

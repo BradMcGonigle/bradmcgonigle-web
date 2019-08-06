@@ -39,7 +39,7 @@ export default props => (
           html
           frontmatter {
             title
-            description
+            summary
             path
             date(formatString: "MMMM DD, YYYY")
             url
@@ -59,6 +59,7 @@ export default props => (
                 }
               }
             }
+            imageAlt
             tags
           }
         }

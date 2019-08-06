@@ -118,6 +118,7 @@ class ContactForm extends React.Component {
                             className="input"
                             placeholder="Name"
                             name="name"
+                            required
                             type="text"
                             value={name}
                             onChange={this.handleChange}
@@ -130,6 +131,7 @@ class ContactForm extends React.Component {
                             className="input"
                             placeholder="Email"
                             name="email"
+                            required
                             type="email"
                             value={email}
                             onChange={this.handleChange}
@@ -142,6 +144,7 @@ class ContactForm extends React.Component {
                             className="textarea"
                             placeholder="Message"
                             name="message"
+                            required
                             value={message}
                             onChange={this.handleChange}
                           />

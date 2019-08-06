@@ -191,6 +191,10 @@ $colors: map-merge($colors, $addColors);
   }
 }
 
+pre {
+  line-height: 1;
+}
+
 .content {
   figure {
     background-color: #f8f8f8;

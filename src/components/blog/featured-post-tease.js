@@ -29,7 +29,7 @@ const BlogFeaturedPostTease = ({ post }) => (
           renderAs="h4"
           size={5}
           subtitle
-          className="has-text-grey margin-bottom-025"
+          className="has-text-grey has-text-weight-light margin-bottom-025"
         >
           {post.frontmatter.description}
         </Heading>
