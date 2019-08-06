@@ -115,6 +115,7 @@ class ContactForm extends React.Component {
                       <div className="field">
                         <p className="control">
                           <input
+                            aria-label="Name"
                             className="input"
                             placeholder="Name"
                             name="name"
@@ -128,6 +129,7 @@ class ContactForm extends React.Component {
                       <div className="field">
                         <p className="control">
                           <input
+                            aria-label="Email"
                             className="input"
                             placeholder="Email"
                             name="email"
@@ -141,6 +143,7 @@ class ContactForm extends React.Component {
                       <div className="field">
                         <div className="control">
                           <textarea
+                            aria-label="Message"
                             className="textarea"
                             placeholder="Message"
                             name="message"

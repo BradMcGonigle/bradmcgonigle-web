@@ -73,6 +73,7 @@ class Nav extends React.Component {
             <SocialLink
               href="https://github.com/bradmcgonigle"
               rel="noopener noreferrer"
+              title="Github"
             >
               <span className="icon">
                 <FontAwesomeIcon icon={faGithub} />
@@ -81,6 +82,7 @@ class Nav extends React.Component {
             <SocialLink
               href="https://instagram.com/bradmcgonigle"
               rel="noopener noreferrer"
+              title="Instragram"
             >
               <span className="icon">
                 <FontAwesomeIcon icon={faInstagram} />
@@ -89,6 +91,7 @@ class Nav extends React.Component {
             <SocialLink
               href="https://twitter.com/bradmcgonigle"
               rel="noopener noreferrer"
+              title="Twitter"
             >
               <span className="icon">
                 <FontAwesomeIcon icon={faTwitter} />
@@ -97,6 +100,7 @@ class Nav extends React.Component {
             <SocialLink
               href="https://facebook.com/bradmcgonigle"
               rel="noopener noreferrer"
+              title="Facebook"
             >
               <span className="icon">
                 <FontAwesomeIcon icon={faFacebook} />

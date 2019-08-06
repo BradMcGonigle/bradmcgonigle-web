@@ -55,6 +55,7 @@ const Footer = () => (
             <SocialLink
               href="https://github.com/bradmcgonigle"
               rel="noopener noreferrer"
+              title="Github"
             >
               <span className="icon">
                 <FontAwesomeIcon icon={faGithub} />
@@ -63,6 +64,7 @@ const Footer = () => (
             <SocialLink
               href="https://instagram.com/bradmcgonigle"
               rel="noopener noreferrer"
+              title="Instagram"
             >
               <span className="icon">
                 <FontAwesomeIcon icon={faInstagram} />
@@ -71,6 +73,7 @@ const Footer = () => (
             <SocialLink
               href="https://twitter.com/bradmcgonigle"
               rel="noopener noreferrer"
+              title="Twitter"
             >
               <span className="icon">
                 <FontAwesomeIcon icon={faTwitter} />
@@ -79,6 +82,7 @@ const Footer = () => (
             <SocialLink
               href="https://facebook.com/bradmcgonigle"
               rel="noopener noreferrer"
+              title="Facebook"
             >
               <span className="icon">
                 <FontAwesomeIcon icon={faFacebook} />
