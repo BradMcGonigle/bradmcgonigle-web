@@ -37,7 +37,7 @@ export const LinkItem = ({ post }) => {
   return (
     <React.Fragment>
       <SEO
-        description={post.frontmatter.description}
+        description={post.frontmatter.summary}
         image={postImage}
         keywords={post.frontmatter.tags}
         title={`Link: ${post.frontmatter.title}`}
