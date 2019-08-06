@@ -54,6 +54,7 @@ class Nav extends React.Component {
             <strong>B &mdash; M.</strong>
           </Link>
           <Navbar.Burger
+            aria-label="Open the menu"
             className={this.state.open ? 'is-active' : ''}
             onClick={this.onClick}
           />
