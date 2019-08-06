@@ -40,7 +40,7 @@ export const LinkItem = ({ post }) => {
         description={post.frontmatter.description}
         image={postImage}
         keywords={post.frontmatter.tags}
-        title={post.frontmatter.title}
+        title={`Link: ${post.frontmatter.title}`}
         url={post.frontmatter.path}
       />
       {post.frontmatter.image && (
