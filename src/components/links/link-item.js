@@ -27,11 +27,20 @@ const TagsWrapper = styled('div')`
 export const LinkItem = ({ post }) => {
   const PostContent = HTMLContent || ContentWrapper
 
+  let postImage
+  if (post.frontmatter.featuredImage) {
+    postImage = post.frontmatter.featuredImage.childImageSharp.fluid.src
+  } else if (post.frontmatter.image) {
+    postImage = post.frontmatter.image.childImageSharp.fluid.src
+  }
+
   return (
     <React.Fragment>
       <SEO
+        description={post.frontmatter.description}
+        image={postImage}
         keywords={post.frontmatter.tags}
-        title={`${post.frontmatter.title} | Links`}
+        title={post.frontmatter.title}
       />
       {post.frontmatter.image && (
         <Columns.Column size={4}>

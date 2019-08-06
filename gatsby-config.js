@@ -1,9 +1,11 @@
 module.exports = {
   siteMetadata: {
-    title: 'Brad McGonigle',
     author: 'Brad McGonigle',
     description: 'Father, husband, developer, and nerd.',
+    image: '/logo.jpg',
     siteUrl: 'https://www.bradmcgonigle.com',
+    title: 'Brad McGonigle',
+    twitterHandle: '@bradmcgonigle',
   },
   plugins: [
     {
@@ -215,7 +217,7 @@ module.exports = {
       },
     },
     {
-      resolve: "gatsby-plugin-netlify-cache",
+      resolve: 'gatsby-plugin-netlify-cache',
     },
     // required to be last in the plugin array
     {

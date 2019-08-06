@@ -58,6 +58,7 @@ export default props => (
                     color: "#eeeeee"
                   }
                 ) {
+                  src
                   tracedSVG
                   ...GatsbyImageSharpFluid_withWebp
                 }
@@ -74,6 +75,7 @@ export default props => (
                     color: "#eeeeee"
                   }
                 ) {
+                  src
                   tracedSVG
                   ...GatsbyImageSharpFluid_withWebp
                 }

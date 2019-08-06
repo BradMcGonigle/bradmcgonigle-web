@@ -53,6 +53,7 @@ export default props => (
                     color: "#eeeeee"
                   }
                 ) {
+                  src
                   tracedSVG
                   ...GatsbyImageSharpFluid_withWebp
                 }
