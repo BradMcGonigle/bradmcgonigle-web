@@ -9,6 +9,20 @@ module.exports = {
   },
   plugins: [
     {
+      resolve: `gatsby-plugin-manifest`,
+      options: {
+        name: 'BradMcGonigle.com',
+        short_name: 'BradMcGonigle.com',
+        start_url: '/',
+        background_color: '#ffffff',
+        theme_color: '#333333',
+        display: 'standalone',
+        icon: 'static/logo-square.jpg',
+        crossOrigin: `use-credentials`,
+      },
+    },
+    'gatsby-plugin-offline',
+    {
       resolve: 'gatsby-plugin-catch-links',
     },
     {
