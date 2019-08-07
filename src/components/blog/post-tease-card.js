@@ -19,17 +19,17 @@ const BlogPostTeaseCard = ({ small, post }) => (
       />
     )}
     <Card.Content>
-      <Heading renderAs="h5" size={6} subtitle className="has-text-grey-light">
+      <Heading renderAs="h5" size={6} subtitle className="has-text-grey-dark">
         {post.frontmatter.date} &mdash; {post.fields.readingTime.text}
       </Heading>
-      <Heading renderAs="h2" size={3}>
+      <Heading className="margin-bottom-2" renderAs="h2" size={3}>
         {post.frontmatter.title}
       </Heading>
       <Heading
         renderAs="h4"
         size={5}
         subtitle
-        className="has-text-weight-light has-text-grey margin-bottom-025"
+        className="has-text-weight-light has-text-grey-darker margin-bottom-025"
       >
         {post.frontmatter.description}
       </Heading>
