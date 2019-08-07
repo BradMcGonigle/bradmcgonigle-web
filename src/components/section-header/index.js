@@ -19,7 +19,7 @@ class SectionHeader extends React.Component {
         {link && !isSubSection && (
           <Link
             to={link}
-            className="prev is-size-6"
+            className="next is-size-6"
             title="Return to previous page"
           >
             <FontAwesomeIcon icon={faChevronLeft} />
