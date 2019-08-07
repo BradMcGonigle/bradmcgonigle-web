@@ -182,11 +182,11 @@ $colors: map-merge($colors, $addColors);
     top: 25%; // TODO find a better way to do this
   }
 
-  a.prev {
+  a.next {
     left: -17px;
   }
 
-  a.next {
+  a.prev {
     right: -17px;
   }
 }
@@ -278,15 +278,15 @@ a.card {
 
     a.prev, a.next {
       position: absolute;
-      top: 0;
+      top: 5px;
       line-height: 1.9rem;
     }
 
-    a.prev {
+    a.next {
       left: -17px;
     }
 
-    a.next {
+    a.prev {
       right: -17px;
     }
   }

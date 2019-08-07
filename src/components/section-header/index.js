@@ -17,7 +17,11 @@ class SectionHeader extends React.Component {
     return (
       <Heading renderAs="h2" size={4} className="has-text-weight-medium">
         {link && !isSubSection && (
-          <Link to={link} className="prev is-size-6">
+          <Link
+            to={link}
+            className="prev is-size-6"
+            title="Return to previous page"
+          >
             <FontAwesomeIcon icon={faChevronLeft} />
           </Link>
         )}
