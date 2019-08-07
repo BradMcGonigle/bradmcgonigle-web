@@ -39,10 +39,10 @@ export const BlogPostDetail = ({ post }) => {
                 renderAs="h5"
                 size={6}
                 subtitle
-                className="has-text-grey"
+                className="has-text-grey-darker"
               >
                 {post.frontmatter.date}
-                <span className="has-text-grey-light">
+                <span className="has-text-grey-dark">
                   {' '}
                   &mdash; {post.fields.readingTime.text}
                 </span>
@@ -54,7 +54,7 @@ export const BlogPostDetail = ({ post }) => {
                 renderAs="h4"
                 size={4}
                 subtitle
-                className="has-text-grey margin-bottom-025"
+                className="has-text-grey-dark margin-bottom-025"
               >
                 {post.frontmatter.description}
               </Heading>

@@ -57,7 +57,7 @@ export const LinkItem = ({ post }) => {
         </Columns.Column>
       )}
       <Columns.Column size={6}>
-        <Heading renderAs="h4" size={6} subtitle className="has-text-grey">
+        <Heading renderAs="h4" size={6} subtitle className="has-text-grey-dark">
           {post.frontmatter.date}
         </Heading>
         <Heading renderAs="h1" size={3}>
@@ -66,7 +66,7 @@ export const LinkItem = ({ post }) => {
           </a>
         </Heading>
         {post.frontmatter.summary && (
-          <Description className="is-italic has-text-grey">
+          <Description className="is-italic has-text-grey-dark">
             <p>{post.frontmatter.summary}</p>
           </Description>
         )}
