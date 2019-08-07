@@ -15,15 +15,15 @@ export const BlogIndex = ({ data }) => {
 
   return (
     <Layout>
-      <SEO keywords={[`blog`]} title="Blog" />
+      <SEO keywords={[`blog`]} title="Blog" url="/about" />
       <Section>
         <Container>
           <SectionHeader section="Writings" tagline="Thoughts on things" />
           <Columns>
             {posts.map(({ node: post }, i, { length }) => (
-              <React.Fragment>
+              <React.Fragment key={post.id}>
                 {i === 0 && (
-                  <Columns.Column size={12} key={post.id}>
+                  <Columns.Column size={12}>
                     <BlogFeaturedPostTease post={post} />
                   </Columns.Column>
                 )}
@@ -32,7 +32,7 @@ export const BlogIndex = ({ data }) => {
           </Columns>
           <Columns>
             {posts.map(({ node: post }, i, { length }) => (
-              <React.Fragment>
+              <React.Fragment key={post.id}>
                 {i !== 0 && i <= 3 && (
                   <Columns.Column size={4} key={post.id}>
                     <BlogPostTeaseCard post={post} />
@@ -43,9 +43,9 @@ export const BlogIndex = ({ data }) => {
           </Columns>
           <Columns>
             {posts.map(({ node: post }, i, { length }) => (
-              <React.Fragment>
+              <React.Fragment key={post.id}>
                 {i > 3 && (
-                  <Columns.Column size={6} key={post.id}>
+                  <Columns.Column size={6}>
                     <BlogPostTease post={post} />
                   </Columns.Column>
                 )}
