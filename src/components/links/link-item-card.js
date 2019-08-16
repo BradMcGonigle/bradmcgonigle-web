@@ -49,7 +49,7 @@ const LinkItemCardWrapper = styled(Columns.Column)`
       font-size: 0.8rem;
 
       a {
-        color: #999;
+        color: #575757;
       }
 
       .card-footer-item {
@@ -105,7 +105,7 @@ const LinkItemCard = ({ post }) => (
         className="card-content"
       >
         <Content>
-          <time dateTime={post.frontmatter.date} className="has-text-grey">
+          <time dateTime={post.frontmatter.date} className="has-text-grey-dark">
             {post.frontmatter.date}
           </time>
           <Heading size={5} subtitle className="margin-top-0">

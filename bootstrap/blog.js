@@ -34,10 +34,18 @@ module.exports.createPages = async (actions, graphql) => {
 
       const pages = result.data.allMarkdownRemark.edges
 
-      pages.forEach(edges => {
+      pages.forEach(({ node }, index) => {
+        const previous =
+          index === pages.length - 1 ? false : pages[index + 1].node
+        const next = index === 0 ? false : pages[index - 1].node
+
         createPage({
-          path: edges.node.frontmatter.path,
+          path: node.frontmatter.path,
           component: path.resolve(`src/templates/blog-post.js`),
+          context: {
+            previous: previous,
+            next: next,
+          },
         })
       })
     })

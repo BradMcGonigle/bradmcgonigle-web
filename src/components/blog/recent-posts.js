@@ -23,16 +23,10 @@ const BlogRecentPosts = ({ data }) => {
               tagline="Thoughts on things"
             />
             <Columns>
-              {posts.map(({ node: post }) => (
-                <Columns.Column size={6} key={post.id}>
-                  <BlogPostTeaseCard post={post} />
-                </Columns.Column>
-              ))}
-              {/*
               {posts.map(({ node: post }, i, { length }) => (
-                <React.Fragment>
+                <React.Fragment key={post.id}>
                   {i === 0 && (
-                    <Columns.Column size={12} key={post.id}>
+                    <Columns.Column size={12}>
                       <BlogFeaturedPostTease post={post} />
                     </Columns.Column>
                   )}
@@ -41,15 +35,14 @@ const BlogRecentPosts = ({ data }) => {
             </Columns>
             <Columns>
               {posts.map(({ node: post }, i, { length }) => (
-                <React.Fragment>
+                <React.Fragment key={post.id}>
                   {i !== 0 && i <= 3 && (
-                    <Columns.Column size={4} key={post.id}>
+                    <Columns.Column size={4}>
                       <BlogPostTeaseCard post={post} />
                     </Columns.Column>
                   )}
                 </React.Fragment>
               ))}
-              */}
             </Columns>
           </Content>
           <p className="has-text-right">

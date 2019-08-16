@@ -1,0 +1,30 @@
+// Base
+html,
+.html {
+  background-color: whitesmoke;
+}
+
+body {
+  background-color: $white;
+}
+
+// Links
+a {
+  transition: 250ms all ease-in-out;
+}
+
+code[class*='language-'],
+pre[class*='language-'] {
+  font-size: 0.85rem;
+}
+
+footer,
+.footer {
+  a {
+    color: $grey-dark;
+
+    &:hover {
+      color: $black-bis;
+    }
+  }
+}

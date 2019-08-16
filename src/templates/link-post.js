@@ -39,7 +39,7 @@ export default props => (
           html
           frontmatter {
             title
-            description
+            summary
             path
             date(formatString: "MMMM DD, YYYY")
             url
@@ -53,11 +53,13 @@ export default props => (
                     color: "#eeeeee"
                   }
                 ) {
+                  src
                   tracedSVG
                   ...GatsbyImageSharpFluid_withWebp
                 }
               }
             }
+            imageAlt
             tags
           }
         }

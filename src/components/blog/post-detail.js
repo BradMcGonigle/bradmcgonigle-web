@@ -1,5 +1,4 @@
 import React from 'react'
-import Img from 'gatsby-image'
 import {
   Columns,
   Container,
@@ -16,11 +15,21 @@ import Tags from '../tags'
 export const BlogPostDetail = ({ post }) => {
   const PostContent = HTMLContent || ContentWrapper
 
+  let postImage
+  if (post.frontmatter.featuredImage) {
+    postImage = post.frontmatter.featuredImage.childImageSharp.fluid.src
+  } else {
+    postImage = post.frontmatter.image.childImageSharp.fluid.src
+  }
+
   return (
     <React.Fragment>
       <SEO
+        description={post.frontmatter.description}
+        image={postImage}
         keywords={post.frontmatter.tags}
-        title={`${post.frontmatter.title} | Blog`}
+        title={post.frontmatter.title}
+        url={post.frontmatter.path}
       />
       <Section className="padding-top-050">
         <Container>
@@ -30,10 +39,10 @@ export const BlogPostDetail = ({ post }) => {
                 renderAs="h5"
                 size={6}
                 subtitle
-                className="has-text-grey"
+                className="has-text-grey-darker"
               >
                 {post.frontmatter.date}
-                <span className="has-text-grey-light">
+                <span className="has-text-grey-dark">
                   {' '}
                   &mdash; {post.fields.readingTime.text}
                 </span>
@@ -45,7 +54,7 @@ export const BlogPostDetail = ({ post }) => {
                 renderAs="h4"
                 size={4}
                 subtitle
-                className="has-text-grey margin-bottom-025"
+                className="has-text-grey-dark margin-bottom-025"
               >
                 {post.frontmatter.description}
               </Heading>

@@ -4,7 +4,7 @@ import ContactForm from '../components/contact-form'
 import Footer from '../components/footer'
 import Navbar from '../components/navbar'
 
-import './all.scss'
+import '../styles/all.scss'
 
 const Layout = ({ children }) => (
   <React.Fragment>

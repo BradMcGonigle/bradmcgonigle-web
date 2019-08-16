@@ -10,9 +10,8 @@ description: >-
 featuredImage: css-code.jpg
 featuredImageAlt: >-
   CSS Code
-image: css-code.jpg
-imageAlt: >-
-  CSS Code
+image:
+imageAlt:
 tags:
   - React
   - CSS
@@ -40,7 +39,7 @@ import { Button } from 'react-bulma-components'
 
 As one would expect the `Button` component renders a html `<Button>` . Looking at the [Bulma docs for buttons](https://bulma.io/documentation/elements/button/), lets see how we can change the color, size and style of our button. As a typical css framework, we would normally pass the Bulma-specific classes to our elements to take advantage of Bulma’s styling properties. That method will work just fine with [react-bulma-components](https://github.com/couds/react-bulma-components) but there is a better way &mdash; props!
 
-```javascript
+```jsx
 <Button color="info" outlined rounded size="large">
   Our Button
 </Button>
@@ -48,19 +47,19 @@ As one would expect the `Button` component renders a html `<Button>` . Looking a
 
 Let's see the what the outputted html looks like now.
 
-```javascript
-<button class="is-info is-outlined is-rounded is-large">Our Button</Button>
+```html
+<button class="is-info is-outlined is-rounded is-large">Our Button</button>
 ```
 
 Like many of the components in [react-bulma-components](https://github.com/couds/react-bulma-components) the button component also accepts a `renderAs` property which allows you to pass an html tag to change the element type our component will be rendered as. Maybe we want all the styles of a button but want to use it as a link.
 
-```javascript
+```jsx
 <Button renderAs”a” href="#" color="info" outlined rounded size="large">Our Button</Button>
 ```
 
 Passing `renderAs=“a”` along with a `href` will make our button markup render as a link.
 
-```javascript
+```html
 <a href="#" class="button is-info is-outlined is-rounded is-large">
   Our Button
 </a>
@@ -85,7 +84,7 @@ Of course, [react-bulma-components](https://github.com/couds/react-bulma-compone
 import { Columns, Container } from 'react-bulma-components'
 ```
 
-```javascript
+```jsx
 <Container>
   <Columns>
     <Columns.Column size="one-fifth">20% width of container</Columns.Column>

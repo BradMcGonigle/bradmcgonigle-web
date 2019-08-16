@@ -1,0 +1,144 @@
+// Bulma over-reaches a bit with some of it's selectors
+.content .tag,
+.content .number {
+  display: inline;
+  padding: inherit;
+  font-size: inherit;
+  line-height: inherit;
+  text-align: inherit;
+  vertical-align: inherit;
+  border-radius: inherit;
+  font-weight: inherit;
+  white-space: inherit;
+  background: inherit;
+  margin: inherit;
+}
+
+.gatsby-highlight {
+  position: relative;
+  -webkit-overflow-scrolling: 'touch';
+
+  pre {
+    code {
+      display: 'block';
+      font-size: '100%';
+      line-height: 1.5;
+      float: left;
+      min-width: 100%;
+      // reset code vertical padding declared earlier
+      padding: '0';
+    }
+
+    &[class*='language-'] {
+      &::before {
+        background: #ddd;
+        border-radius: 0 0 4px 4px;
+        color: #000000;
+        font-size: 0.75rem;
+        font-family: SFMono-Regular, Menlo, Monaco, Consolas, Liberation Mono,
+          Courier New, monospace;
+        letter-spacing: 0.075em;
+        line-height: 1;
+        padding: 0.25rem 0.5rem;
+        position: absolute;
+        right: 1.5rem;
+        text-align: right;
+        text-shadow: none;
+        text-transform: uppercase;
+        top: 0;
+      }
+    }
+
+    &[class='language-javascript']::before {
+      content: 'js';
+      background: #f7df1e;
+    }
+    &[class='language-typescript']::before,
+    &[class='language-ts']::before {
+      content: 'typescript';
+      background: #4499d1;
+    }
+    &[class='language-jsx']::before {
+      content: 'jsx';
+      background: #61dafb;
+    }
+    &[class='language-graphql']::before {
+      content: 'GraphQL';
+      color: #fff;
+      background: #e10098;
+    }
+    &[class='language-html']::before {
+      content: 'html';
+      color: #fff;
+      background: #005a9c;
+    }
+    &[class='language-css']::before {
+      content: 'css';
+      color: #fff;
+      background: #ff9800;
+    }
+    &[class='language-mdx']::before {
+      content: 'jsx';
+      background: #f9ac00;
+    }
+    &[class='language-shell']::before {
+      content: 'shell';
+    }
+    &[class='language-sh']::before {
+      content: 'jsx';
+    }
+    &[class='language-bash']::before {
+      content: 'bash';
+    }
+    &[class='language-yaml']::before {
+      content: 'yaml';
+      background: #61dafb;
+    }
+    &[class='language-markdown']::before,
+    &[class='language-md']::before {
+      content: 'md';
+    }
+    &[class='language-json']::before,
+    &[class='language-json5']::before {
+      content: 'json';
+      background: linen;
+    }
+    &[class='language-diff']::before {
+      content: 'diff';
+      background: #e6ffed;
+    }
+    &[class='language-text']::before {
+      content: 'text';
+      background: #eee;
+    }
+    &[class='language-flow']::before {
+      content: 'flow';
+      background: #e8bd36;
+    }
+  }
+}
+
+.gatsby-highlight-code-line {
+  background: #eee;
+  margin-left: 1rem;
+  margin-right: 1rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  border-left: 4px solid #333;
+  display: block;
+}
+
+.gatsby-highlight pre {
+  &::-webkit-scrollbar {
+    width: 10px;
+    height: 10px;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background: #bbb;
+  }
+
+  &::-webkit-scrollbar-track {
+    background: #ddd;
+  }
+}

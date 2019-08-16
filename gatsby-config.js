@@ -1,11 +1,27 @@
 module.exports = {
   siteMetadata: {
-    title: 'Brad McGonigle',
     author: 'Brad McGonigle',
     description: 'Father, husband, developer, and nerd.',
+    image: '/logo.jpg',
     siteUrl: 'https://www.bradmcgonigle.com',
+    title: 'Brad McGonigle',
+    twitterHandle: '@bradmcgonigle',
   },
   plugins: [
+    {
+      resolve: `gatsby-plugin-manifest`,
+      options: {
+        name: 'BradMcGonigle.com',
+        short_name: 'BradMcGonigle.com',
+        start_url: '/',
+        background_color: '#ffffff',
+        theme_color: '#333333',
+        display: 'standalone',
+        icon: 'static/logo-square.jpg',
+        crossOrigin: `use-credentials`,
+      },
+    },
+    'gatsby-plugin-offline',
     {
       resolve: 'gatsby-plugin-catch-links',
     },
@@ -71,7 +87,7 @@ module.exports = {
       resolve: 'gatsby-transformer-remark',
       options: {
         plugins: [
-          `gatsby-remark-reading-time`,
+          'gatsby-remark-reading-time',
           'gatsby-remark-static-images',
           {
             resolve: 'gatsby-remark-images',
@@ -80,6 +96,35 @@ module.exports = {
               maxWidth: 1400,
               sizeByPixelDensity: true,
               quality: 100,
+            },
+          },
+          {
+            resolve: 'gatsby-remark-prismjs',
+            options: {
+              classPrefix: 'language-',
+              inlineCodeMarker: '›',
+              aliases: {
+                md: 'markdown',
+              },
+              languageExtensions: [
+                {
+                  language: 'superscript',
+                  extend: 'javascript',
+                  definition: {
+                    superscript_types: /(SuperType)/,
+                  },
+                  insertBefore: {
+                    function: {
+                      superscript_keywords: /(superif|superelse)/,
+                    },
+                  },
+                },
+              ],
+              prompt: {
+                user: 'root',
+                host: 'localhost',
+                global: false,
+              },
             },
           },
         ],
@@ -181,6 +226,7 @@ module.exports = {
                   date: edge.node.frontmatter.date,
                   url: site.siteMetadata.siteUrl + edge.node.frontmatter.path,
                   guid: site.siteMetadata.siteUrl + edge.node.frontmatter.path,
+                  source: edge.node.frontmatter.url,
                   custom_elements: [{ 'content:encoded': edge.node.html }],
                 })
               })
@@ -200,6 +246,7 @@ module.exports = {
                         title
                         description
                         date
+                        url
                       }
                     }
                   }
@@ -213,7 +260,7 @@ module.exports = {
       },
     },
     {
-      resolve: "gatsby-plugin-netlify-cache",
+      resolve: 'gatsby-plugin-netlify-cache',
     },
     // required to be last in the plugin array
     {

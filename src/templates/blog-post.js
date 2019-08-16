@@ -4,10 +4,12 @@ import { Columns, Container, Section } from 'react-bulma-components'
 
 import BlogPostDetail from '../components/blog/post-detail'
 import Layout from '../components/layout'
+import PreviousNext from '../components/previous-next'
 import SectionHeader from '../components/section-header'
 
-const BlogPostDetailWrapper = ({ data }) => {
+const BlogPostDetailWrapper = ({ data, pageContext }) => {
   const { markdownRemark: post } = data
+  const { next, previous } = pageContext
 
   return (
     <Layout>
@@ -25,6 +27,7 @@ const BlogPostDetailWrapper = ({ data }) => {
         </Container>
       </Section>
       <BlogPostDetail post={post} />
+      <PreviousNext next={next} previous={previous} />
     </Layout>
   )
 }
@@ -58,6 +61,7 @@ export default props => (
                     color: "#eeeeee"
                   }
                 ) {
+                  src
                   tracedSVG
                   ...GatsbyImageSharpFluid_withWebp
                 }
@@ -74,6 +78,7 @@ export default props => (
                     color: "#eeeeee"
                   }
                 ) {
+                  src
                   tracedSVG
                   ...GatsbyImageSharpFluid_withWebp
                 }

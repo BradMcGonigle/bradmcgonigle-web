@@ -20,7 +20,11 @@ export const PreviousNext = ({ next, previous }) => (
                   Next
                 </Heading>
                 <Heading size={4} className="has-text-weight-light">
-                  <Link className="link prev" to={next.frontmatter.path}>
+                  <Link
+                    className="link next"
+                    title="Next Link"
+                    to={next.frontmatter.path}
+                  >
                     <FontAwesomeIcon
                       icon={faChevronLeft}
                       className="is-size-6"
@@ -52,7 +56,11 @@ export const PreviousNext = ({ next, previous }) => (
                   <Link to={previous.frontmatter.path}>
                     <span>{previous.frontmatter.title}</span>
                   </Link>
-                  <Link className="link next" to={previous.frontmatter.path}>
+                  <Link
+                    className="link prev"
+                    title="Previous Link"
+                    to={previous.frontmatter.path}
+                  >
                     <FontAwesomeIcon
                       icon={faChevronRight}
                       className="is-size-6"

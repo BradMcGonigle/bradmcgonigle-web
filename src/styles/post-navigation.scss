@@ -1,0 +1,25 @@
+.prev-next-nav {
+  .title {
+    position: relative;
+
+    a,
+    span {
+      vertical-align: middle;
+    }
+
+    a.prev,
+    a.next {
+      position: absolute;
+      top: 5px;
+      line-height: 1.9rem;
+    }
+
+    a.next {
+      left: -17px;
+    }
+
+    a.prev {
+      right: -17px;
+    }
+  }
+}
