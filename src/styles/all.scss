@@ -80,4 +80,5 @@ $colors: map-merge($colors, $addColors);
 // Post-bulma import
 @import "./blog";
 @import "./cards";
+@import "./code-highlighting";
 @import "./post-navigation";
