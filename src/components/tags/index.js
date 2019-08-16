@@ -15,7 +15,7 @@ export default function Tags({ list = [], ignore }) {
         return (
           <Link
             to={`/tags/${tagSlug}`}
-            className="tag is-link has-text-weight-light is-capitalized"
+            className="tag is-light has-text-weight-light is-capitalized"
             key={index}
           >
             {tag}
