@@ -4,7 +4,6 @@ import { Columns, Container, Section } from 'react-bulma-components'
 
 import Layout from '../components/layout'
 import LinkedCard from '../components/shared/linked-card'
-import LinksRecentLinks from '../components/links/recent-links'
 import SectionHeader from '../components/section-header'
 import SEO from '../components/seo'
 
