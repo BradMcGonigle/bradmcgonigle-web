@@ -51,7 +51,7 @@ export default props => (
           totalCount
           edges {
             node {
-              excerpt(pruneLength: 600)
+              excerpt(pruneLength: 100, truncate: true)
               id
               fields {
                 readingTime {
@@ -64,6 +64,25 @@ export default props => (
                 description
                 date(formatString: "MMMM DD, YYYY")
                 path
+                featuredImage {
+                  childImageSharp {
+                    fluid(
+                      maxWidth: 3000
+                      maxHeight: 1250
+                      cropFocus: ATTENTION
+                      traceSVG: {
+                        turdSize: 10
+                        background: "#fefefe"
+                        color: "#eeeeee"
+                      }
+                    ) {
+                      src
+                      tracedSVG
+                      ...GatsbyImageSharpFluid_withWebp
+                    }
+                  }
+                }
+                featuredImageAlt
                 image {
                   childImageSharp {
                     fluid(

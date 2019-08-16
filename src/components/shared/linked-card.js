@@ -49,6 +49,15 @@ const LinkedCard = ({ post }) => {
           <FontAwesomeIcon icon={icon} />
         </CardHeaderIcon>
       </CardHeader>
+      {post.frontmatter.templateKey === 'blog-post' &&
+        post.frontmatter.featuredImage &&
+        !post.frontmatter.image && (
+          <Img
+            fluid={post.frontmatter.featuredImage.childImageSharp.fluid}
+            caption={post.frontmatter.featuredImage}
+            className="card-image"
+          />
+        )}
       {post.frontmatter.image && (
         <Img
           fluid={post.frontmatter.image.childImageSharp.fluid}
@@ -86,7 +95,7 @@ const LinkedCard = ({ post }) => {
             subtitle
             className="has-text-grey margin-bottom-025"
           >
-            {post.frontmatter.description}
+            {post.excerpt}
           </Heading>
         )}
       </Card.Content>
