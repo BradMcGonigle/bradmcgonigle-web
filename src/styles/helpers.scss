@@ -1,0 +1,128 @@
+// Helper Classes
+.full-width-image-container {
+  width: 100vw;
+  height: 400px;
+  position: relative;
+  left: 50%;
+  right: 50%;
+  margin: 5em -50vw;
+  background-size: cover;
+  background-position: bottom;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.has-opacity-0 {
+  opacity: 0 !important;
+}
+.has-opacity-15 {
+  opacity: 0.15 !important;
+}
+.has-opacity-25 {
+  opacity: 0.25 !important;
+}
+.has-opacity-50 {
+  opacity: 0.5 !important;
+}
+.has-opacity-75 {
+  opacity: 0.75 !important;
+}
+.has-opacity-85 {
+  opacity: 0.85 !important;
+}
+.has-opacity-1 {
+  opacity: 1 !important;
+}
+
+.margin-0 {
+  margin: 0 !important;
+}
+
+.margin-top-0 {
+  margin-top: 0 !important;
+}
+.margin-top-025 {
+  margin-top: 0.25rem !important;
+}
+.margin-top-050 {
+  margin-top: 0.5rem !important;
+}
+.margin-top-075 {
+  margin-top: 0.75rem !important;
+}
+.margin-top-1 {
+  margin-top: 1rem !important;
+}
+
+.margin-bottom-0 {
+  margin-bottom: 0 !important;
+}
+.margin-bottom-025 {
+  margin-bottom: 0.25rem !important;
+}
+.margin-bottom-050 {
+  margin-bottom: 0.5rem !important;
+}
+.margin-bottom-075 {
+  margin-bottom: 0.75rem !important;
+}
+.margin-bottom-1 {
+  margin-bottom: 1rem !important;
+}
+.margin-bottom-2 {
+  margin-bottom: 2rem !important;
+}
+
+.padding-0 {
+  padding: 0 !important;
+}
+.padding-1rem {
+  padding: 1rem !important;
+}
+.padding-2rem {
+  padding: 2rem !important;
+}
+.padding-3rem {
+  padding: 3rem !important;
+}
+
+.padding-top-0 {
+  padding-top: 0 !important;
+}
+.padding-top-025 {
+  padding-top: 0.25rem !important;
+}
+.padding-top-050 {
+  padding-top: 0.5rem !important;
+}
+.padding-top-075 {
+  padding-top: 0.75rem !important;
+}
+.padding-top-1 {
+  padding-top: 1rem !important;
+}
+
+.padding-bottom-0 {
+  padding-bottom: 0 !important;
+}
+.padding-bottom-025 {
+  padding-bottom: 0.25rem !important;
+}
+.padding-bottom-050 {
+  padding-bottom: 0.5rem !important;
+}
+.padding-bottom-075 {
+  padding-bottom: 0.75rem !important;
+}
+.padding-bottom-1 {
+  padding-bottom: 1rem !important;
+}
+
+.background-transparent {
+  background-color: transparent !important;
+}
+
+.greyscale {
+  filter: grayscale(100%);
+}
