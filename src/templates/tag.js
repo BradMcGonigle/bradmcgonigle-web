@@ -7,9 +7,9 @@ import LinkedCard from '../components/shared/linked-card'
 import SectionHeader from '../components/section-header'
 import SEO from '../components/seo'
 
-export const TaggedItems = ({ pageContext, data }) => {
-  const { tag } = pageContext
+export const TaggedItems = ({ data, pageContext }) => {
   const { edges: posts, totalCount } = data.allMarkdownRemark
+  const { tag } = pageContext
 
   const tagline = `${totalCount} item${
     totalCount === 1 ? '' : 's'
