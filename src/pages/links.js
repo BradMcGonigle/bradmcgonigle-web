@@ -12,7 +12,12 @@ const LinkPosts = ({ data }) => {
 
   return (
     <Layout>
-      <SEO keywords={[`links`]} title="Links" />
+      <SEO
+        description="Interesting finds from around the web"
+        keywords={[`links`]}
+        title="Links"
+        url="/links"
+      />
       <Section>
         <Container>
           <SectionHeader

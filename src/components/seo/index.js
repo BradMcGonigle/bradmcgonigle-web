@@ -32,15 +32,13 @@ function SEO({ description, image, keywords, lang, meta, title, type, url }) {
   const metaDescription = description
     ? description
     : site.siteMetadata.description
-  const metaImage =
-    site.siteMetadata.siteUrl + image
-      ? site.siteMetadata.siteUrl + image
-      : site.siteMetadata.image
+  const metaImage = image
+    ? site.siteMetadata.siteUrl + image
+    : site.siteMetadata.siteUrl + site.siteMetadata.image
   const metaType = type ? type : 'website'
-  const metaUrl =
-    site.siteMetadata.siteUrl + url
-      ? site.siteMetadata.siteUrl + url
-      : site.siteMetadata.siteUrl
+  const metaUrl = url
+    ? site.siteMetadata.siteUrl + url
+    : site.siteMetadata.siteUrl
 
   return (
     <Helmet

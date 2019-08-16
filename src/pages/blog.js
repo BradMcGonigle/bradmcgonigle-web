@@ -15,7 +15,13 @@ export const BlogIndex = ({ data }) => {
 
   return (
     <Layout>
-      <SEO keywords={[`blog`]} title="Blog" url="/about" />
+      <SEO
+        description="Thoughts on things"
+        keywords={[`blog`]}
+        title="Blog"
+        type="article"
+        url="/blog"
+      />
       <Section>
         <Container>
           <SectionHeader section="Writings" tagline="Thoughts on things" />
