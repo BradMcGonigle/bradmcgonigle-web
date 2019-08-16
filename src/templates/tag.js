@@ -8,7 +8,6 @@ import SectionHeader from '../components/section-header'
 import SEO from '../components/seo'
 
 export const TaggedItems = ({ pageContext, data }) => {
-  console.log(data)
   const { tag } = pageContext
   const { edges: posts, totalCount } = data.allMarkdownRemark
 
