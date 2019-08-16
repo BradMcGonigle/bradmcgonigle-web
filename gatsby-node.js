@@ -36,9 +36,16 @@ exports.createPages = async ({ page, actions, graphql }) => {
     const pages = result.data.allMarkdownRemark.edges
 
     pages.forEach(({ node }, index) => {
+      const previous =
+        index === pages.length - 1 ? false : pages[index + 1].node
+      const next = index === 0 ? false : pages[index - 1].node
       createPage({
         path: node.frontmatter.path,
         component: blogPost,
+        context: {
+          previous: previous,
+          next: next,
+        },
       })
     })
 
