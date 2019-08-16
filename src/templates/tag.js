@@ -13,11 +13,16 @@ export const TaggedItems = ({ data, pageContext }) => {
 
   const tagline = `${totalCount} item${
     totalCount === 1 ? '' : 's'
-  } tagged with "${tag}"`
+  } tagged with '${tag}'`
 
   return (
     <Layout>
-      <SEO keywords={[`${tag}`]} title={`Items tagged with ${tag}`} />
+      <SEO
+        description={tagline}
+        keywords={[`${tag}`]}
+        title={`Items tagged ${tag}`}
+        url={`/tags/${tag.toLowerCase()}`}
+      />
       <Section>
         <Container>
           <SectionHeader link="/tags" section="Tags" tagline={tagline} />

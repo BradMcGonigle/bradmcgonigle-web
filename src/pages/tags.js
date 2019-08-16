@@ -60,7 +60,12 @@ class TagsPage extends React.Component {
 
     return (
       <Layout>
-        <SEO keywords={['tags']} title="Tags" />
+        <SEO
+          description="These might be useful one day"
+          keywords={[`tags`]}
+          title="Tags"
+          url="/tags"
+        />
         <Section>
           <Container>
             <SectionHeader
