@@ -32,7 +32,7 @@ $ npm install react-nhl-logos
 
 ## Usage
 
-```js
+```jsx
 import React from 'react'
 import { DET } from 'react-nhl-logos'
 
@@ -45,7 +45,7 @@ export default Example
 
 or include all icons
 
-```js
+```jsx
 import React from 'react'
 import * as NHLLogos from 'react-nhl-logos'
 
@@ -60,7 +60,7 @@ export default Example
 
 Size can be easily configured (Default of 100px)
 
-```js
+```jsx
 import React from 'react'
 import { DET } from 'react-nhl-logos'
 

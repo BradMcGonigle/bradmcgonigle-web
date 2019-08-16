@@ -17,11 +17,11 @@ tags:
   - React
 ---
 
-For anyone that started using React prior to version 16.2, the need to wrap elements with useless `divs` or `spans` was enough to endure markup nausea. Thankfully, those days are long behind us with the help of Fragments. If you aren't using Fragments _(tisk tisk - they've been available for 2017)_, you should to be. Put simply, Fragments let us return multiple children elements without adding frivolous nodes to the DOM. Really, that’s all they do!
+For anyone that started using React prior to version 16.2, the need to wrap elements with useless `<divs>` or `spans` was enough to endure markup nausea. Thankfully, those days are long behind us with the help of Fragments. If you aren't using Fragments _(tisk tisk - they've been available for 2017)_, you should to be. Put simply, Fragments let us return multiple children elements without adding frivolous nodes to the DOM. Really, that’s all they do!
 
 Let’s look at a simple example of how a component’s `return` might have looked prior to React version 16.2.
 
-```javascript
+```jsx
 class Parent extends React.Component {
   render() {
     return (
@@ -38,7 +38,7 @@ Our Parent component above directly returns multiple Child components so we need
 
 Let’s take the same example and see how we’d use Fragments to improve the rendered HTML.
 
-```javascript
+```jsx
 class Parent extends React.Component {
   render() {
     return (
