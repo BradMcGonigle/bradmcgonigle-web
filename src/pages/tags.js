@@ -1,11 +1,24 @@
 import React from 'react'
 import kebabCase from 'lodash/kebabCase'
 import { Link, graphql } from 'gatsby'
-import { Columns, Container, Heading, Section } from 'react-bulma-components'
+import { Container, Heading, Section } from 'react-bulma-components'
+import styled from '@emotion/styled'
+import facepaint from 'facepaint'
 
+import { BREAKPOINTS } from '../constants/breakpoints'
 import Layout from '../components/layout'
 import SectionHeader from '../components/section-header'
 import SEO from '../components/seo'
+
+const mq = facepaint(BREAKPOINTS.map(bp => `@media (min-width: ${bp}px)`))
+
+const responsiveColumns = mq({
+  columnCount: ['1', '2', '3', '4'],
+})
+
+const TagColumns = styled.div`
+  ${responsiveColumns};
+`
 
 let currentLetter = ''
 
@@ -21,9 +34,6 @@ class TagsPage extends React.Component {
     const {
       data: {
         allMarkdownRemark: { group },
-        site: {
-          siteMetadata: { title },
-        },
       },
     } = this.props
     const { filterQuery } = this.state
@@ -57,7 +67,7 @@ class TagsPage extends React.Component {
               section="Tags"
               tagline="These might be useful one day"
             />
-            <div>
+            <TagColumns>
               {results.map(key => {
                 const tag = uniqGroup[key]
                 const firstLetter = tag.fieldValue.charAt(0).toLowerCase()
@@ -89,7 +99,7 @@ class TagsPage extends React.Component {
                 }
                 return buildTag
               })}
-            </div>
+            </TagColumns>
           </Container>
         </Section>
       </Layout>
