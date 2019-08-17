@@ -3,7 +3,7 @@ import { graphql, StaticQuery } from 'gatsby'
 import { Columns, Container, Section } from 'react-bulma-components'
 
 import Layout from '../components/layout'
-import LinkedCard from '../components/shared/linked-card'
+import LinkItem from '../components/links/link-item-card'
 import SectionHeader from '../components/section-header'
 import SEO from '../components/seo'
 
@@ -31,7 +31,7 @@ const LinkPosts = ({ data }) => {
                 desktop={{ size: 'one-third' }}
                 widescreen={{ size: 'one-quarter' }}
               >
-                <LinkedCard post={post} key={post.id} />
+                <LinkItem post={post} key={post.id} />
               </Columns.Column>
             ))}
           </Columns>
