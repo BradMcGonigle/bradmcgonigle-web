@@ -10,16 +10,16 @@ module.exports.createPages = async (actions, graphql) => {
       `
         {
           allMarkdownRemark(
-            sort: { fields: [frontmatter___date], order: DESC }
             filter: { frontmatter: { templateKey: { eq: "blog-post" } } }
             limit: 500
+            sort: { fields: [frontmatter___date], order: DESC }
           ) {
             edges {
               node {
                 frontmatter {
-                  templateKey
-                  path
                   date
+                  path
+                  templateKey
                   title
                 }
               }
@@ -48,6 +48,8 @@ module.exports.createPages = async (actions, graphql) => {
           },
         })
       })
+
+      return null
     })
   } catch (err) {
     console.log(err)

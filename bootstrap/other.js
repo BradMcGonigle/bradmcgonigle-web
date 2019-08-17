@@ -9,19 +9,19 @@ module.exports.createPages = async (actions, graphql) => {
       `
         {
           allMarkdownRemark(
-            sort: { fields: [frontmatter___date], order: DESC }
             filter: {
               frontmatter: { templateKey: { nin: ["blog-post", "link-post"] } }
             }
             limit: 1000
+            sort: { fields: [frontmatter___date], order: DESC }
           ) {
             edges {
               node {
                 frontmatter {
-                  templateKey
-                  path
-                  title
                   date
+                  path
+                  templateKey
+                  title
                 }
               }
             }

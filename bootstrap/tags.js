@@ -16,8 +16,8 @@ module.exports.createPages = async (actions, graphql) => {
             edges {
               node {
                 frontmatter {
-                  templateKey
                   tags
+                  templateKey
                 }
               }
             }
@@ -50,6 +50,8 @@ module.exports.createPages = async (actions, graphql) => {
           },
         })
       })
+
+      return null
     })
   } catch (err) {
     console.log(err)
