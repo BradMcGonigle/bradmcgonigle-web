@@ -27,11 +27,12 @@ const LinkPosts = ({ data }) => {
           <Columns multiline>
             {posts.map(({ node: post }) => (
               <Columns.Column
+                key={post.id}
                 tablet={{ size: 'half' }}
                 desktop={{ size: 'one-third' }}
                 widescreen={{ size: 'one-quarter' }}
               >
-                <LinkItem post={post} key={post.id} />
+                <LinkItem post={post} />
               </Columns.Column>
             ))}
           </Columns>
