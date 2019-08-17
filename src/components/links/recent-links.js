@@ -22,7 +22,14 @@ const LinksRecentLinks = ({ data }) => {
           />
           <Columns multiline>
             {posts.map(({ node: post }) => (
-              <LinkItemCard post={post} key={post.id} />
+              <Columns.Column
+                key={post.id}
+                tablet={{ size: 'half' }}
+                desktop={{ size: 'one-third' }}
+                widescreen={{ size: 'one-quarter' }}
+              >
+                <LinkItemCard post={post} />
+              </Columns.Column>
             ))}
           </Columns>
           <p className="has-text-right">

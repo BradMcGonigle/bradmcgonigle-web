@@ -1,0 +1,3 @@
+const BREAKPOINTS = [768, 1024, 1216]
+
+export { BREAKPOINTS }

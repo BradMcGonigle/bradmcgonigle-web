@@ -3,7 +3,7 @@ import { graphql, StaticQuery } from 'gatsby'
 import { Columns, Container, Section } from 'react-bulma-components'
 
 import Layout from '../components/layout'
-import LinkItemCard from '../components/links/link-item-card'
+import LinkItem from '../components/links/link-item-card'
 import SectionHeader from '../components/section-header'
 import SEO from '../components/seo'
 
@@ -12,7 +12,12 @@ const LinkPosts = ({ data }) => {
 
   return (
     <Layout>
-      <SEO keywords={[`links`]} title="Links" />
+      <SEO
+        description="Interesting finds from around the web"
+        keywords={[`links`]}
+        title="Links"
+        url="/links"
+      />
       <Section>
         <Container>
           <SectionHeader
@@ -21,7 +26,14 @@ const LinkPosts = ({ data }) => {
           />
           <Columns multiline>
             {posts.map(({ node: post }) => (
-              <LinkItemCard post={post} key={post.id} />
+              <Columns.Column
+                key={post.id}
+                tablet={{ size: 'half' }}
+                desktop={{ size: 'one-third' }}
+                widescreen={{ size: 'one-quarter' }}
+              >
+                <LinkItem post={post} />
+              </Columns.Column>
             ))}
           </Columns>
         </Container>

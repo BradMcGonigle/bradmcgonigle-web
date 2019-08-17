@@ -10,5 +10,5 @@ url: https://overcast.fm/forecast
 tags:
   - Podcasts
   - Apps
-  - MacOS
+  - macOS
 ---

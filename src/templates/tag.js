@@ -2,65 +2,44 @@ import React from 'react'
 import { graphql, StaticQuery } from 'gatsby'
 import { Columns, Container, Section } from 'react-bulma-components'
 
-import BlogFeaturedPostTease from '../components/blog/featured-post-tease'
-import BlogPostTeaseCard from '../components/blog/post-tease-card'
-import BlogPostTease from '../components/blog/post-tease'
 import Layout from '../components/layout'
-import LinksRecentLinks from '../components/links/recent-links'
+import LinkedCard from '../components/shared/linked-card'
 import SectionHeader from '../components/section-header'
 import SEO from '../components/seo'
 
-export const BlogIndex = ({ data }) => {
-  const { edges: posts } = data.allMarkdownRemark
+export const TaggedItems = ({ data, pageContext }) => {
+  const { edges: posts, totalCount } = data.allMarkdownRemark
+  const { tag } = pageContext
+
+  const tagline = `${totalCount} item${
+    totalCount === 1 ? '' : 's'
+  } tagged with '${tag}'`
 
   return (
     <Layout>
       <SEO
-        description="Thoughts on things"
-        keywords={[`blog`]}
-        title="Blog"
-        type="article"
-        url="/blog"
+        description={tagline}
+        keywords={[`${tag}`]}
+        title={`Items tagged ${tag}`}
+        url={`/tags/${tag.toLowerCase()}`}
       />
       <Section>
         <Container>
-          <SectionHeader section="Writings" tagline="Thoughts on things" />
+          <SectionHeader link="/tags" section="Tags" tagline={tagline} />
           <Columns>
-            {posts.map(({ node: post }, i, { length }) => (
-              <React.Fragment key={post.id}>
-                {i === 0 && (
-                  <Columns.Column size={12}>
-                    <BlogFeaturedPostTease post={post} />
-                  </Columns.Column>
-                )}
-              </React.Fragment>
-            ))}
-          </Columns>
-          <Columns>
-            {posts.map(({ node: post }, i, { length }) => (
-              <React.Fragment key={post.id}>
-                {i !== 0 && i <= 3 && (
-                  <Columns.Column size={4} key={post.id}>
-                    <BlogPostTeaseCard post={post} />
-                  </Columns.Column>
-                )}
-              </React.Fragment>
-            ))}
-          </Columns>
-          <Columns>
-            {posts.map(({ node: post }, i, { length }) => (
-              <React.Fragment key={post.id}>
-                {i > 3 && (
-                  <Columns.Column size={6}>
-                    <BlogPostTease post={post} />
-                  </Columns.Column>
-                )}
-              </React.Fragment>
+            {posts.map(({ node: post }, i) => (
+              <Columns.Column
+                tablet={{ size: 'half' }}
+                desktop={{ size: 'one-third' }}
+                widescreen={{ size: 'one-quarter' }}
+                key={post.id}
+              >
+                <LinkedCard post={post} />
+              </Columns.Column>
             ))}
           </Columns>
         </Container>
       </Section>
-      <LinksRecentLinks />
     </Layout>
   )
 }
@@ -68,14 +47,15 @@ export const BlogIndex = ({ data }) => {
 export default props => (
   <StaticQuery
     query={graphql`
-      query BlogPostsQuery {
+      query($tag: String) {
         allMarkdownRemark(
           sort: { order: DESC, fields: [frontmatter___date] }
-          filter: { frontmatter: { templateKey: { eq: "blog-post" } } }
+          filter: { frontmatter: { tags: { in: [$tag] } } }
         ) {
+          totalCount
           edges {
             node {
-              excerpt(pruneLength: 350)
+              excerpt(pruneLength: 100, truncate: true)
               id
               fields {
                 readingTime {
@@ -83,21 +63,24 @@ export default props => (
                 }
               }
               frontmatter {
+                templateKey
                 title
                 description
-                templateKey
                 date(formatString: "MMMM DD, YYYY")
                 path
                 featuredImage {
                   childImageSharp {
                     fluid(
                       maxWidth: 3000
+                      maxHeight: 1250
+                      cropFocus: ATTENTION
                       traceSVG: {
                         turdSize: 10
                         background: "#fefefe"
                         color: "#eeeeee"
                       }
                     ) {
+                      src
                       tracedSVG
                       ...GatsbyImageSharpFluid_withWebp
                     }
@@ -107,7 +90,9 @@ export default props => (
                 image {
                   childImageSharp {
                     fluid(
-                      maxWidth: 3000
+                      maxWidth: 1000
+                      maxHeight: 667
+                      cropFocus: ATTENTION
                       traceSVG: {
                         turdSize: 10
                         background: "#fefefe"
@@ -126,6 +111,6 @@ export default props => (
         }
       }
     `}
-    render={data => <BlogIndex data={data} {...props} />}
+    render={data => <TaggedItems data={data} {...props} />}
   />
 )

@@ -8,7 +8,7 @@ description:
 date: 2018-02-21T10:01:50-0500
 url: http://gizmodo.com/the-house-that-spied-on-me-1822429852
 tags:
-  - IoT
+  - Internet of Things
   - Privacy
   - Automation
 ---
