@@ -56,6 +56,7 @@
     &[class='language-typescript']::before,
     &[class='language-ts']::before {
       content: 'typescript';
+      color: #fff;
       background: #4499d1;
     }
     &[class='language-jsx']::before {
@@ -74,8 +75,12 @@
     }
     &[class='language-css']::before {
       content: 'css';
-      color: #fff;
       background: #ff9800;
+    }
+    &[class='language-sass']::before {
+      content: 'sass';
+      color: #fff;
+      background: #d0649a;
     }
     &[class='language-mdx']::before {
       content: 'jsx';
