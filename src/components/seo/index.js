@@ -50,6 +50,10 @@ function SEO({ description, image, keywords, lang, meta, title, type, url }) {
       titleTemplate={`%s | ${site.siteMetadata.title}`}
       meta={[
         {
+          nane: `apple-mobile-web-app-status-bar-style`,
+          content: `default`,
+        },
+        {
           name: `description`,
           content: metaDescription,
         },
