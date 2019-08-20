@@ -13,9 +13,15 @@ a {
   transition: 250ms all ease-in-out;
 }
 
-code[class*='language-'],
-pre[class*='language-'] {
-  font-size: 0.85rem;
+.gatsby-highlight {
+  margin: 1.5rem 0;
+}
+
+pre,
+code {
+  &[class*='language-'] {
+    font-size: 0.85rem;
+  }
 }
 
 footer,

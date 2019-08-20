@@ -101,6 +101,11 @@
       content: 'yaml';
       background: #61dafb;
     }
+    &[class='language-ruby']::before {
+      content: 'ruby';
+      color: #fff;
+      background: #cc342d;
+    }
     &[class='language-markdown']::before,
     &[class='language-md']::before {
       content: 'md';
