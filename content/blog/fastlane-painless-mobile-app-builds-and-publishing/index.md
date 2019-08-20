@@ -19,7 +19,7 @@ tags:
   - React Native
 ---
 
-When I first got started with [React Native][react-native], I hoped to focus on learning the intricacies of developing cross-platform apps using my existing knowledge of React and not deal with the headaches I had previously experienced around provisioning profiles, certificates and code signing. Not long into one of my first projects I discovered [fastlane][fastlane], a way to automate the development and release process for mobile apps.
+When I first got started with [React Native][react-native], I hoped to focus on learning the intricacies of developing cross-platform apps using my existing knowledge of React and not deal with the headaches I had previously experienced around provisioning profiles, certificates and code signing. Not long into one of my first projects, I discovered [fastlane][fastlane], a way to automate the development and release process for mobile apps.
 
 > _fastlane_ is the easiest way to automate beta deployments and releases for your iOS and Android apps. 🚀 It handles all tedious tasks, like generating screenshots, dealing with code signing, and releasing your application.
 
