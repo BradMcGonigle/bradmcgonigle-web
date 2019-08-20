@@ -10,7 +10,7 @@ export default function Tags({ list = [], ignore }) {
   return (
     <Tag.Group>
       {tags.map((tag, index) => {
-        const tagSlug = tag.toLowerCase()
+        const tagSlug = tag.toLowerCase().replace(/ /g, '-')
 
         return (
           <Link
