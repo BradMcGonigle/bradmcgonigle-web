@@ -10,8 +10,8 @@ description: >-
 featuredImage: react-nhl-logos.jpg
 featuredImageAlt: >-
   National Hockey League Logos
-image: react-nhl-logos.jpg
-imageAlt: National Hockey League Logos
+image:
+imageAlt:
 tags:
   - Development
   - React
