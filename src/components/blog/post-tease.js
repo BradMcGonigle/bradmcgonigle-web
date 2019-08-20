@@ -24,6 +24,14 @@ const BlogPostTease = ({ post }) => (
       </Media.Item>
       <Media.Item>
         <Content>
+          <Heading
+            renderAs="h5"
+            size={6}
+            subtitle
+            className="has-text-grey-dark"
+          >
+            {post.frontmatter.date} &mdash; {post.fields.readingTime.text}
+          </Heading>
           <Heading renderAs="h2" size={3}>
             {post.frontmatter.title}
           </Heading>
@@ -31,17 +39,9 @@ const BlogPostTease = ({ post }) => (
             renderAs="h4"
             size={5}
             subtitle
-            className="has-text-grey margin-bottom-025"
+            className="has-text-weight-light has-text-grey-darker  margin-bottom-025"
           >
             {post.frontmatter.description}
-          </Heading>
-          <Heading
-            renderAs="h5"
-            size={6}
-            subtitle
-            className="has-text-grey-light"
-          >
-            {post.frontmatter.date} &mdash; {post.fields.readingTime.text}
           </Heading>
         </Content>
       </Media.Item>
