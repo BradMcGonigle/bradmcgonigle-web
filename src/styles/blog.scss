@@ -43,8 +43,10 @@
     }
   }
 
-  blockquote {
-    margin: 0 4rem;
+  @media screen and (min-width: 768px) {
+    blockquote {
+      margin: 0 4rem;
+    }
   }
 }
 
