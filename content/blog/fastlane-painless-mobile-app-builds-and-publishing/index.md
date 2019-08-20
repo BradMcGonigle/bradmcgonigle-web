@@ -1,9 +1,9 @@
 ---
 templateKey: blog-post
-path: /blog/fastlane-painless-mobile-app-builds-and-publishing
+path: /blog/fastlane-painless-mobile-app-builds-and-deployment
 category: Development
 title: >-
-  Fastlane: Painless Mobile App Builds and Publishing
+  Fastlane: Painless Mobile App Builds and Deployment
 date: 2019-08-19T16:50:29-04:00
 description: >-
   Getting from idea to released app is a long process. As developers, our focus should remain on code and user experience. Releasing a mobile app requires so much more, from screenshot generation to code signing to app store deployments, developing and releasing a mobile app can be a tedious process which Fastlane helps make easier.
@@ -39,7 +39,7 @@ Next, let's install [fastlane][fastlane] via [homebrew](https://brew.sh).
 $ brew cask install fastlane
 ```
 
-Once installed, we need to create a `fastlane` folder inside out [React Native][react-native] project root. Next, create an empty file called `Fastfile`. _Alternatively, there is a `fastlane init` command that can used to handle some of the scaffolding._ Our `Fastfile` will consist of all of our _lanes_ which contain [fastlane actions][actions] that execute synchronously to automate our processes.
+Once installed, we need to create a `fastlane` folder inside our [React Native][react-native] project root. Next, create an empty file called `Fastfile`. _Alternatively, there is a `fastlane init` command that can be used to handle some of the scaffolding._ Our `Fastfile` will consist of all of our _lanes_ which contain [fastlane actions][actions] that execute synchronously to automate our processes.
 
 ```ruby
 fastlane_version '2.129.0'
@@ -59,7 +59,7 @@ platform :android do
 end
 ```
 
-Our `Fastfile` starts with a `before_all` hook to ensure our repository has the latest code from our `master` branch and is _clean_ so we don't deploy unfinished code. Next we define the platforms for which we are doing to later provide _lanes_. By defining our platforms individually, we are able to execute builds and deployments for each platform individually.
+Our `Fastfile` starts with a `before_all` hook to ensure our repository has the latest code from our `master` branch and is _clean_ so we don't deploy unfinished code. Next, we define the platforms for which we are going to later provide _lanes_. By defining our platforms individually, we are able to execute builds and deployments for each platform individually.
 
 ## iOS and the App Store
 
@@ -73,7 +73,7 @@ Before creating our _lanes_, we need to setup [_match_][match] in our project an
 $ fastlane match init
 ```
 
-This will create a `Matchfile` in our `fastlane` directory within our project root and will be used anytime we use a _match_ action in our _lanes_. Now let's setup our first _lane_ to fetch our certificates and provisioning files using our `Matchfile` settings. Each _lane_ should be proceeded by a description using `desc` that clearly describes purpose of the _lane_. Next we define the name of our _lane_ and provide it with the actions it should execute.
+This will create a `Matchfile` in our `fastlane` directory within our project root and will be used anytime we use a _match_ action in our _lanes_. Now let's setup our first _lane_ to fetch our certificates and provisioning files using our `Matchfile` settings. Each _lane_ should be proceeded by a description using `desc` that clearly describes purpose of the _lane_. Next, we define the name of our _lane_ and provide it with the actions it should execute.
 
 ```ruby
 platform :ios do
@@ -112,9 +112,9 @@ platform :ios do
 end
 ```
 
-Let's break our two new _lanes_ down a bit and start with our build _lane_. We are using a `private_lane` block since it doesn't make sense to execute a build directly from the command line using `fastlane build`. Inside our build block will call our `certificates` lane and execute it before we automatically increment our app build number in Xcode and then build our app using [_gym_][gym].
+Let's break our two new _lanes_ down a bit and start with our build _lane_. We are using a `private_lane` block since it doesn't make sense to only execute a build task directly from the command line using `fastlane build`. Inside our build block will call our `certificates` lane and execute it before we automatically increment our app build number in Xcode and then build our app using [_gym_][gym].
 
-Now we have all the pieces in place to ship our app to Testflight using our beta _lane_. When we run `fastlane ios beta`, fastlane executes our build _lane_ to build our signed app `.ipa` bundle. We then use [pilot]([pilot] to upload our local build to Testflight. Finally, we also create a new commit in our repo for the build number bump and push that to our Git remote automatically.
+Now, we have all the pieces in place to ship our app to Testflight using our beta _lane_. When we run `fastlane ios beta`, fastlane executes our build _lane_ to build our signed app `.ipa` bundle. We then use [pilot][pilot] to upload our local build to Testflight. Finally, we also create a new commit in our repo for the build number bump and push that to our Git remote automatically.
 
 ## Android and the Google Play Store
 
@@ -166,9 +166,9 @@ platform :android do
 end
 ```
 
-We now have three _lanes_ for each release track. Using `fastlane android OUR_LANE_NAME`, each _lane_ calls our `build` _lane_, uses [_supply_][supply] to upload that build to the defined Google Play Store track, bumps our app `versionCode` and pushes that bump to our Git repo.
+We now have three _lanes_, one for each release track. Using `fastlane android OUR_LANE_NAME`, each _lane_ calls our `build` _lane_, uses [_supply_][supply] to upload that build to the defined Google Play Store track, bumps our app `versionCode` and pushes that bump to our Git repo.
 
-Depending on your release flow, you may only ever use the `internal` track _lane_ and from there use the Google Play Console to promote the releases up to the Alpha and Beta tracks before releasing it to the public. However, it's nice to have the other _lanes_ available if there is ever the need to ship directly to a specific track.
+Depending on your release flow, you may only need to use the `internal` track _lane_ and from there use the Google Play Console to promote the internal release up to the Alpha and Beta tracks before releasing it to the public. However, it can be nice to have the other _lanes_ available if there is ever the need to ship directly to a specific track.
 
 ## Fastlane to the Rescue
 
