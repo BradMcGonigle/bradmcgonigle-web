@@ -7,16 +7,25 @@ const BlogPostTease = ({ post }) => (
   <Link to={post.frontmatter.path}>
     <Media>
       <Media.Item renderAs="figure" position="left">
-        <Img
-          fluid={post.frontmatter.image.childImageSharp.fluid}
-          alt={post.frontmatter.image}
-          className="image is-128x128"
-        />
+        {!post.frontmatter.featuredImage && post.frontmatter.image && (
+          <Img
+            fluid={post.frontmatter.image.childImageSharp.fluid}
+            alt={post.frontmatter.imageAlt}
+            className="image is-128x128"
+          />
+        )}
+        {post.frontmatter.featuredImage && !post.frontmatter.image && (
+          <Img
+            fluid={post.frontmatter.featuredImage.childImageSharp.fluid}
+            alt={post.frontmatter.featuredImageAlt}
+            className="image is-128x128"
+          />
+        )}
       </Media.Item>
       <Media.Item>
         <Content>
           <Heading renderAs="h2" size={3}>
-            Small {post.frontmatter.title}
+            {post.frontmatter.title}
           </Heading>
           <Heading
             renderAs="h4"
