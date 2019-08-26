@@ -15,7 +15,7 @@
     "bulma": "~0.7.2",
     "bulma-helpers": "^0.3.6",
     "bulma-timeline": "^3.0.3",
-    "dotenv": "^8.0.0",
+    "dotenv": "^8.1.0",
     "emotion": "~10.0.5",
     "eslint-plugin-emotion": "^10.0.6",
     "facepaint": "^1.2.1",
