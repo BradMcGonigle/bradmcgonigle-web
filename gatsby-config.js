@@ -162,7 +162,7 @@ module.exports = {
               {
                 allMarkdownRemark(
                   sort: { order: DESC, fields: [frontmatter___date] },
-                  filter: { frontmatter: { templateKey: { in: ["blog-post", "link-post"] } } }
+                  filter: { frontmatter: { draft: {eq: false}, templateKey: { in: ["blog-post", "link-post"] } } }
                 ) {
                   edges {
                     node {
@@ -198,7 +198,7 @@ module.exports = {
               {
                 allMarkdownRemark(
                   sort: { order: DESC, fields: [frontmatter___date] },
-                  filter: { frontmatter: { templateKey: { eq: "blog-post" } } }
+                  filter: { frontmatter: { draft: {eq: false}, templateKey: { eq: "blog-post" } } }
                 ) {
                   edges {
                     node {
@@ -235,7 +235,7 @@ module.exports = {
               {
                 allMarkdownRemark(
                   sort: { order: DESC, fields: [frontmatter___date] },
-                  filter: { frontmatter: { templateKey: { eq: "link-post" } } }
+                  filter: { frontmatter: { draft: {eq: false}, templateKey: { eq: "link-post" } } }
                 ) {
                   edges {
                     node {

@@ -9,7 +9,7 @@ module.exports.createPages = async (actions, graphql) => {
         {
           allMarkdownRemark(
             filter: {
-              frontmatter: { templateKey: { in: ["blog-post", "link-post"] } }
+              frontmatter: { draft: {eq: false}, templateKey: { in: ["blog-post", "link-post"] } }
             }
             limit: 1000
           ) {
