@@ -62,11 +62,11 @@ In our `resolve`, the `source` variable contains each of our frontmatter fields 
 
 Now that we have our `draft` functionality defined to work in cases where the field is provided and even when it is not, let's put it to use.
 
-```markdown
+```yaml
 ---
 title: Working Title  
-date: 2019-09-10T14:09:32-04:00  
-draft: true  
+date: 2019-09-10T14:09:32-04:00
+draft: true
 ---
 ```
 
