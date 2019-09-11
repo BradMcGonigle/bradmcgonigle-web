@@ -6,7 +6,7 @@ title: >-
   Drafts for Gatsby
 date: 2019-09-10T14:09:32-04:00
 description: >-
-  Using Gatsby's Schema Customization API, implementing drafts functionality for content is painless and straightforward.
+  Draft functionality is common place in content management systems but implementing them in simple Gatsby sites always seemed a bit hacky. Now, using Gatsby's Schema Customization API, implementing drafts functionality for content is painless and straightforward.
 featuredImage: pencils.jpg
 featuredImageAlt: Number 2 Pencils
 image:
