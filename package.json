@@ -19,7 +19,7 @@
     "emotion": "~10.0.5",
     "eslint-plugin-emotion": "^10.0.6",
     "facepaint": "^1.2.1",
-    "gatsby": "^2.13.65",
+    "gatsby": "^2.15.14",
     "gatsby-image": "~2.0.25",
     "gatsby-plugin-canonical-urls": "~2.0.8",
     "gatsby-plugin-catch-links": "~2.0.9",
