@@ -36,7 +36,7 @@ export default props => (
   <StaticQuery
     query={graphql`
       query BlogPostByPath($path: String!) {
-        markdownRemark(frontmatter: { path: { eq: $path } }) {
+        markdownRemark(frontmatter: { draft: {eq: false}, path: { eq: $path } }) {
           html
           fields {
             readingTime {

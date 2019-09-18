@@ -71,7 +71,7 @@ export default props => (
       query BlogPostsQuery {
         allMarkdownRemark(
           sort: { order: DESC, fields: [frontmatter___date] }
-          filter: { frontmatter: { templateKey: { eq: "blog-post" } } }
+          filter: { frontmatter: { draft: {eq: false}, templateKey: { eq: "blog-post" } } }
         ) {
           edges {
             node {
