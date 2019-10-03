@@ -41,7 +41,7 @@
     "gatsby-remark-prismjs": "^3.3.5",
     "gatsby-remark-reading-time": "^1.0.1",
     "gatsby-remark-static-images": "^1.1.0",
-    "gatsby-source-filesystem": "~2.0.12",
+    "gatsby-source-filesystem": "~2.1.28",
     "gatsby-transformer-remark": "^2.3.12",
     "gatsby-transformer-sharp": "~2.1.9",
     "netlify-cli": "^2.11.18",
