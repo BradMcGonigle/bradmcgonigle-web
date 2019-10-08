@@ -32,24 +32,6 @@ module.exports = {
       },
     },
     {
-      resolve: 'gatsby-plugin-favicon',
-      options: {
-        logo: './src/favicon.png',
-        injectHTML: true,
-        icons: {
-          android: true,
-          appleIcon: true,
-          appleStartup: false,
-          coast: false,
-          favicons: true,
-          firefox: true,
-          twitter: false,
-          yandex: false,
-          windows: false,
-        },
-      },
-    },
-    {
       resolve: 'gatsby-plugin-google-tagmanager',
       options: {
         id: 'GTM-T6KTKL',
