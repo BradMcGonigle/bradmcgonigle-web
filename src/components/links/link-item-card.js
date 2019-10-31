@@ -3,7 +3,7 @@ import { Link } from 'gatsby'
 import Img from 'gatsby-image'
 import styled from 'styled-components'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faExternalLink } from '@fortawesome/free-solid-svg-icons'
+import { faExternalLinkAlt } from '@fortawesome/free-solid-svg-icons'
 import { Card, Content, Heading } from 'react-bulma-components'
 
 const LinkCard = styled(Card)`
@@ -90,7 +90,7 @@ const LinkItemCard = ({ post }) => (
       ) : (
         <figure className="is-hidden-mobile image">
           <span className="icon is-large">
-            <FontAwesomeIcon icon={faExternalLink} />
+            <FontAwesomeIcon icon={faExternalLinkAlt} />
           </span>
         </figure>
       )}
