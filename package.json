@@ -54,7 +54,7 @@
     "react-emotion": "~10.0.0",
     "react-helmet": "~5.2.0",
     "react-load-script": "0.0.6",
-    "sharp": "0.23.1"
+    "sharp": "0.23.1",
     "styled-components": "^4.4.0"
   },
   "keywords": [
