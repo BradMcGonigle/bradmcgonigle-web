@@ -2,7 +2,7 @@ import React from 'react'
 import kebabCase from 'lodash/kebabCase'
 import { Link, graphql } from 'gatsby'
 import { Container, Heading, Section } from 'react-bulma-components'
-import styled from '@emotion/styled'
+import styled from 'styled-components'
 import facepaint from 'facepaint'
 
 import { BREAKPOINTS } from '../constants/breakpoints'

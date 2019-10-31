@@ -21,6 +21,7 @@ module.exports = {
         crossOrigin: `use-credentials`,
       },
     },
+    'gatsby-plugin-styled-components',
     'gatsby-plugin-offline',
     {
       resolve: 'gatsby-plugin-catch-links',

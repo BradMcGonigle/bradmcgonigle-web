@@ -6,7 +6,7 @@ import {
   Heading,
   Section,
 } from 'react-bulma-components'
-import styled from '@emotion/styled'
+import styled from 'styled-components'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faPaperPlane } from '@fortawesome/pro-light-svg-icons'
 

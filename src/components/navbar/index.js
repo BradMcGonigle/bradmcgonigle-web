@@ -1,6 +1,6 @@
 import React from 'react'
 import { Link } from 'gatsby'
-import styled from '@emotion/styled'
+import styled from 'styled-components'
 import { Navbar } from 'react-bulma-components'
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'

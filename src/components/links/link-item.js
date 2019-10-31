@@ -1,5 +1,5 @@
 import React from 'react'
-import styled from '@emotion/styled'
+import styled from 'styled-components'
 import { Columns, Heading } from 'react-bulma-components'
 
 import { ContentWrapper, HTMLContent } from '../content'

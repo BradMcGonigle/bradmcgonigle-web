@@ -1,7 +1,7 @@
 import React from 'react'
 import { Link } from 'gatsby'
 import Img from 'gatsby-image'
-import styled from '@emotion/styled'
+import styled from 'styled-components'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faExternalLink } from '@fortawesome/pro-light-svg-icons'
 import { Card, Content, Heading } from 'react-bulma-components'
