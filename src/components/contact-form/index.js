@@ -8,7 +8,7 @@ import {
 } from 'react-bulma-components'
 import styled from 'styled-components'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faPaperPlane } from '@fortawesome/pro-light-svg-icons'
+import { faPaperPlane } from '@fortawesome/free-solid-svg-icons'
 
 import { COLORS } from '../../constants/colors'
 import { RandomColor } from '../../helpers/random-color'

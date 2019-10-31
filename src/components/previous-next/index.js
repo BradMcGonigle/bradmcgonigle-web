@@ -1,7 +1,10 @@
 import React from 'react'
 import { Link } from 'gatsby'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faChevronLeft, faChevronRight } from '@fortawesome/pro-light-svg-icons'
+import {
+  faChevronLeft,
+  faChevronRight,
+} from '@fortawesome/free-solid-svg-icons'
 import { Columns, Container, Heading, Hero } from 'react-bulma-components'
 
 export const PreviousNext = ({ next, previous }) => (

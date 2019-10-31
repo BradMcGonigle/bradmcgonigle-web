@@ -5,11 +5,11 @@ import { Box, Columns, Container, Heading, Hero } from 'react-bulma-components'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import {
   faFootballBall,
-  faHockeySticks,
-  faKnifeKitchen,
+  faHockeyPuck,
+  faUtensils,
   faWater,
-  faUserAstronaut,
-} from '@fortawesome/pro-light-svg-icons'
+  faIdBadge,
+} from '@fortawesome/free-solid-svg-icons'
 
 import { ContentWrapper, HTMLContent } from '../components/content'
 import Layout from '../components/layout'
@@ -38,7 +38,7 @@ export const AboutPage = ({ data }) => {
               <Columns.Column size={5}>
                 <p className="has-opacity-50">
                   <span className="icon is-large">
-                    <FontAwesomeIcon icon={faUserAstronaut} size="3x" />
+                    <FontAwesomeIcon icon={faIdBadge} size="3x" />
                   </span>
                 </p>
                 <Heading renderAs="h1" size={4}>
@@ -54,7 +54,7 @@ export const AboutPage = ({ data }) => {
                   </Columns.Column>
                   <Columns.Column size="one-quarter">
                     <span className="icon is-large">
-                      <FontAwesomeIcon icon={faHockeySticks} size="2x" />
+                      <FontAwesomeIcon icon={faHockeyPuck} size="2x" />
                     </span>
                   </Columns.Column>
                   <Columns.Column size="one-quarter">
@@ -64,7 +64,7 @@ export const AboutPage = ({ data }) => {
                   </Columns.Column>
                   <Columns.Column size="one-quarter">
                     <span className="icon is-large">
-                      <FontAwesomeIcon icon={faKnifeKitchen} size="2x" />
+                      <FontAwesomeIcon icon={faUtensils} size="2x" />
                     </span>
                   </Columns.Column>
                 </Columns>

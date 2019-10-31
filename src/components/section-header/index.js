@@ -2,7 +2,7 @@ import React from 'react'
 import { Link } from 'gatsby'
 import { Heading } from 'react-bulma-components'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faChevronLeft } from '@fortawesome/pro-light-svg-icons'
+import { faChevronLeft } from '@fortawesome/free-solid-svg-icons'
 
 class SectionHeader extends React.Component {
   render() {

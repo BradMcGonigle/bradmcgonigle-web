@@ -2,7 +2,7 @@ import React from 'react'
 import { graphql, Link, StaticQuery } from 'gatsby'
 import { Columns, Container, Hero } from 'react-bulma-components'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faChevronRight } from '@fortawesome/pro-light-svg-icons'
+import { faChevronRight } from '@fortawesome/free-solid-svg-icons'
 
 import LinkItemCard from './link-item-card'
 import SectionHeader from '../section-header'

@@ -2,7 +2,7 @@ import React from 'react'
 import { graphql, Link, StaticQuery } from 'gatsby'
 import { Columns, Container, Content, Hero } from 'react-bulma-components'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faChevronRight } from '@fortawesome/pro-light-svg-icons'
+import { faChevronRight } from '@fortawesome/free-solid-svg-icons'
 
 import BlogFeaturedPostTease from './featured-post-tease'
 import BlogPostTeaseCard from './post-tease-card'
@@ -62,7 +62,12 @@ export default props => (
       query BlogRecentPosts {
         allMarkdownRemark(
           sort: { order: DESC, fields: [frontmatter___date] }
-          filter: { frontmatter: { draft: {eq: false}, templateKey: { eq: "blog-post" } } }
+          filter: {
+            frontmatter: {
+              draft: { eq: false }
+              templateKey: { eq: "blog-post" }
+            }
+          }
           limit: 4
         ) {
           edges {

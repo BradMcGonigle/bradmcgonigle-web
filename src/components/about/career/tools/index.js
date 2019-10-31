@@ -8,7 +8,7 @@ import {
 } from 'react-bulma-components'
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faBracketsCurly, faLanguage } from '@fortawesome/pro-light-svg-icons'
+import { faCode, faLanguage } from '@fortawesome/free-solid-svg-icons'
 
 import shuffleArray from '../../../../helpers/shuffle-array'
 
@@ -95,7 +95,7 @@ export default () => (
             <Columns.Column size="half" className="has-text-centered">
               <div className="padding-3rem">
                 <p>
-                  <span className="icon is-large has-text-grey-light">
+                  <span className="icon is-large has-text-grey-lighter">
                     <FontAwesomeIcon icon={faLanguage} size="4x" />
                   </span>
                 </p>
@@ -117,8 +117,8 @@ export default () => (
             <Columns.Column size="half" className="has-text-centered">
               <div className="padding-3rem">
                 <p>
-                  <span className="icon is-large has-text-grey-light">
-                    <FontAwesomeIcon icon={faBracketsCurly} size="4x" />
+                  <span className="icon is-large has-text-grey-lighter">
+                    <FontAwesomeIcon icon={faCode} size="4x" />
                   </span>
                 </p>
                 <Heading

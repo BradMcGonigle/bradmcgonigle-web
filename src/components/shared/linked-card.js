@@ -3,7 +3,7 @@ import Img from 'gatsby-image'
 import styled from 'styled-components'
 import { Card, Heading } from 'react-bulma-components'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faBlog, faLink } from '@fortawesome/pro-light-svg-icons'
+import { faBlog, faLink } from '@fortawesome/free-solid-svg-icons'
 
 const CardHeader = styled(Card.Header)`
   background-color: #f3f3f3;
