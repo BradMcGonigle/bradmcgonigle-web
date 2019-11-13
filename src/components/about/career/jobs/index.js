@@ -8,6 +8,8 @@ import {
   Image,
 } from 'react-bulma-components'
 
+import shuffleArray from '../../../../helpers/shuffle-array'
+
 export default ({ jobs }) => (
   <Hero size="medium" color="light">
     <Hero.Body>
@@ -22,13 +24,13 @@ export default ({ jobs }) => (
             </Heading>
           </Columns.Column>
         </Columns>
-        <Columns className="is-mobile">
-          {jobs.map(job => (
+        <Columns className="is-centered is-mobile">
+          {shuffleArray(jobs).map(job => (
             <Columns.Column
               mobile={{ size: 'half' }}
-              tablet={{ size: 'one-quarter' }}
+              tablet={{ size: 'one-third' }}
             >
-              <Image src={job.publicURL} alt={job.name} className="is-3by2" />
+              <Image src={job.publicURL} alt={job.name} />
             </Columns.Column>
           ))}
         </Columns>
