@@ -36,7 +36,7 @@
     "gatsby-plugin-sitemap": "~2.2.20",
     "gatsby-plugin-styled-components": "^3.1.11",
     "gatsby-remark-images": "~3.0.1",
-    "gatsby-remark-prismjs": "^3.3.5",
+    "gatsby-remark-prismjs": "^3.3.22",
     "gatsby-remark-reading-time": "^1.0.1",
     "gatsby-remark-static-images": "^1.1.0",
     "gatsby-source-filesystem": "~2.1.36",
