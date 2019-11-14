@@ -20,7 +20,7 @@
     "facepaint": "^1.2.1",
     "gatsby": "^2.17.13",
     "gatsby-image": "~2.0.25",
-    "gatsby-plugin-canonical-urls": "~2.0.8",
+    "gatsby-plugin-canonical-urls": "~2.1.14",
     "gatsby-plugin-catch-links": "~2.0.9",
     "gatsby-plugin-feed": "^2.2.0",
     "gatsby-plugin-google-tagmanager": "~2.0.7",
