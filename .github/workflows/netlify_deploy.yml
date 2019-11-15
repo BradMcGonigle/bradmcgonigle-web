@@ -36,7 +36,7 @@ jobs:
         uses: jakejarvis/lighthouse-action@master
         with:
           netlify_site: 'bradmcgonigle.netlify.com'
-        - uses: actions/upload-artifact@master
+        uses: actions/upload-artifact@master
           with:
             name: report
             path: './report'
