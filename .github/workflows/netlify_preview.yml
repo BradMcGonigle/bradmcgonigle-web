@@ -29,11 +29,14 @@ jobs:
           args: deploy --site ${{ secrets.NETLIFY_SITE_ID }} --auth ${{ secrets.NETLIFY_AUTH_TOKEN }} --dir=public
         env:
           CD: true
+      - name: Sleep for 30 seconds
+        run: sleep 30
       - name: Lighthouse Audit Netlify deploy preview
         uses: jakejarvis/lighthouse-action@master
         with:
           netlify_site: 'bradmcgonigle.netlify.com'
-      - uses: actions/upload-artifact@master
+      - name: Generate Lighthouse Audit Report
+        uses: actions/upload-artifact@master
         with:
           name: report
           path: './report'
