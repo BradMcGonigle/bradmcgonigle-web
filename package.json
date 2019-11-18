@@ -41,7 +41,7 @@
     "gatsby-remark-static-images": "^1.1.0",
     "gatsby-source-filesystem": "~2.1.36",
     "gatsby-transformer-remark": "^2.6.34",
-    "gatsby-transformer-sharp": "~2.2.20",
+    "gatsby-transformer-sharp": "~2.3.5",
     "node-sass": "^4.11.0",
     "preact-emotion": "~9.2.10",
     "prismjs": "^1.17.1",
