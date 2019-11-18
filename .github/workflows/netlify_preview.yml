@@ -29,8 +29,8 @@ jobs:
           args: deploy --site ${{ secrets.NETLIFY_SITE_ID }} --auth ${{ secrets.NETLIFY_AUTH_TOKEN }} --dir=public
         env:
           CD: true
-      - name: Sleep for 30 seconds
-        run: sleep 30
+      - name: Sleep for 2 minutes
+        run: sleep 2m
       - name: Lighthouse Audit Netlify deploy preview
         uses: jakejarvis/lighthouse-action@master
         with:
