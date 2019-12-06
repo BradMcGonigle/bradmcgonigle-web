@@ -727,7 +727,7 @@
     "@babel/plugin-transform-react-jsx-self" "^7.7.4"
     "@babel/plugin-transform-react-jsx-source" "^7.7.4"
 
-"@babel/runtime@^7.0.0", "@babel/runtime@^7.1.2", "@babel/runtime@^7.3.4", "@babel/runtime@^7.4.2", "@babel/runtime@^7.4.5", "@babel/runtime@^7.6.2", "@babel/runtime@^7.6.3", "@babel/runtime@^7.7.2", "@babel/runtime@^7.7.4":
+"@babel/runtime@^7.0.0", "@babel/runtime@^7.1.2", "@babel/runtime@^7.3.4", "@babel/runtime@^7.4.2", "@babel/runtime@^7.4.5", "@babel/runtime@^7.6.3", "@babel/runtime@^7.7.2", "@babel/runtime@^7.7.4":
   version "7.7.4"
   resolved "https://registry.yarnpkg.com/@babel/runtime/-/runtime-7.7.4.tgz#b23a856751e4bf099262f867767889c0e3fe175b"
   integrity sha512-r24eVUUr0QqNZa+qrImUk8fn5SPhHq+IfYvIoIMg0do3GdK9sMdiLKP3GYVVaxpPKORgm8KRKaNTEhAjgIpLMw==
@@ -2421,7 +2421,7 @@ block-stream@*:
   dependencies:
     inherits "~2.0.0"
 
-bluebird@^3.5.5, bluebird@^3.7.0, bluebird@^3.7.1:
+bluebird@^3.5.5, bluebird@^3.7.1:
   version "3.7.1"
   resolved "https://registry.yarnpkg.com/bluebird/-/bluebird-3.7.1.tgz#df70e302b471d7473489acf26a93d63b53f874de"
   integrity sha512-DdmyoGCleJnkbp3nkbxTLJ18rjDsE4yCggEwKNXkeV123sPNfOCYeDoeuOY+F2FrSjO1YXcTU+dsy96KMy+gcg==
@@ -5600,7 +5600,7 @@ gatsby-cli@^2.8.16:
     ink "^2.5.0"
     ink-spinner "^3.0.1"
 
-gatsby-core-utils@^1.0.12, gatsby-core-utils@^1.0.18, gatsby-core-utils@^1.0.22:
+gatsby-core-utils@^1.0.18, gatsby-core-utils@^1.0.22:
   version "1.0.22"
   resolved "https://registry.yarnpkg.com/gatsby-core-utils/-/gatsby-core-utils-1.0.22.tgz#e246c85db5223906f67251ebb0e4e2e4965d66d7"
   integrity sha512-38W+lWb7pPiv7AjGxDx/MSWwmgnPtOejNHSxRcMXhrXNSWpiWCDoNTBM6UCXnbky82kUx4DPX5gXgw7u2s+/rA==
@@ -5673,12 +5673,12 @@ gatsby-plugin-feed@^2.3.21:
     lodash.merge "^4.6.2"
     rss "^1.2.2"
 
-gatsby-plugin-google-tagmanager@~2.0.7:
-  version "2.0.15"
-  resolved "https://registry.yarnpkg.com/gatsby-plugin-google-tagmanager/-/gatsby-plugin-google-tagmanager-2.0.15.tgz#11bc4e0a96aae55b434b7a6dd32f6aedf8e686fb"
-  integrity sha512-Qz6KuEXqD1m/d3KSkKlypSMidJQtA06NWB35qTHXfLTSWrkrylyKRTuZc1/+KsrU9AzsgGsdVNHcQXHO7NQLkQ==
+gatsby-plugin-google-tagmanager@~2.1.18:
+  version "2.1.18"
+  resolved "https://registry.yarnpkg.com/gatsby-plugin-google-tagmanager/-/gatsby-plugin-google-tagmanager-2.1.18.tgz#38f19ab580c32778badd4b57328906aaf115ea2f"
+  integrity sha512-kf5TfZjqArm5I0fNP1tQgw9mHplxJ8awyGpljYSjauWXJe9AQl1tuZkSgaOyfitm5t1ho5X18x0Ygaq7dgJG3g==
   dependencies:
-    "@babel/runtime" "^7.0.0"
+    "@babel/runtime" "^7.7.4"
 
 gatsby-plugin-manifest@^2.2.31:
   version "2.2.31"
@@ -11789,7 +11789,7 @@ sharp@0.23.2:
     tar "^5.0.5"
     tunnel-agent "^0.6.0"
 
-sharp@^0.23.1, sharp@^0.23.3:
+sharp@^0.23.3:
   version "0.23.4"
   resolved "https://registry.yarnpkg.com/sharp/-/sharp-0.23.4.tgz#ca36067cb6ff7067fa6c77b01651cb9a890f8eb3"
   integrity sha512-fJMagt6cT0UDy9XCsgyLi0eiwWWhQRxbwGmqQT6sY8Av4s0SVsT/deg8fobBQCTDU5iXRgz0rAeXoE2LBZ8g+Q==
