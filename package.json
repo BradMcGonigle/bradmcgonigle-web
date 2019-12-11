@@ -55,7 +55,7 @@
     "react-load-script": "0.0.6",
     "sharp": "0.23.4",
     "styled-components": "^4.4.0",
-    "yarn": "^1.19.1"
+    "yarn": "^1.21.0"
   },
   "keywords": [
     "gatsby"
