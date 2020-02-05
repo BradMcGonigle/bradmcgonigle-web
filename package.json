@@ -23,7 +23,7 @@
     "gatsby-plugin-canonical-urls": "~2.1.19",
     "gatsby-plugin-catch-links": "~2.1.24",
     "gatsby-plugin-feed": "^2.3.26",
-    "gatsby-plugin-google-tagmanager": "~2.1.24",
+    "gatsby-plugin-google-tagmanager": "~2.1.25",
     "gatsby-plugin-manifest": "^2.2.40",
     "gatsby-plugin-netlify": "~2.1.32",
     "gatsby-plugin-netlify-cache": "^1.1.0",
