@@ -12,8 +12,8 @@ It follows the [JAMstack architecture](https://jamstack.org) by using Git as a s
 ### Access Locally
 
 ```
-$ git clone https://github.com/bradmcgongile/bradmcgongile.git
-$ cd [REPO_NAME]
+$ git clone https://github.com/bradmcgonigle/bradmcgonigle.git
+$ cd bradmcgonigle
 $ yarn
 $ yarn develop
 ```
@@ -21,7 +21,7 @@ $ yarn develop
 ## Getting Started (Without Netlify)
 
 ```
-$ gatsby new [SITE_DIRECTORY_NAME] https://github.com/bradmcgongile/bradmcgongile/
+$ gatsby new [SITE_DIRECTORY_NAME] https://github.com/bradmcgonigle/bradmcgonigle/
 $ cd [SITE_DIRECTORY_NAME]
 $ yarn build
 $ yarn serve
