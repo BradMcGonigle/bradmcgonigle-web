@@ -9,7 +9,7 @@ description: >-
   GitHub Actions are a powerful tool to create custom software development life cycle workflows from directly in your GitHub repositories. I've moved from CircleCI for my continuous deployment needs and leveraged GitHub Actions as a seamless replacement for deploying directly to Netlify every time commits are made.
 featuredImage:
 featuredImageAlt:
-image: github-actions.png
+image: github-actions.jpg
 imageAlt: >-
   Github Actions
 tags:
