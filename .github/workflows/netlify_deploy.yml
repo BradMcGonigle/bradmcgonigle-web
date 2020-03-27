@@ -32,14 +32,3 @@ jobs:
           args: deploy --site ${{ secrets.NETLIFY_SITE_ID }} --auth ${{ secrets.NETLIFY_AUTH_TOKEN }} --prod --dir=public
         env:
           CD: true
-      - name: Sleep for 30 seconds
-        run: sleep 30
-      - name: Lighthouse Audit Netlify deploy
-        uses: jakejarvis/lighthouse-action@master
-        with:
-          url: 'https://www.bradmcgonigle.com'
-      - name: Generate Lighthouse Audit Report
-        uses: actions/upload-artifact@master
-        with:
-          name: report
-          path: './report'

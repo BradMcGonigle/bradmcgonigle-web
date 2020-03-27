@@ -1,4 +1,4 @@
-name: Deploy Preview
+name: Lighthouse Audit
 
 on:
   pull_request
@@ -23,9 +23,10 @@ jobs:
       - name: Build
         run: |
           npm run build --if-present
-      - name: Deploy to Netlify
-        uses: netlify/actions/cli@master
+      - name: Run Lighthouse against the static build
+        uses: treosh/lighthouse-ci-action@v2
         with:
-          args: deploy --site ${{ secrets.NETLIFY_SITE_ID }} --auth ${{ secrets.NETLIFY_AUTH_TOKEN }} --dir=public
-        env:
-          CD: true
+          configPath: '.github/lighthouse/lighthouserc.json'
+          runs: 3
+          temporaryPublicStorage: true
+          uploadArtifacts: true

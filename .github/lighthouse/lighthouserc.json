@@ -1,0 +1,14 @@
+{
+  "ci": {
+    "assert": {
+      "assertMatrix": [
+        {
+          "preset": "lighthouse:recommended"
+        }
+      ]
+    },
+    "collect": {
+      "staticDistDir": "./public"
+    }
+  }
+}
