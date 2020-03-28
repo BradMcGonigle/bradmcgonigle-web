@@ -30,6 +30,7 @@ module.exports = {
       resolve: 'gatsby-plugin-canonical-urls',
       options: {
         siteUrl: 'https://www.bradmcgonigle.com',
+        stripQueryString: true,
       },
     },
     {

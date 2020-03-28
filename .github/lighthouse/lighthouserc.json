@@ -3,7 +3,13 @@
     "assert": {
       "assertMatrix": [
         {
-          "preset": "lighthouse:recommended"
+          "preset": "lighthouse:recommended",
+          "assertions": {
+            "unused-css-rules": "off",
+            "uses-rel-preconnect": "off",
+            "redirects-http": ["warn", { "minScore": 0 }],
+            "uses-http2": ["warn", { "minScore": 0 }]
+          }
         }
       ]
     },
