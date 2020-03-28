@@ -10,9 +10,11 @@ import {
 } from 'react-bulma-components'
 
 import Layout from '../components/layout'
+import SEO from '../components/seo'
 
 const NotFoundPage = () => (
   <Layout>
+    <SEO description="Page not found" title="404 - Page Not Found" />
     <Hero className="is-fullheight is-bold is-primary">
       <Hero.Body>
         <Container>

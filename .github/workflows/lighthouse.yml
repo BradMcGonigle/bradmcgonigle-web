@@ -1,0 +1,32 @@
+name: Lighthouse Audit
+
+on:
+  pull_request
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    strategy:
+      matrix:
+        node-version: [12.x]
+
+    steps:
+      - uses: actions/checkout@v1
+      - name: Use Node.js ${{ matrix.node-version }}
+        uses: actions/setup-node@v1
+        with:
+          node-version: ${{ matrix.node-version }}
+      - name: Install dependencies
+        run: |
+          npm install
+      - name: Build
+        run: |
+          npm run build --if-present
+      - name: Run Lighthouse against the static build
+        uses: treosh/lighthouse-ci-action@v2
+        with:
+          configPath: '.github/lighthouse/lighthouserc.json'
+          runs: 3
+          temporaryPublicStorage: true
+          uploadArtifacts: true
