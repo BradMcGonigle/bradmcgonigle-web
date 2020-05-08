@@ -74,6 +74,6 @@
     "test": "echo \"Error: no test specified\""
   },
   "devDependencies": {
-    "prettier": "2.0.4"
+    "prettier": "2.0.5"
   }
 }
