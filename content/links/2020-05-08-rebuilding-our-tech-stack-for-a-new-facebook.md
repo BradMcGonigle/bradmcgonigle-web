@@ -13,4 +13,5 @@ imageAlt: >-
 tags:
   - Development
 ---
-This is a great write-up about the new Facebook.com and some of the challenges and choices during development.  The one glaring omission, however, is the lack of Safari support. It's amazing to me a company as large as Facebook would launch such a huge change without supporting second most-used browser in the world.
+
+This is a great write-up about the new Facebook.com and some of the challenges and choices during development. The one glaring omission, however, is the lack of Safari support. It's amazing to me a company as large as Facebook would launch such a huge change without supporting second most-used browser in the world.
