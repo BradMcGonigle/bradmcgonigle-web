@@ -51,7 +51,7 @@
     "react-bulma-components": "~3.2.0",
     "react-dom": "^16.13.1",
     "react-emotion": "~10.0.0",
-    "react-helmet": "~5.2.0",
+    "react-helmet": "~6.0.0",
     "react-load-script": "0.0.6",
     "sharp": "0.25.3",
     "styled-components": "^5.1.0",
