@@ -39,8 +39,8 @@ const Intro = () => (
                 Hi, I'm Brad.
               </Heading>
               <p>
-                I'm a software developer from Orlando,
-                Florida building things on the internet.
+                I'm a software developer from Orlando, Florida building things
+                on the internet.
               </p>
             </Content>
           </Columns.Column>
