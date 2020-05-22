@@ -28,7 +28,7 @@ const Intro = () => (
     <Hero.Body>
       <Container>
         <Columns>
-          <Columns.Column size={5}>
+          <Columns.Column size={4}>
             <Content>
               <Heading>
                 <span role="img" aria-label="Waving Hand">
@@ -39,7 +39,7 @@ const Intro = () => (
                 Hi, I'm Brad.
               </Heading>
               <p>
-                I'm a frontend developer and product designer from Orlando,
+                I'm a software developer from Orlando,
                 Florida building things on the internet.
               </p>
             </Content>

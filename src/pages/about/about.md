@@ -5,9 +5,9 @@ title: About
 image: me.jpg
 ---
 
-Hi, I'm Brad — a frontend developer and product designer living in Orlando, Florida.
+Hi, I'm Brad — a software developer living in Orlando, Florida.
 
-I've been working as a product designer and frontend developer for over 13 years. I've been lucky enough to work with and for a wide variety of companies ranging from agency-style client driven shops to venture capital funded startups to typical large-scale corporations.
+With over 13 years of software development experience, I've been lucky enough to work with and for a wide variety of companies ranging from agency-style client driven shops to venture capital funded startups to typical large-scale corporations.
 
 When I'm not creating things on the web, I spend my time with my wife Shaina, our son Owen and our kitty Mila.
 
