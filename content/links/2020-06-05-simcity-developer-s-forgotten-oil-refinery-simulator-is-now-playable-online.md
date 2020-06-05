@@ -14,4 +14,4 @@ tags:
   - Gaming
   - Retro
 ---
-I’ve spent countless hours playing Maxis games. From SimAnt to 
+From SimAnt to most of the SimCity series of games, I’ve spent countless hours playing and loving games from developer Maxis. I've never heard of SimRefinery but apparently it is one of many explorations into business simulations Maxis explored.
