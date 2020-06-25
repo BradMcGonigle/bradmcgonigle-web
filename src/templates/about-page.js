@@ -84,7 +84,7 @@ export const AboutPage = ({ data }) => {
   )
 }
 
-export default props => (
+export default (props) => (
   <StaticQuery
     query={graphql`
       query aboutPageQuery($path: String!) {
@@ -115,6 +115,6 @@ export default props => (
         ...jobsQuery
       }
     `}
-    render={data => <AboutPage data={data} {...props} />}
+    render={(data) => <AboutPage data={data} {...props} />}
   />
 )
