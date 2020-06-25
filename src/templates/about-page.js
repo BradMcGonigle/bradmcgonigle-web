@@ -36,13 +36,10 @@ export const AboutPage = ({ data }) => {
           <Container>
             <Columns className="is-vcentered">
               <Columns.Column size={5}>
-                <p className="has-opacity-50">
+                <Heading className="has-opacity-50" renderAs="h1" size={4}>
                   <span className="icon is-large">
                     <FontAwesomeIcon icon={faIdBadge} size="3x" />
                   </span>
-                </p>
-                <Heading renderAs="h1" size={4}>
-                  {page.frontmatter.title}
                 </Heading>
                 <PageContent content={page.html} />
                 <hr className="has-opacity-15" />
