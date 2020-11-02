@@ -25,7 +25,7 @@
     "gatsby-plugin-feed": "^2.5.7",
     "gatsby-plugin-google-tagmanager": "~2.3.1",
     "gatsby-plugin-manifest": "^2.4.14",
-    "gatsby-plugin-netlify": "~2.3.2",
+    "gatsby-plugin-netlify": "~2.3.25",
     "gatsby-plugin-netlify-cache": "^1.1.0",
     "gatsby-plugin-nprogress": "~2.3.1",
     "gatsby-plugin-offline": "^3.1.2",
