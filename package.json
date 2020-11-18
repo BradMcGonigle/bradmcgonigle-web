@@ -53,7 +53,7 @@
     "react-emotion": "~10.0.0",
     "react-helmet": "~6.1.0",
     "react-load-script": "0.0.6",
-    "sharp": "0.25.3",
+    "sharp": "0.26.3",
     "styled-components": "^5.1.0",
     "yarn": "^1.22.4"
   },
