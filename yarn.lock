@@ -3430,10 +3430,10 @@ builtin-status-codes@^3.0.0:
   resolved "https://registry.yarnpkg.com/builtin-status-codes/-/builtin-status-codes-3.0.0.tgz#85982878e21b98e1c66425e03d0174788f569ee8"
   integrity sha1-hZgoeOIbmOHGZCXgPQF0eI9Wnug=
 
-bulma-helpers@^0.3.10:
-  version "0.3.10"
-  resolved "https://registry.yarnpkg.com/bulma-helpers/-/bulma-helpers-0.3.10.tgz#a0ab518b44343bb708339ade721f7355d159a547"
-  integrity sha512-dgJB8LreVzAHJfcbYUUONA0oo/cdWxhFt1b/DlmTLaukYTjkdM5GP9A7DRyssjuRhcozIqzTm//BLLR313Xw3Q==
+bulma-helpers@^0.4.0:
+  version "0.4.0"
+  resolved "https://registry.yarnpkg.com/bulma-helpers/-/bulma-helpers-0.4.0.tgz#f437ca91f6e2a50d438e18bb589803da8b3ae83f"
+  integrity sha512-N1+hW7tzEb8DaWLbBXhqM9zYay18c99Zw2WtzBiovXPWv/BtSDUVk0IOqmPT+4p6JjFFc1filZ4IY1mLmh+hcA==
 
 bulma-timeline@^3.0.3:
   version "3.0.4"
