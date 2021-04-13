@@ -12,7 +12,7 @@
     "babel-plugin-emotion": "~10.0.33",
     "babel-plugin-styled-components": "^1.10.7",
     "bulma": "~0.8.2",
-    "bulma-helpers": "^0.3.10",
+    "bulma-helpers": "^0.4.0",
     "bulma-timeline": "^3.0.3",
     "dotenv": "^8.0.0",
     "emotion": "~10.0.27",
