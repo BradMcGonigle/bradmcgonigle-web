@@ -1113,10 +1113,10 @@
     core-js-pure "^3.0.0"
     regenerator-runtime "^0.13.4"
 
-"@babel/runtime@^7.10.2", "@babel/runtime@^7.10.3", "@babel/runtime@^7.3.4", "@babel/runtime@^7.6.3", "@babel/runtime@^7.7.2", "@babel/runtime@^7.8.4", "@babel/runtime@^7.9.2", "@babel/runtime@^7.9.6":
-  version "7.10.3"
-  resolved "https://registry.yarnpkg.com/@babel/runtime/-/runtime-7.10.3.tgz#670d002655a7c366540c67f6fd3342cd09500364"
-  integrity sha512-RzGO0RLSdokm9Ipe/YD+7ww8X2Ro79qiXZF3HU9ljrM+qnJmH1Vqth+hbiQZy761LnMJTMitHDuKVYTk3k4dLw==
+"@babel/runtime@^7.10.2", "@babel/runtime@^7.10.3", "@babel/runtime@^7.12.5", "@babel/runtime@^7.3.4", "@babel/runtime@^7.6.3", "@babel/runtime@^7.7.2", "@babel/runtime@^7.8.4", "@babel/runtime@^7.9.2", "@babel/runtime@^7.9.6":
+  version "7.13.17"
+  resolved "https://registry.yarnpkg.com/@babel/runtime/-/runtime-7.13.17.tgz#8966d1fc9593bf848602f0662d6b4d0069e3a7ec"
+  integrity sha512-NCdgJEelPTSh+FEFylhnP1ylq848l1z9t9N0j1Lfbcw0+KXGjsTvUmkxy+voLLXB5SOKMbLLx4jxYliGrYQseA==
   dependencies:
     regenerator-runtime "^0.13.4"
 
@@ -6644,12 +6644,12 @@ gatsby-plugin-netlify@~2.3.2:
     lodash "^4.17.15"
     webpack-assets-manifest "^3.1.1"
 
-gatsby-plugin-nprogress@~2.3.1:
-  version "2.3.1"
-  resolved "https://registry.yarnpkg.com/gatsby-plugin-nprogress/-/gatsby-plugin-nprogress-2.3.1.tgz#36fe27e5cca3dda9a1555e2cb75070157f8cebf4"
-  integrity sha512-K9msO/oK0AMQ8pM/++FNey8QwZL+tlwB03cdhxNXumMHwiqqHF28DT5MB6XWgql7SBFMYwvZUA7e8wH+jhKKVg==
+gatsby-plugin-nprogress@~3.4.0:
+  version "3.4.0"
+  resolved "https://registry.yarnpkg.com/gatsby-plugin-nprogress/-/gatsby-plugin-nprogress-3.4.0.tgz#6b6bf37c22619eb8f0637075a4823e758f19181b"
+  integrity sha512-2ISSNBurdCCPyOn260HKd8Js2n1w5wYAajismU9O7ya/btqt9reKngztA51hvuCFIbp86DpKjlNpNV0NubG/AA==
   dependencies:
-    "@babel/runtime" "^7.9.6"
+    "@babel/runtime" "^7.12.5"
     nprogress "^0.2.0"
 
 gatsby-plugin-offline@^3.1.2:
