@@ -1,0 +1,90 @@
+version: 2
+updates:
+  - package-ecosystem: npm
+    directory: '/'
+    schedule:
+      interval: daily
+      time: '10:00'
+    open-pull-requests-limit: 10
+    labels:
+      - dependabot
+      - dependencies
+    ignore:
+      - dependency-name: gatsby-plugin-sass
+        versions:
+          - 3.1.0
+          - 3.2.0
+          - 4.1.0
+          - 4.2.0
+          - 4.3.0
+      - dependency-name: gatsby
+        versions:
+          - 2.31.1
+          - 2.32.3
+          - 2.32.8
+          - 2.32.9
+          - 3.0.2
+          - 3.1.1
+          - 3.1.2
+          - 3.2.1
+          - 3.3.0
+      - dependency-name: gatsby-plugin-feed
+        versions:
+          - 2.11.0
+          - 2.12.0
+          - 3.0.0
+          - 3.1.0
+          - 3.2.0
+      - dependency-name: gatsby-plugin-sharp
+        versions:
+          - 3.0.0
+          - 3.2.0
+      - dependency-name: y18n
+        versions:
+          - 4.0.1
+      - dependency-name: gatsby-plugin-sitemap
+        versions:
+          - 2.11.0
+          - 2.12.0
+          - 3.0.0
+          - 3.1.0
+      - dependency-name: gatsby-plugin-netlify
+        versions:
+          - 2.10.0
+          - 2.11.0
+          - 3.0.0
+          - 3.0.1
+      - dependency-name: gatsby-plugin-google-tagmanager
+        versions:
+          - 2.10.0
+          - 2.11.0
+          - 2.8.0
+          - 3.0.0
+      - dependency-name: gatsby-source-filesystem
+        versions:
+          - 2.11.0
+          - 2.9.1
+          - 3.0.0
+      - dependency-name: gatsby-transformer-sharp
+        versions:
+          - 2.10.0
+          - 2.12.0
+          - 3.0.0
+      - dependency-name: sharp
+        versions:
+          - 0.27.0
+          - 0.27.1
+          - 0.27.2
+      - dependency-name: gatsby-plugin-nprogress
+        versions:
+          - 2.10.0
+          - 2.8.0
+      - dependency-name: bulma-helpers
+        versions:
+          - 0.3.12
+      - dependency-name: lodash
+        versions:
+          - 4.17.20
+      - dependency-name: elliptic
+        versions:
+          - 6.5.3
