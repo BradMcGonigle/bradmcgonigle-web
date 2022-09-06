@@ -57,9 +57,9 @@ export const LinkItem = ({ post }) => {
         </Columns.Column>
       )}
       <Columns.Column size={6}>
-        <Heading renderAs="h4" size={6} subtitle className="has-text-grey-dark">
+        {/*<Heading renderAs="h4" size={6} subtitle className="has-text-grey-dark">
           {post.frontmatter.date}
-        </Heading>
+          </Heading>*/}
         <Heading renderAs="h1" size={3}>
           <a href={post.frontmatter.url} title="{post.frontmatter.title}">
             {post.frontmatter.title}

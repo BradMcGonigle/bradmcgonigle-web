@@ -30,7 +30,7 @@ const BlogPostTease = ({ post }) => {
               subtitle
               className="has-text-grey-dark"
             >
-              {post.frontmatter.date} &mdash; {post.fields.readingTime.text}
+              {/*{post.frontmatter.date} &mdash; */}{post.fields.readingTime.text}
             </Heading>
             <Heading renderAs="h2" size={3}>
               {post.frontmatter.title}

@@ -23,7 +23,7 @@ const BlogFeaturedPostTease = ({ post }) => {
         />
         <Card.Content>
           <Heading renderAs="h5" size={6} subtitle className="has-text-grey-dark">
-            {post.frontmatter.date} &mdash; {post.fields.readingTime.text}
+            {/*{post.frontmatter.date} &mdash; */}{post.fields.readingTime.text}
           </Heading>
           <Heading className="margin-bottom-2" renderAs="h2" size={3}>
             {post.frontmatter.title}

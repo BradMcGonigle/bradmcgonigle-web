@@ -41,11 +41,14 @@ export const BlogPostDetail = ({ post }) => {
                 subtitle
                 className="has-text-grey-darker"
               >
+                {/*
                 {post.frontmatter.date}
                 <span className="has-text-grey-dark">
                   {' '}
                   &mdash; {post.fields.readingTime.text}
                 </span>
+                */}
+                <span className="has-text-grey-dark">{post.fields.readingTime.text}</span>
               </Heading>
               <Heading renderAs="h1" size={3}>
                 {post.frontmatter.title}
